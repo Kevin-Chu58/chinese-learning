@@ -5,7 +5,6 @@
 
 	import Header from './Header.svelte';
 	import SideBar from './SideBar.svelte';
-	import "../app.css";
 	import './styles.css';
 
 	let showSidebar = false;
