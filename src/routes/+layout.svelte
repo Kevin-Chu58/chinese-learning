@@ -1,4 +1,8 @@
 <script>
+	import { Amplify } from 'aws-amplify';
+    import awsmobile from '../aws-exports';
+    Amplify.configure(awsmobile);
+
 	import Header from './Header.svelte';
 	import SideBar from './SideBar.svelte';
 	import "../app.css";
