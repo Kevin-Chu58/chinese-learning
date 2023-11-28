@@ -25,7 +25,6 @@
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^9.0.0",
 		"eslint-plugin-svelte": "^2.30.0",
-		"flowbite-svelte-icons": "^0.4.5",
 		"postcss": "^8.4.31",
 		"prettier": "^3.0.0",
 		"prettier-plugin-svelte": "^3.0.0",
@@ -39,7 +38,6 @@
 	"dependencies": {
 		"@mui/material": "^5.14.18",
 		"@mui/styled-engine-sc": "^6.0.0-alpha.6",
-		"flowbite-svelte": "^0.44.19",
 		"iconify-icon": "^1.0.8",
 		"styled-components": "^6.1.1"
 	}
