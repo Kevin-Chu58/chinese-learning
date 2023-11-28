@@ -1,18 +1,13 @@
-// svelte.config.js
-import adapter from '@jill64/sveltekit-adapter-aws'
+import adapter from '@sveltejs/adapter-auto';
 
+/** @type {import('@sveltejs/kit').Config} */
 const config = {
-  // ...
-  kit: {
-    adapter: adapter({
-      name: 'chinese-learning',
-      deploy: true,
-      architecture: 'lambda-s3'
-      // ...
-      // Other Adapter Options
-      // ...
-    })
-  }
-}
+	kit: {
+		// adapter-auto only supports some environments, see https://kit.svelte.dev/docs/adapter-auto for a list.
+		// If your environment is not supported or you settled on a specific environment, switch out the adapter.
+		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
+		adapter: adapter(),
+	}
+};
 
-export default config
+export default config;

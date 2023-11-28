@@ -34,7 +34,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@jill64/sveltekit-adapter-aws": "^1.0.16",
 		"@mui/material": "^5.14.18",
 		"@mui/styled-engine-sc": "^6.0.0-alpha.6",
 		"aws-amplify": "^6.0.5",
