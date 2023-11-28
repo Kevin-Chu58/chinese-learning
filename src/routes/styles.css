@@ -115,7 +115,7 @@ p {
 }
 
 a {
-	/* color: var(--color-theme-1); */
+	color: var(--primary-red);
 	text-decoration: none;
 	font-size: 17px;
 }
@@ -150,6 +150,12 @@ p,
 a,
 div {
 	font-family: antropos, 'Times New Roman', SimHei, serif;
+}
+
+button {
+	border: 0px solid transparent;
+	background-color: transparent;
+	color: white;
 }
 
 .text-column {

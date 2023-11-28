@@ -1,0 +1,560 @@
+{
+ "Resources": {
+  "ServerServiceRole3DA1B1D6": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "chinese-learning/Server/ServiceRole/Resource"
+   }
+  },
+  "Server7E7D21FA": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Architectures": [
+     "arm64"
+    ],
+    "Code": {
+     "S3Bucket": "cdk-hnb659fds-assets-249093034106-eu-north-1",
+     "S3Key": "24737d3de448aeeb3d56baa103ea69e046689ee2f4466e1fb78136a11cf860bb.zip"
+    },
+    "Handler": "server.handler",
+    "MemorySize": 128,
+    "Role": {
+     "Fn::GetAtt": [
+      "ServerServiceRole3DA1B1D6",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs18.x",
+    "Timeout": 30
+   },
+   "DependsOn": [
+    "ServerServiceRole3DA1B1D6"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "chinese-learning/Server/Resource",
+    "aws:asset:path": "asset.24737d3de448aeeb3d56baa103ea69e046689ee2f4466e1fb78136a11cf860bb",
+    "aws:asset:is-bundled": false,
+    "aws:asset:property": "Code"
+   }
+  },
+  "ServerFunctionUrl50ECC06C": {
+   "Type": "AWS::Lambda::Url",
+   "Properties": {
+    "AuthType": "NONE",
+    "InvokeMode": "RESPONSE_STREAM",
+    "TargetFunctionArn": {
+     "Fn::GetAtt": [
+      "Server7E7D21FA",
+      "Arn"
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "chinese-learning/Server/FunctionUrl/Resource"
+   }
+  },
+  "Serverinvokefunctionurl5F075B82": {
+   "Type": "AWS::Lambda::Permission",
+   "Properties": {
+    "Action": "lambda:InvokeFunctionUrl",
+    "FunctionName": {
+     "Fn::GetAtt": [
+      "Server7E7D21FA",
+      "Arn"
+     ]
+    },
+    "FunctionUrlAuthType": "NONE",
+    "Principal": "*"
+   },
+   "Metadata": {
+    "aws:cdk:path": "chinese-learning/Server/invoke-function-url"
+   }
+  },
+  "Bucket83908E77": {
+   "Type": "AWS::S3::Bucket",
+   "Properties": {
+    "AccelerateConfiguration": {
+     "AccelerationStatus": "Enabled"
+    },
+    "Tags": [
+     {
+      "Key": "aws-cdk:cr-owned:157b4295",
+      "Value": "true"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Retain",
+   "DeletionPolicy": "Retain",
+   "Metadata": {
+    "aws:cdk:path": "chinese-learning/Bucket/Resource"
+   }
+  },
+  "BucketPolicyE9A3008A": {
+   "Type": "AWS::S3::BucketPolicy",
+   "Properties": {
+    "Bucket": {
+     "Ref": "Bucket83908E77"
+    },
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": "s3:GetObject",
+       "Effect": "Allow",
+       "Principal": {
+        "CanonicalUser": {
+         "Fn::GetAtt": [
+          "CloudFrontOrigin2S3Origin6D979C05",
+          "S3CanonicalUserId"
+         ]
+        }
+       },
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          {
+           "Fn::GetAtt": [
+            "Bucket83908E77",
+            "Arn"
+           ]
+          },
+          "/*"
+         ]
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "chinese-learning/Bucket/Policy/Resource"
+   }
+  },
+  "CF2D7241DD7": {
+   "Type": "AWS::CloudFront::Function",
+   "Properties": {
+    "AutoPublish": true,
+    "FunctionCode": "\"use strict\";\nvar main = (function() {\n  var __defProp = Object.defineProperty;\n  var __getOwnPropDesc = Object.getOwnPropertyDescriptor;\n  var __getOwnPropNames = Object.getOwnPropertyNames;\n  var __hasOwnProp = Object.prototype.hasOwnProperty;\n  var __export = function(target, all) {\n    for (var name in all)\n      __defProp(target, name, { get: all[name], enumerable: true });\n  };\n  var __copyProps = function(to, from, except, desc) {\n    if (from && typeof from === \"object\" || typeof from === \"function\")\n      for (var keys = __getOwnPropNames(from), i = 0, n = keys.length, key; i < n; i++) {\n        key = keys[i];\n        if (!__hasOwnProp.call(to, key) && key !== except)\n          __defProp(to, key, { get: function(k) {\n            return from[k];\n          }.bind(null, key), enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });\n      }\n    return to;\n  };\n  var __toCommonJS = function(mod) {\n    return __copyProps(__defProp({}, \"__esModule\", { value: true }), mod);\n  };\n\n  // cf2/src/index.ts\n  var src_exports = {};\n  __export(src_exports, {\n    default: function() {\n      return src_default;\n    }\n  });\n  var src_default = function(event) {\n    var domainName = \"\";\n    console.log(\"event\", event);\n    var request = event.request;\n    var host = request.headers.host;\n    var uri = request.uri;\n    var querystring = request.querystring;\n    if (!host) {\n      return {\n        statusCode: 400\n      };\n    }\n    var keys = Object.keys(querystring);\n    var values = Object.values(querystring);\n    if (host.value === domainName || !domainName) {\n      request.querystring = {};\n      request.headers[\"x-forwarded-host\"] = {\n        value: host.value\n      };\n      keys.forEach(function(key, index) {\n        request.querystring[encodeURIComponent(key)] = values[index];\n      });\n      return request;\n    }\n    var search = \"\";\n    if (keys.length) {\n      search = \"?\";\n      keys.forEach(function(key) {\n        var val = querystring[key];\n        var value = val.value;\n        var multiValue = val.multiValue;\n        if (search !== \"?\") {\n          search = search + \"&\";\n        }\n        search = search + key + \"=\" + value;\n        if (multiValue) {\n          multiValue.forEach(function(value2) {\n            search = search + \"&\" + key + \"=\" + value2;\n          });\n        }\n      });\n    }\n    return {\n      statusCode: 308,\n      headers: {\n        location: {\n          value: \"https://\" + domainName + uri + search\n        }\n      }\n    };\n  };\n  return __toCommonJS(src_exports);\n})();\nfunction handler (event) { return main.default(event); }",
+    "FunctionConfig": {
+     "Comment": "eu-north-1chineselearningCF24053B323",
+     "Runtime": "cloudfront-js-1.0"
+    },
+    "Name": "eu-north-1chineselearningCF24053B323"
+   },
+   "Metadata": {
+    "aws:cdk:path": "chinese-learning/CF2/Resource"
+   }
+  },
+  "CloudFrontOrigin2S3Origin6D979C05": {
+   "Type": "AWS::CloudFront::CloudFrontOriginAccessIdentity",
+   "Properties": {
+    "CloudFrontOriginAccessIdentityConfig": {
+     "Comment": "Identity for chineselearningCloudFrontOrigin2D191C8C4"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "chinese-learning/CloudFront/Origin2/S3Origin/Resource"
+   }
+  },
+  "CloudFrontD198EC06": {
+   "Type": "AWS::CloudFront::Distribution",
+   "Properties": {
+    "DistributionConfig": {
+     "CacheBehaviors": [
+      {
+       "CachePolicyId": "658327ea-f89d-4fab-a63d-7e88639e58f6",
+       "Compress": true,
+       "FunctionAssociations": [
+        {
+         "EventType": "viewer-request",
+         "FunctionARN": {
+          "Fn::GetAtt": [
+           "CF2D7241DD7",
+           "FunctionARN"
+          ]
+         }
+        }
+       ],
+       "OriginRequestPolicyId": "b689b0a8-53d0-40ab-baf2-68738e2966ac",
+       "PathPattern": "/_app/*",
+       "TargetOriginId": "chineselearningCloudFrontOrigin2D191C8C4",
+       "ViewerProtocolPolicy": "redirect-to-https"
+      }
+     ],
+     "DefaultCacheBehavior": {
+      "AllowedMethods": [
+       "GET",
+       "HEAD",
+       "OPTIONS",
+       "PUT",
+       "PATCH",
+       "POST",
+       "DELETE"
+      ],
+      "CachePolicyId": "4135ea2d-6df8-44a3-9df3-4b5a84be39ad",
+      "Compress": true,
+      "FunctionAssociations": [
+       {
+        "EventType": "viewer-request",
+        "FunctionARN": {
+         "Fn::GetAtt": [
+          "CF2D7241DD7",
+          "FunctionARN"
+         ]
+        }
+       }
+      ],
+      "OriginRequestPolicyId": "b689b0a8-53d0-40ab-baf2-68738e2966ac",
+      "TargetOriginId": "chineselearningCloudFrontOrigin194B4A7C1",
+      "ViewerProtocolPolicy": "redirect-to-https"
+     },
+     "Enabled": true,
+     "HttpVersion": "http2and3",
+     "IPV6Enabled": true,
+     "Origins": [
+      {
+       "CustomOriginConfig": {
+        "OriginProtocolPolicy": "https-only",
+        "OriginSSLProtocols": [
+         "TLSv1.2"
+        ]
+       },
+       "DomainName": {
+        "Fn::Select": [
+         2,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::GetAtt": [
+             "ServerFunctionUrl50ECC06C",
+             "FunctionUrl"
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "Id": "chineselearningCloudFrontOrigin194B4A7C1",
+       "OriginCustomHeaders": [
+        {
+         "HeaderName": "Bridge-Authorization",
+         "HeaderValue": "Plain ZywumB-vxqp3eWRhz6bw9"
+        }
+       ]
+      },
+      {
+       "DomainName": {
+        "Fn::GetAtt": [
+         "Bucket83908E77",
+         "RegionalDomainName"
+        ]
+       },
+       "Id": "chineselearningCloudFrontOrigin2D191C8C4",
+       "S3OriginConfig": {
+        "OriginAccessIdentity": {
+         "Fn::Join": [
+          "",
+          [
+           "origin-access-identity/cloudfront/",
+           {
+            "Ref": "CloudFrontOrigin2S3Origin6D979C05"
+           }
+          ]
+         ]
+        }
+       }
+      }
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "chinese-learning/CloudFront/Resource"
+   }
+  },
+  "S3DeployAwsCliLayer4CECF5F7": {
+   "Type": "AWS::Lambda::LayerVersion",
+   "Properties": {
+    "Content": {
+     "S3Bucket": "cdk-hnb659fds-assets-249093034106-eu-north-1",
+     "S3Key": "3fb6287214999ddeafa7cd0e3e58bc5144c8678bb720f3b5e45e8fd32f333eb3.zip"
+    },
+    "Description": "/opt/awscli/aws"
+   },
+   "Metadata": {
+    "aws:cdk:path": "chinese-learning/S3Deploy/AwsCliLayer/Resource",
+    "aws:asset:path": "asset.3fb6287214999ddeafa7cd0e3e58bc5144c8678bb720f3b5e45e8fd32f333eb3.zip",
+    "aws:asset:is-bundled": false,
+    "aws:asset:property": "Content"
+   }
+  },
+  "S3DeployCustomResourceC89A7EB5": {
+   "Type": "Custom::CDKBucketDeployment",
+   "Properties": {
+    "ServiceToken": {
+     "Fn::GetAtt": [
+      "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C81C01536",
+      "Arn"
+     ]
+    },
+    "SourceBucketNames": [
+     "cdk-hnb659fds-assets-249093034106-eu-north-1"
+    ],
+    "SourceObjectKeys": [
+     "af68a7b63e986a807c46ce442a6f6fbf7e7da2427b28b83e4e7b45cbdfdf62f4.zip"
+    ],
+    "DestinationBucketName": {
+     "Ref": "Bucket83908E77"
+    },
+    "Prune": true,
+    "DistributionId": {
+     "Ref": "CloudFrontD198EC06"
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "chinese-learning/S3Deploy/CustomResource/Default"
+   }
+  },
+  "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "chinese-learning/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource"
+   }
+  },
+  "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "s3:GetBucket*",
+        "s3:GetObject*",
+        "s3:List*"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        "arn:aws:s3:::cdk-hnb659fds-assets-249093034106-eu-north-1",
+        "arn:aws:s3:::cdk-hnb659fds-assets-249093034106-eu-north-1/*"
+       ]
+      },
+      {
+       "Action": [
+        "s3:Abort*",
+        "s3:DeleteObject*",
+        "s3:GetBucket*",
+        "s3:GetObject*",
+        "s3:List*",
+        "s3:PutObject",
+        "s3:PutObjectLegalHold",
+        "s3:PutObjectRetention",
+        "s3:PutObjectTagging",
+        "s3:PutObjectVersionTagging"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "Bucket83908E77",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "Bucket83908E77",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": [
+        "cloudfront:CreateInvalidation",
+        "cloudfront:GetInvalidation"
+       ],
+       "Effect": "Allow",
+       "Resource": "*"
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF",
+    "Roles": [
+     {
+      "Ref": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "chinese-learning/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy/Resource"
+   }
+  },
+  "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C81C01536": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Code": {
+     "S3Bucket": "cdk-hnb659fds-assets-249093034106-eu-north-1",
+     "S3Key": "0b1f5aa55d045066ed91316b823a808060c12737e0575ab7cefe2335324108b0.zip"
+    },
+    "Environment": {
+     "Variables": {
+      "AWS_CA_BUNDLE": "/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem"
+     }
+    },
+    "Handler": "index.handler",
+    "Layers": [
+     {
+      "Ref": "S3DeployAwsCliLayer4CECF5F7"
+     }
+    ],
+    "Role": {
+     "Fn::GetAtt": [
+      "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265",
+      "Arn"
+     ]
+    },
+    "Runtime": "python3.9",
+    "Timeout": 900
+   },
+   "DependsOn": [
+    "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF",
+    "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "chinese-learning/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource",
+    "aws:asset:path": "asset.0b1f5aa55d045066ed91316b823a808060c12737e0575ab7cefe2335324108b0",
+    "aws:asset:is-bundled": false,
+    "aws:asset:property": "Code"
+   }
+  },
+  "CDKMetadata": {
+   "Type": "AWS::CDK::Metadata",
+   "Properties": {
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/3VRwWrDMAz9lt0dr+1OO6YphcGgJWW7BsdRixrHLpa9EkL+fbaTZT1sp/f0kJ+spw1fr9d89STulMmmzRTWfDg5IVsWpGpQoqsbwYe919Kh0aw464X/kA+roj7DEWyHRHPzu+jBfoJN9Qn1RYEzi8XIUHR8KI2C2JzwaBTKPjklNjJ6qQZBBI54HoE1cFOm70A7vvWyBbdbhNjNh0ndCgI20Wg3swl+pzzWI5PK+OZsTbD+e+kdkrNY+1QcLF5Q51IC0VsTxqNLnkV02UeX/zoebcaRlUDGWwksLRgOEB5d2JR+pWKGVbiHVMjzOxUKU6ys8ORMt7yNCT7wg3c3HwLRpgF+peevzYq/hltfCTGzPnylA15O+A2DJxoHCAIAAA=="
+   },
+   "Metadata": {
+    "aws:cdk:path": "chinese-learning/CDKMetadata/Default"
+   }
+  }
+ },
+ "Outputs": {
+  "CloudFrontURL": {
+   "Description": "CloudFront URL",
+   "Value": {
+    "Fn::Join": [
+     "",
+     [
+      "https://",
+      {
+       "Fn::GetAtt": [
+        "CloudFrontD198EC06",
+        "DomainName"
+       ]
+      }
+     ]
+    ]
+   }
+  }
+ },
+ "Parameters": {
+  "BootstrapVersion": {
+   "Type": "AWS::SSM::Parameter::Value<String>",
+   "Default": "/cdk-bootstrap/hnb659fds/version",
+   "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]"
+  }
+ },
+ "Rules": {
+  "CheckBootstrapVersion": {
+   "Assertions": [
+    {
+     "Assert": {
+      "Fn::Not": [
+       {
+        "Fn::Contains": [
+         [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+         ],
+         {
+          "Ref": "BootstrapVersion"
+         }
+        ]
+       }
+      ]
+     },
+     "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI."
+    }
+   ]
+  }
+ }
+}

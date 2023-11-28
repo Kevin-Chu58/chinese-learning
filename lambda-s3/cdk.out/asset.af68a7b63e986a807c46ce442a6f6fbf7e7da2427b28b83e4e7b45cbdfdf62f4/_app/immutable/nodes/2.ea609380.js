@@ -1,0 +1,45 @@
+import{s as he,f as ie,n as Y}from"../chunks/scheduler.f0508d58.js";import{S as ue,i as fe,g as i,s as _,m as de,h as c,j as S,c as b,f as x,n as _e,k as r,a as R,z as t,o as be,C as me,r as xe,D as ge,u as pe,x as C,v as Ce,d as He,t as ze,w as Te}from"../chunks/index.2e3bba6e.js";import{e as ce}from"../chunks/each.6cdb37f6.js";const ye=!0,je=Object.freeze(Object.defineProperty({__proto__:null,prerender:ye},Symbol.toStringTag,{value:"Module"})),Le=""+new URL("../assets/iconic-semicircle-top.218fdac8.svg",import.meta.url).href,ke=""+new URL("../assets/iconic-semicircle-bottom.c6599e70.svg",import.meta.url).href;function oe(p,s,o){const e=p.slice();return e[3]=s[o],e}function ve(p){let s=p[3]+"",o,e,d;return{c(){o=de(s),e=_(),d=i("br")},l(l){o=_e(l,s),e=b(l),d=c(l,"BR",{})},m(l,v){R(l,o,v),R(l,e,v),R(l,d,v)},p(l,v){v&1&&s!==(s=l[3]+"")&&be(o,s)},d(l){l&&(x(o),x(e),x(d))}}}function Me(p){let s,o,e,d,l,v,H,L,T,g,A,D,m,U,y=ce(p[0]),h=[];for(let u=0;u<y.length;u+=1)h[u]=ve(oe(p,y,u));return{c(){s=i("div"),o=i("img"),d=_(),l=i("div"),v=i("div");for(let u=0;u<h.length;u+=1)h[u].c();H=_(),L=i("div"),T=i("button"),g=i("a"),A=de(p[1]),D=_(),m=i("img"),this.h()},l(u){s=c(u,"DIV",{class:!0});var f=S(s);o=c(f,"IMG",{src:!0,alt:!0,class:!0}),d=b(f),l=c(f,"DIV",{class:!0});var n=S(l);v=c(n,"DIV",{class:!0});var M=S(v);for(let j=0;j<h.length;j+=1)h[j].l(M);M.forEach(x),n.forEach(x),H=b(f),L=c(f,"DIV",{class:!0});var B=S(L);T=c(B,"BUTTON",{class:!0});var k=S(T);g=c(k,"A",{href:!0,class:!0});var Z=S(g);A=_e(Z,p[1]),Z.forEach(x),k.forEach(x),B.forEach(x),D=b(f),m=c(f,"IMG",{src:!0,alt:!0,class:!0}),f.forEach(x),this.h()},h(){ie(o.src,e=Le)||r(o,"src",e),r(o,"alt",""),r(o,"class","svelte-1ytrs8a"),r(v,"class","chi-text svelte-1ytrs8a"),r(l,"class","text-container svelte-1ytrs8a"),r(g,"href",p[2]),r(g,"class","svelte-1ytrs8a"),r(T,"class","svelte-1ytrs8a"),r(L,"class","link-button svelte-1ytrs8a"),ie(m.src,U=ke)||r(m,"src",U),r(m,"alt",""),r(m,"class","svelte-1ytrs8a"),r(s,"class","iconic-circle-container svelte-1ytrs8a")},m(u,f){R(u,s,f),t(s,o),t(s,d),t(s,l),t(l,v);for(let n=0;n<h.length;n+=1)h[n]&&h[n].m(v,null);t(s,H),t(s,L),t(L,T),t(T,g),t(g,A),t(s,D),t(s,m)},p(u,[f]){if(f&1){y=ce(u[0]);let n;for(n=0;n<y.length;n+=1){const M=oe(u,y,n);h[n]?h[n].p(M,f):(h[n]=ve(M),h[n].c(),h[n].m(v,null))}for(;n<h.length;n+=1)h[n].d(1);h.length=y.length}f&2&&be(A,u[1]),f&4&&r(g,"href",u[2])},i:Y,o:Y,d(u){u&&x(s),me(h,u)}}}function Ee(p,s,o){let{texts:e=[]}=s,{linkText:d=""}=s,{linkHref:l=""}=s;return p.$$set=v=>{"texts"in v&&o(0,e=v.texts),"linkText"in v&&o(1,d=v.linkText),"linkHref"in v&&o(2,l=v.linkHref)},[e,d,l]}class Ie extends ue{constructor(s){super(),fe(this,s,Ee,Me,he,{texts:0,linkText:1,linkHref:2})}}function we(p){let s,o,e,d,l,v,H,L=`<svg viewBox="0 0 1500 100" aria-hidden="true" class="svelte-tzen53"><path d="M 0 0 L 0 30 Q 300 100 700 50 Q 1100 0 1500 50 L 1500 0 Z" class="svelte-tzen53"></path></svg> <div class="gallery-container svelte-tzen53"><div class="gallery svelte-tzen53"><div class="image-container svelte-tzen53"><svg viewBox="0 0 300 160" aria-hidden="true" class="svelte-tzen53"><path d="M 0 0 L 300 0 L 300 160 L 0 160 Z" class="svelte-tzen53"></path></svg></div> <div class="link-button svelte-tzen53"><button class="svelte-tzen53"><a href="/" class="svelte-tzen53">了解世界和图中文教育学会</a></button></div></div> <div class="context svelte-tzen53">世界和图中文教育学会<br/>
+				倡导面向未来的中文教育<br/>
+				以根植于东方的文明、文化和思维，<br/>
+				并支持儿童身心健康发展的华德福教育理念，<br/>
+				以期让越来越多的中外孩子<br/>
+				在获得汉语技能的同时，<br/>
+				有缘走进最古老而又从未间断的东方文明，<br/>
+				共享其智慧果实<br/>
+				由不同走向共同<br/>
+				成为真正的世界公民</div></div> <svg viewBox="0 0 1500 100" aria-hidden="true" class="svelte-tzen53"><path d="M 0 100 L 0 30 Q 300 100 700 50 Q 1100 0 1500 50 L 1500 100 Z" class="svelte-tzen53"></path></svg>`,T,g,A=`教育是改变社会的力量。<br/>
+			作为师者，永远是黑暗中的火炬手，是时代迷雾的灯塔。<br/>
+			如果您热爱教育和孩子，<br/>
+			热爱自然与艺术，<br/>
+			热衷于探索宇宙和生命的真相，<br/>
+			欢迎您的加入，成为我们的一员。<br/>
+			用教育让民族精神源泉，注入我们的血液；<br/>
+			用合作的智慧，超越血缘与民族，<br/>
+			融聚人类的终极关怀。`,D,m,U="了解世界和图中文培训课程",y,h,u="培训反馈（选择两位老师对培训课程的评价）",f,n,M="加入课程",B,k,Z=`世界和图中文教程<br/>
+			源于中国传统文化和华德福教育的双重启迪，<br/>
+			历经二十年的发展历程，<br/>
+			形成了汉语作为外语的教学大纲<br/>
+			汉语作为母语的1-12年级教学大纲<br/>
+			双语的教学大纲，<br/>
+			是适合世界各地全日制学校、<br/>
+			周末学校、课后班、家庭学校、社区学校等<br/>
+			进行汉语教学的一套完备的中文课程。<br/>
+			并且教程的所有内容及方法<br/>
+			与中国人思维中象数理气四元素同构，<br/>
+			与学生不同年龄的生理心理特征相匹配，<br/>
+			整个教程形成天-语-人合一的和谐境界。`,j,E,$="了解世界和图中文教程",P,O,ee=`学会热情欢迎各类合作<br/>
+			世界和图中文教程在二十年的发展中<br/>
+			积累了丰硕的教学成果<br/>
+			愿意走出课堂，走向社会<br/>
+			和我们有着相同理念的<br/>
+			教学机构、文化组织、社会团体合作，<br/>
+			共同推进中文教育品质的提升<br/>
+			促进中华文化交流与创新<br/>
+			开展有益社区和谐发展的各类活动或公益项目<br/>
+			共同为孩子创造一个能支持他们身心健康发展的<br/>
+			学习、生活以及社区环境`,F,I,te="了解合作方案",J,V,se="选择一篇近期的向东方美篇中的图片、视频配上简要文字介绍",K,w,le="浏览官方博客",W,Q,ne=`保持联系<br/>
+			加入我们的邮件通讯<br/>
+			接收学会最新消息、培训及活动信息<br/>
+			请放心，您的信息不会被分享`,X,q,re=`姓名框（可填写）<br/>
+		邮箱框（可填写）<br/>
+		捐款（可点击）`,N;return l=new Ie({props:{texts:["扎根本土筑基民族魂","面向世界融贯意识心"],linkText:"2023/2024世界和图中文师资培训项目已开启",linkHref:"/about"}}),{c(){s=i("meta"),o=_(),e=i("section"),d=i("code"),xe(l.$$.fragment),v=_(),H=i("div"),H.innerHTML=L,T=_(),g=i("h3"),g.innerHTML=A,D=_(),m=i("a"),m.textContent=U,y=_(),h=i("h3"),h.textContent=u,f=_(),n=i("a"),n.textContent=M,B=_(),k=i("h3"),k.innerHTML=Z,j=_(),E=i("a"),E.textContent=$,P=_(),O=i("h3"),O.innerHTML=ee,F=_(),I=i("a"),I.textContent=te,J=_(),V=i("h3"),V.textContent=se,K=_(),w=i("a"),w.textContent=le,W=_(),Q=i("h3"),Q.innerHTML=ne,X=_(),q=i("h3"),q.innerHTML=re,this.h()},l(z){const G=ge("svelte-t32ptj",document.head);s=c(G,"META",{name:!0,content:!0}),G.forEach(x),o=b(z),e=c(z,"SECTION",{class:!0});var a=S(e);d=c(a,"CODE",{class:!0});var ae=S(d);pe(l.$$.fragment,ae),ae.forEach(x),v=b(a),H=c(a,"DIV",{class:!0,"data-svelte-h":!0}),C(H)!=="svelte-1e266ep"&&(H.innerHTML=L),T=b(a),g=c(a,"H3",{"data-svelte-h":!0}),C(g)!=="svelte-1ld4bm7"&&(g.innerHTML=A),D=b(a),m=c(a,"A",{href:!0,class:!0,"data-svelte-h":!0}),C(m)!=="svelte-nhm77p"&&(m.textContent=U),y=b(a),h=c(a,"H3",{"data-svelte-h":!0}),C(h)!=="svelte-1gdttl1"&&(h.textContent=u),f=b(a),n=c(a,"A",{href:!0,class:!0,"data-svelte-h":!0}),C(n)!=="svelte-1yoh63b"&&(n.textContent=M),B=b(a),k=c(a,"H3",{"data-svelte-h":!0}),C(k)!=="svelte-pebg11"&&(k.innerHTML=Z),j=b(a),E=c(a,"A",{href:!0,class:!0,"data-svelte-h":!0}),C(E)!=="svelte-ekzaec"&&(E.textContent=$),P=b(a),O=c(a,"H3",{"data-svelte-h":!0}),C(O)!=="svelte-yk5w7a"&&(O.innerHTML=ee),F=b(a),I=c(a,"A",{href:!0,class:!0,"data-svelte-h":!0}),C(I)!=="svelte-1hvzfkp"&&(I.textContent=te),J=b(a),V=c(a,"H3",{"data-svelte-h":!0}),C(V)!=="svelte-5491y4"&&(V.textContent=se),K=b(a),w=c(a,"A",{href:!0,class:!0,"data-svelte-h":!0}),C(w)!=="svelte-j18b97"&&(w.textContent=le),W=b(a),Q=c(a,"H3",{"data-svelte-h":!0}),C(Q)!=="svelte-e0usbq"&&(Q.innerHTML=ne),X=b(a),q=c(a,"H3",{"data-svelte-h":!0}),C(q)!=="svelte-1n8alis"&&(q.innerHTML=re),a.forEach(x),this.h()},h(){document.title="Home",r(s,"name","description"),r(s,"content","Svelte demo app"),r(d,"class","javascript"),r(H,"class","content-container svelte-tzen53"),r(m,"href","/"),r(m,"class","svelte-tzen53"),r(n,"href","/"),r(n,"class","svelte-tzen53"),r(E,"href","/"),r(E,"class","svelte-tzen53"),r(I,"href","/"),r(I,"class","svelte-tzen53"),r(w,"href","/"),r(w,"class","svelte-tzen53"),r(e,"class","svelte-tzen53")},m(z,G){t(document.head,s),R(z,o,G),R(z,e,G),t(e,d),Ce(l,d,null),t(e,v),t(e,H),t(e,T),t(e,g),t(e,D),t(e,m),t(e,y),t(e,h),t(e,f),t(e,n),t(e,B),t(e,k),t(e,j),t(e,E),t(e,P),t(e,O),t(e,F),t(e,I),t(e,J),t(e,V),t(e,K),t(e,w),t(e,W),t(e,Q),t(e,X),t(e,q),N=!0},p:Y,i(z){N||(He(l.$$.fragment,z),N=!0)},o(z){ze(l.$$.fragment,z),N=!1},d(z){z&&(x(o),x(e)),x(s),Te(l)}}}class Be extends ue{constructor(s){super(),fe(this,s,null,we,he,{})}}export{Be as component,je as universal};

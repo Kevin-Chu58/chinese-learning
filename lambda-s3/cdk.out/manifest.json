@@ -1,0 +1,155 @@
+{
+  "version": "35.0.0",
+  "artifacts": {
+    "chinese-learning.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "chinese-learning.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "chinese-learning": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://249093034106/eu-north-1",
+      "properties": {
+        "templateFile": "chinese-learning.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::249093034106:role/cdk-hnb659fds-deploy-role-249093034106-eu-north-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::249093034106:role/cdk-hnb659fds-cfn-exec-role-249093034106-eu-north-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-249093034106-eu-north-1/84a0f8efb7c220fe932a17b848218c1f78b5fa2c773ea99aa151e535323466a8.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "chinese-learning.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::249093034106:role/cdk-hnb659fds-lookup-role-249093034106-eu-north-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "chinese-learning.assets"
+      ],
+      "metadata": {
+        "/chinese-learning/Server/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServerServiceRole3DA1B1D6"
+          }
+        ],
+        "/chinese-learning/Server/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Server7E7D21FA"
+          }
+        ],
+        "/chinese-learning/Server/FunctionUrl/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServerFunctionUrl50ECC06C"
+          }
+        ],
+        "/chinese-learning/Server/invoke-function-url": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Serverinvokefunctionurl5F075B82"
+          }
+        ],
+        "/chinese-learning/Bucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Bucket83908E77"
+          }
+        ],
+        "/chinese-learning/Bucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketPolicyE9A3008A"
+          }
+        ],
+        "/chinese-learning/CF2/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CF2D7241DD7"
+          }
+        ],
+        "/chinese-learning/CloudFront/Origin2/S3Origin/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CloudFrontOrigin2S3Origin6D979C05"
+          }
+        ],
+        "/chinese-learning/CloudFront/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CloudFrontD198EC06"
+          }
+        ],
+        "/chinese-learning/S3Deploy/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "S3DeployAwsCliLayer4CECF5F7"
+          }
+        ],
+        "/chinese-learning/S3Deploy/CustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "S3DeployCustomResourceC89A7EB5"
+          }
+        ],
+        "/chinese-learning/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265"
+          }
+        ],
+        "/chinese-learning/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF"
+          }
+        ],
+        "/chinese-learning/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C81C01536"
+          }
+        ],
+        "/chinese-learning/CloudFront URL": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CloudFrontURL"
+          }
+        ],
+        "/chinese-learning/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/chinese-learning/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/chinese-learning/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "chinese-learning"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}

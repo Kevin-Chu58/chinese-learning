@@ -172,6 +172,7 @@
         cursor: pointer;
         display: inline-block;
         position: relative;
+		color: white;
         transition: 0.5s;
         font-size: 20px;
     }
