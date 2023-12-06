@@ -1,0 +1,40 @@
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - var(--header-height));
+}
+
+.sidebar-container {
+  position: fixed;
+  width: var(--sidebar-width);
+  min-width: var(--sidebar-width);
+  transition: .5s ease;
+  z-index: 10;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* width: 100vw; */
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 600px;
+  width: 100vw;
+  box-sizing: border-box;
+
+  height: 100vh - var(--header-height);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}

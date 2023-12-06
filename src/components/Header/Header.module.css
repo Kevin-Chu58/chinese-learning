@@ -1,0 +1,53 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  height: var(--header-height);
+  background-color: var(--brown);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25), 0px 2px 2px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 8px 8px 0px rgba(0, 0, 0, 0.25);
+  color: white;
+  z-index: 10;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  height: var(--header-height);
+  padding-left: 20px;
+}
+
+.headerButton {
+  margin-left: auto;
+  padding: 0 10px;
+  display: flex;
+  text-align: center;
+  font-size: large;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: 0.5s ease;
+}
+
+.icon {
+  margin: auto 0;
+}
+
+.headerButton:hover {
+  background-color: var(--persian-red);
+  transform: scale(1.1);
+}
+
+path {
+  stroke: none;
+}
+
+.headerChi {
+  width: 110px;
+  font-size: 18px;
+  margin: auto 0;
+}
+
+.headerEng {
+  width: 200px;
+  text-align: center;
+  font-family: antropos;
+  margin: auto 0;
+}/*# sourceMappingURL=Header.module.css.map */

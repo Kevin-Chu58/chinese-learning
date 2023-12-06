@@ -1,0 +1,131 @@
+.homeContainer {
+    font-family: "微軟正黑體";
+}
+
+.contentContainer1 {
+    background-color: var(--brown);
+    background: linear-gradient(
+        90deg,
+        var(--pohutukawa) 0%,
+        var(--brown) 23%,
+        var(--persian-red) 51%,
+        var(--brown) 77%,
+        var(--pohutukawa) 100%
+    );
+}
+
+.contentContainer2,
+.contentContainer3,
+.contentContainer4 {
+    background-color: var(--citrine-white);
+    margin: 0;
+}
+
+.galleryContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.gallery,
+.contextLight {
+    padding-bottom: 50px;
+    width: 50vw;
+    font-size: 24px;
+
+    color: white;
+    text-align: center;
+}
+
+.contextDark {
+    width: 50vw;
+    font-size: 24px;
+
+    // color: white;
+    text-align: center;
+}
+
+.imageContainer {
+    padding: 30px 150px 30px 150px;
+}
+
+svg {
+    display: block;
+}
+
+.svgPrimary {
+    fill: var(--citrine-white);
+    stroke: var(--citrine-white);
+    stroke-width: 5px;
+}
+
+.svgSecondary {
+    fill: var(--persian-red);
+}
+
+.imgIronPagoda {
+    scale: 1.95;
+    margin: 50px -300px 0 -250px;
+}
+
+.imgBamboo {
+    scale: -3 3;
+    rotate: -25deg;
+    margin: -200px 0 -200px 1000px;
+}
+
+// .imgJunkVector {
+//     margin: 0 -350px 0 -300px;
+//     padding-top: 40px;
+//     padding-left: 50px;
+//     float: right;
+// }
+
+// .hanziBackground {
+//     color: var(--pohutukawa);
+//     // opacity: .5;
+//     font-size: 500px;
+//     font-family: HYZhuanShuF;
+//     margin: -30px -400px -100px -120px;
+// }
+
+.linkButton {
+    text-align: center;
+    justify-content: center;
+}
+
+.contentContainer1 button {
+    color: white;
+}
+
+.contentContainer2 button,
+.contentContainer3 button,
+.contentContainer4 button {
+    color: black;
+}
+
+button a {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    font-size: 20px;
+    font-style: italic;
+}
+
+button a:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+button:hover a {
+    padding-right: 25px;
+}
+
+button:hover a:after {
+    opacity: 1;
+    right: 0;
+}
