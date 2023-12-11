@@ -62,6 +62,11 @@ code {
 	/* light and dark */
 	--citrine-white: #FDFCF0;
 	--satin-linen: #eae6d9;
+	--off-black: #303031;
+
+	/*variated gradient scheme */
+	--intergalactic-ray: #563a37;
+	--bravado-red: #a1524d;
 
 	/* layout variables */
 	--header-height: 50px;
@@ -131,7 +136,7 @@ p {
 }
 
 a {
-	color: var(--primary-red);
+	color: inherit;
 	text-decoration: none;
 	font-size: 17px;
 }
@@ -160,18 +165,10 @@ pre {
 	color: var(--color-text);
 }
 
-h1,
-h2,
-p,
-a,
-div {
-	/* font-family: antropos, 'kaiti', SimHei, serif; */
-}
-
 button {
 	border: 0px solid transparent;
 	background-color: transparent;
-	color: white;
+	color: inherit;
 }
 
 .text-column {

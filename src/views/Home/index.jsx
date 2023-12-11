@@ -1,9 +1,11 @@
 import { Grid } from "@mui/material";
 import style from "./home.module.css";
-import HeTuLuoShu from "./components/HeTuLuoShu";
+// import HeTuLuoShu from "./components/HeTuLuoShu";
 import Bamboo from "./../../assets/bamboo.svg";
 import IronPagoda from "./../../assets/iron-pagoda.svg";
+import ChinaTownGate from "./../../assets/chinatown-gate.svg";
 import Logo from "../../components/Logo";
+import DefaultImage from "../../assets/default-image.jpg";
 
 const Home = () => {
     return (
@@ -22,7 +24,6 @@ const Home = () => {
                 <Grid xs={12} sm={1}/>
             </Grid> */}
             <Logo />
-
             <div className={style.contentContainer1}>
                 <svg viewBox="0 0 1500 100" aria-hidden="true">
                     <path
@@ -42,16 +43,46 @@ const Home = () => {
                         className={style.imgIronPagoda}
                     />
                     <div className={style.gallery}>
-                        {/* <div className={style.iamgeContainer}></div> */}
+                        <div className={style.imagesContainer}>
+                            <img
+                                src={DefaultImage}
+                                alt=""
+                                className={style.defaultImage}
+                                style={{ rotate: "-20deg" }}
+                            />
+                            <img
+                                src={DefaultImage}
+                                alt=""
+                                className={style.defaultImage}
+                                style={{ rotate: "25deg" }}
+                            />
+                            <img
+                                src={DefaultImage}
+                                alt=""
+                                className={style.defaultImage}
+                                style={{ rotate: "-10deg" }}
+                            />
+                            <img
+                                src={DefaultImage}
+                                alt=""
+                                className={style.defaultImage}
+                                style={{ rotate: "10deg" }}
+                            />
+                            <img
+                                src={DefaultImage}
+                                alt=""
+                                className={style.defaultImage}
+                                style={{ rotate: "-5deg", marginTop: "-300px" }}
+                            />
+                        </div>
                         <div className={style.linkButton}>
-                            <div>images.jpg</div>
                             <button>
                                 <a href="/">了解世界和图中文教育学会</a>
                             </button>
                         </div>
                     </div>
                     {/* <img src={JunkVector} alt="" className={style.imgJunkVector} /> */}
-                    <div className={style.contextLight}>
+                    <div className={style.gallery}>
                         世界和图中文教育学会
                         <br />
                         倡导面向未来的中文教育
@@ -84,79 +115,113 @@ const Home = () => {
                     />
                 </svg>
             </div>
-
             <div className={style.contentContainer2}>
-                <div className={style.contextDark}>
-                    教育是改变社会的力量。
-                    <br />
-                    作为师者，永远是黑暗中的火炬手，是时代迷雾的灯塔。
-                    <br />
-                    如果您热爱教育和孩子，
-                    <br />
-                    热爱自然与艺术，
-                    <br />
-                    热衷于探索宇宙和生命的真相，
-                    <br />
-                    欢迎您的加入，成为我们的一员。
-                    <br />
-                    用教育让民族精神源泉，注入我们的血液；
-                    <br />
-                    用合作的智慧，超越血缘与民族，
-                    <br />
-                    融聚人类的终极关怀。
+                <img src={Bamboo} alt="" className={style.imgBamboo} />
+
+                <div className={style.galleryContainer}>
+                    <div className={style.gallery}>
+                        教育是改变社会的力量。
+                        <br />
+                        作为师者，永远是黑暗中的火炬手，是时代迷雾的灯塔。
+                        <br />
+                        如果您热爱教育和孩子，
+                        <br />
+                        热爱自然与艺术，
+                        <br />
+                        热衷于探索宇宙和生命的真相，
+                        <br />
+                        欢迎您的加入，成为我们的一员。
+                        <br />
+                        用教育让民族精神源泉，注入我们的血液；
+                        <br />
+                        用合作的智慧，超越血缘与民族，
+                        <br />
+                        融聚人类的终极关怀。
+                    </div>
                 </div>
-                <img
-                        src={Bamboo}
-                        alt=""
-                        className={style.imgBamboo}
-                    />
-                <div className={style.linkButton}>
-                    <button>
-                        <a href="/">了解世界和图中文培训课程</a>
-                    </button>
+
+                <div className={style.galleryContainer}>
+                    <div className={style.imagesContainer} style={{ margin: "0 0 0 -400px" }}>
+                        <img
+                            src={DefaultImage}
+                            alt=""
+                            className={style.defaultImage}
+                            style={{ rotate: "-5deg", margin: "0 0 -50px 0" }}
+                        />
+                        <img
+                            src={DefaultImage}
+                            alt=""
+                            className={style.defaultImage}
+                            style={{ rotate: "95deg", margin: "0 0 -40px -40px" }}
+                        />
+                        <div className={style.linkButton}>
+                            <button className={style.circleButton}>
+                                <a href="/">了解世界和图中文培训课程</a>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
-
             {/* <h3>培训反馈（选择两位老师对培训课程的评价）</h3> */}
-            {/* <a href="/">加入课程</a> */} {/* this should be inside the page of 了解世界和图中文培训课程 */}
-
+            {/* <a href="/">加入课程</a> */}{" "}
+            {/* this should be inside the page of 了解世界和图中文培训课程 */}
             <div className={style.contentContainer3}>
-                <div className={style.contextDark}>
-                    世界和图中文教程
-                    <br />
-                    源于中国传统文化和华德福教育的双重启迪，
-                    <br />
-                    历经二十年的发展历程，
-                    <br />
-                    形成了汉语作为外语的教学大纲
-                    <br />
-                    汉语作为母语的1-12年级教学大纲
-                    <br />
-                    双语的教学大纲，
-                    <br />
-                    是适合世界各地全日制学校、
-                    <br />
-                    周末学校、课后班、家庭学校、社区学校等
-                    <br />
-                    进行汉语教学的一套完备的中文课程。
-                    <br />
-                    并且教程的所有内容及方法
-                    <br />
-                    与中国人思维中象数理气四元素同构，
-                    <br />
-                    与学生不同年龄的生理心理特征相匹配，
-                    <br />
-                    整个教程形成天-语-人合一的和谐境界。
+                <img src={ChinaTownGate} alt="" className={style.imgGate} />
+                
+                <div className={style.galleryContainer}>
+                    <div className={style.imagesContainer} style={{ margin: "0 0 0 -400px" }}>
+                        <img
+                            src={DefaultImage}
+                            alt=""
+                            className={style.defaultImage}
+                            style={{ rotate: "-5deg", margin: "20px 0 -50px 50px" }}
+                        />
+                        <img
+                            src={DefaultImage}
+                            alt=""
+                            className={style.defaultImage}
+                            style={{ rotate: "5deg", margin: "0 0 -60px -20px" }}
+                        />
+                        <div className={style.linkButton} style={{ margin: "60px 0 0px 50px" }}>
+                            <button className={style.circleButton}>
+                                <a href="/">了解世界和图中文教程</a>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div className={style.linkButton}>
-                    <button>
-                        <a href="/">了解世界和图中文教程</a>
-                    </button>
+
+                <div className={style.galleryContainer}>
+                    <div className={style.gallery}>
+                        世界和图中文教程
+                        <br />
+                        源于中国传统文化和华德福教育的双重启迪，
+                        <br />
+                        历经二十年的发展历程，
+                        <br />
+                        形成了汉语作为外语的教学大纲
+                        <br />
+                        汉语作为母语的1-12年级教学大纲
+                        <br />
+                        双语的教学大纲，
+                        <br />
+                        是适合世界各地全日制学校、
+                        <br />
+                        周末学校、课后班、家庭学校、社区学校等
+                        <br />
+                        进行汉语教学的一套完备的中文课程。
+                        <br />
+                        并且教程的所有内容及方法
+                        <br />
+                        与中国人思维中象数理气四元素同构，
+                        <br />
+                        与学生不同年龄的生理心理特征相匹配，
+                        <br />
+                        整个教程形成天-语-人合一的和谐境界。
+                    </div>
                 </div>
             </div>
-
             <div className={style.contentContainer4}>
-                <div className={style.contextDark}>
+                <div className={style.gallery}>
                     学会热情欢迎各类合作
                     <br />
                     世界和图中文教程在二十年的发展中
@@ -185,10 +250,8 @@ const Home = () => {
                     </button>
                 </div>
             </div>
-
             <h3>选择一篇近期的向东方美篇中的图片、视频配上简要文字介绍</h3>
             <a href="/">浏览官方博客</a>
-
             <h3>
                 保持联系
                 <br />
@@ -198,7 +261,6 @@ const Home = () => {
                 <br />
                 请放心，您的信息不会被分享
             </h3>
-
             <h3>
                 姓名框（可填写）
                 <br />
