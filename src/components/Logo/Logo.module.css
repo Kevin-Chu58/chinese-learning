@@ -6,7 +6,7 @@
   background-image: url("./../../assets/along-the-river-during-qingming-festival.svg");
 }
 
-img {
+.iconicCircleContainer img {
   --width: 42vw;
   width: var(--width);
   height: calc(var(--width) / 2);

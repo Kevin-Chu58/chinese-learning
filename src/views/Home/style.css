@@ -1,0 +1,140 @@
+@charset "UTF-8";
+.homeContainer {
+  font-family: "微軟正黑體";
+}
+.homeContainer .contentContainer1 {
+  background-color: var(--brown);
+  background: linear-gradient(90deg, var(--pohutukawa) 0%, var(--brown) 23%, var(--persian-red) 51%, var(--brown) 77%, var(--pohutukawa) 100%);
+  color: white;
+}
+.homeContainer .contentContainer2,
+.homeContainer .contentContainer3,
+.homeContainer .contentContainer4 {
+  background-color: var(--citrine-white);
+  margin: 0;
+  padding: 50px 0;
+}
+.homeContainer .contentContainer2 {
+  margin-left: -300px;
+}
+.homeContainer .contentContainer3 {
+  margin-top: -200px;
+  padding-left: 500px;
+}
+.homeContainer .contentContainer4 {
+  padding-top: 100px;
+}
+.homeContainer .galleryContainer {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0 -50px 0;
+}
+.homeContainer .galleryContainer .gallery {
+  width: 45vw;
+  font-size: 24px;
+  text-align: center;
+  z-index: 3;
+}
+.homeContainer .galleryContainer .imagesContainer {
+  padding: 0px 150px 0px 150px;
+  margin: 30px 0 -15px 0;
+}
+.homeContainer .galleryContainer .linkButton {
+  text-align: center;
+  justify-content: center;
+  margin: 70px 0 0 0;
+}
+.homeContainer .galleryContainer .linkButtonCircle {
+  text-align: center;
+  justify-content: center;
+  margin: 50px 0 0 0;
+}
+.homeContainer .galleryContainer .circleButton {
+  width: 150px;
+  height: 150px;
+  margin: -200px 0 0 0;
+  position: relative;
+  z-index: 5;
+  border-radius: 200px;
+}
+.homeContainer .galleryContainer .circleButton.intergalactic-ray {
+  background-color: var(--intergalactic-ray);
+}
+.homeContainer .galleryContainer .circleButton.bravado-red {
+  background-color: var(--bravado-red);
+}
+.homeContainer .galleryContainer .circleButton a {
+  width: 120px;
+  top: 0;
+  color: white;
+  transition: 0.5s ease;
+}
+.homeContainer .galleryContainer .circleButton a:after {
+  top: 65px;
+  right: 45%;
+}
+.homeContainer .galleryContainer .circleButton:hover a {
+  padding-right: 0px;
+  top: -5px;
+}
+.homeContainer .galleryContainer .circleButton:hover a:after {
+  opacity: 1;
+  top: 60px;
+  right: 45%;
+}
+.homeContainer .galleryContainer button a {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  transition: 0.5s;
+  font-size: 20px;
+  font-style: italic;
+  z-index: 10;
+}
+.homeContainer .galleryContainer button a:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.homeContainer .galleryContainer button:hover a {
+  padding-right: 25px;
+}
+.homeContainer .galleryContainer button:hover a:after {
+  opacity: 1;
+  right: 0;
+}
+.homeContainer .imgIronPagoda {
+  scale: 0.7;
+  position: sticky;
+  margin: -600px -500px -570px -550px;
+}
+.homeContainer .imgBamboo {
+  scale: -0.4 0.6;
+  rotate: -25deg;
+  margin: -800px 0px -1900px 700px;
+}
+.homeContainer .imgGate {
+  scale: 0.35;
+  margin: -600px 0 -1600px -1300px;
+}
+.homeContainer .defaultImage {
+  width: 160px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.12), 2px 2px 2px 2px rgba(0, 0, 0, 0.12), 0px 4px 4px 0px rgba(0, 0, 0, 0.12), 0px 8px 8px 0px rgba(0, 0, 0, 0.12);
+}
+.homeContainer svg {
+  display: block;
+}
+.homeContainer svg .svgPrimary {
+  fill: var(--citrine-white);
+  stroke: var(--citrine-white);
+  stroke-width: 5px;
+}
+.homeContainer svg .svgSecondary {
+  fill: var(--persian-red);
+}/*# sourceMappingURL=style.css.map */

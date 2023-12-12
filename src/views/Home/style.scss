@@ -1,0 +1,199 @@
+.homeContainer {
+    font-family: "微軟正黑體";
+
+    .contentContainer1 {
+        background-color: var(--brown);
+        background: linear-gradient(
+            90deg,
+            var(--pohutukawa) 0%,
+            var(--brown) 23%,
+            var(--persian-red) 51%,
+            var(--brown) 77%,
+            var(--pohutukawa) 100%
+        );
+        color: white;
+    }
+    
+    .contentContainer2,
+    .contentContainer3,
+    .contentContainer4 {
+        background-color: var(--citrine-white);
+        margin: 0;
+        padding: 50px 0;
+    }
+    
+    .contentContainer2 {
+        margin-left: -300px;
+    }
+    
+    .contentContainer3 {
+        margin-top: -200px;
+        padding-left: 500px;
+    }
+
+    .contentContainer4 {
+        padding-top: 100px;
+    }
+    
+    .galleryContainer {
+        display: flex;
+        justify-content: center;
+        margin: 25px 0 -50px 0;
+
+        .gallery {
+            width: 45vw;
+            font-size: 24px;
+            text-align: center;
+            z-index: 3;
+        }
+
+        .imagesContainer {
+            padding: 0px 150px 0px 150px;
+            margin: 30px 0 -15px 0;
+        }
+
+        .linkButton {
+            text-align: center;
+            justify-content: center;
+            margin: 70px 0 0 0;
+        }
+        
+        .linkButtonCircle {
+            text-align: center;
+            justify-content: center;
+            margin: 50px 0 0 0;
+        }
+        
+        .circleButton {
+            width: 150px;
+            height: 150px;
+            margin: -200px 0 0 0;
+            position: relative;
+            z-index: 5;
+            border-radius: 200px;
+
+            &.intergalactic-ray {
+                background-color: var(--intergalactic-ray);
+            }
+
+            &.bravado-red {
+                background-color: var(--bravado-red);
+            }
+        }
+    
+        .circleButton {
+            & a {
+                width: 120px;
+                top: 0;
+                color: white;
+                transition:  .5s ease;
+    
+                &:after {
+                    top: 65px;
+                    right: 45%;
+                }
+            }
+    
+            &:hover a{
+                padding-right: 0px;
+                top: -5px;
+    
+                &:after {
+                    opacity: 1;
+                    top: 60px;
+                    right: 45%;
+                }
+            }
+        }
+    
+        button {
+            & a {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                text-align: center;
+                transition: 0.5s;
+                font-size: 20px;
+                font-style: italic;
+                
+                z-index: 10;
+    
+                &:after {
+                    content: "\00bb";
+                    position: absolute;
+                    opacity: 0;
+                    top: 0;
+                    right: -20px;
+                    transition: 0.5s;
+                }
+            }
+    
+            &:hover a{
+                padding-right: 25px;
+    
+                &:after {
+                    opacity: 1;
+                    right: 0;
+                }
+            }
+        }
+    }
+    
+    .imgIronPagoda {
+        scale: .7;
+        position: sticky;
+        margin: -600px -500px -570px -550px;
+    }
+    
+    .imgBamboo {
+        scale: -0.4 0.6;
+        rotate: -25deg;
+        margin: -800px 0px -1900px 700px;
+    }
+    
+    .imgGate {
+        scale: 0.35;
+        margin: -600px 0 -1600px -1300px;
+    }
+    
+    .defaultImage {
+        width: 160px;
+        height: auto;
+        border-radius: 10px;
+        
+        box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.12),
+            2px 2px 2px 2px rgba(0, 0, 0, 0.12), 0px 4px 4px 0px rgba(0, 0, 0, 0.12),
+            0px 8px 8px 0px rgba(0, 0, 0, 0.12);
+    }
+    
+    svg {
+        display: block;
+
+        .svgPrimary {
+            fill: var(--citrine-white);
+            stroke: var(--citrine-white);
+            stroke-width: 5px;
+        }
+        
+        .svgSecondary {
+            fill: var(--persian-red);
+        }
+    }
+    
+    // .imgJunkVector {
+    //     margin: 0 -350px 0 -300px;
+    //     padding-top: 40px;
+    //     padding-left: 50px;
+    //     float: right;
+    // }
+    
+    // .hanziBackground {
+    //     color: var(--pohutukawa);
+    //     // opacity: .5;
+    //     font-size: 500px;
+    //     font-family: HYZhuanShuF;
+    //     margin: -30px -400px -100px -120px;
+    // }    
+
+    
+}

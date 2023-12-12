@@ -1,5 +1,6 @@
 @import '@fontsource/fira-mono';
 @import url('https://fonts.cdnfonts.com/css/antropos');
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand+SC');
 
 @font-face {
 	font-family: HYCuZhuanF;
@@ -14,6 +15,16 @@
 @font-face {
 	font-family: jdfzhuanf;
 	src: url('/src/assets/fonts/jdfzhuanf/JDFZHUANF.TTF');
+}
+
+@font-face {
+	font-family: HYXingKaiF;
+	src: url('/src/assets/fonts/HYXingKaiF/HYXingKaiF.TTF');
+}
+
+@font-face {
+	font-family: MaShanZhengF;
+	src: url('/src/assets/fonts/Ma_Shan_Zheng/MaShanZheng-Regular.ttf');
 }
 
 body {
@@ -62,6 +73,10 @@ code {
 	/* light and dark */
 	--citrine-white: #FDFCF0;
 	--satin-linen: #eae6d9;
+	--spilled-cappuccino: #e3e0df;
+	--thatched-roof: #f0e1c7;
+	--tequila: #f6d1a7;
+	--brandy: #dab68c;
 	--off-black: #303031;
 
 	/*variated gradient scheme */

@@ -1,10 +1,11 @@
 import { Grid } from "@mui/material";
-import style from "./home.module.css";
+import "./style.css";
 // import HeTuLuoShu from "./components/HeTuLuoShu";
 import Bamboo from "./../../assets/bamboo.svg";
 import IronPagoda from "./../../assets/iron-pagoda.svg";
 import ChinaTownGate from "./../../assets/chinatown-gate.svg";
 import Logo from "../../components/Logo";
+import Postcard from "../../components/Postcard";
 import DefaultImage from "../../assets/default-image.jpg";
 
 const Home = () => {
@@ -14,75 +15,75 @@ const Home = () => {
             display="block"
             alignItems="center"
             alignContent="center"
-            className={style.homeContainer}
+            className="homeContainer"
         >
-            {/* <Grid container className={styles.content}>
+            {/* <Grid container className="content">
                 <Grid xs={12} sm={1}/>
-                <Grid xs={12} sm={10} className={styles.wrapper}>
+                <Grid xs={12} sm={10} className="wrapper">
                     <HeTuLuoShu/>
                 </Grid>
                 <Grid xs={12} sm={1}/>
             </Grid> */}
             <Logo />
-            <div className={style.contentContainer1}>
+            <div className="contentContainer1">
                 <svg viewBox="0 0 1500 100" aria-hidden="true">
                     <path
                         d="M 0 0 Q 300 75 700 30 Q 1100 -25 1500 20 L 1500 0 Z"
-                        className={style.svgPrimary}
+                        className="svgPrimary"
                     />
                     <path
                         d="M 0 0 Q 300 20 550 43 Q 225 60 0 0 Z"
-                        className={style.svgSecondary}
+                        className="svgSecondary"
                     />
                 </svg>
-                <div className={style.galleryContainer}>
-                    {/* <div className={style.hanziBackground}>道</div> */}
+                <div className="galleryContainer">
+                    {/* <div className="hanziBackground">道</div> */}
                     <img
                         src={IronPagoda}
                         alt=""
-                        className={style.imgIronPagoda}
+                        className="imgIronPagoda"
                     />
-                    <div className={style.gallery}>
-                        <div className={style.imagesContainer}>
+                    <div className="gallery">
+                        <div className="imagesContainer">
                             <img
                                 src={DefaultImage}
                                 alt=""
-                                className={style.defaultImage}
+                                className="defaultImage"
                                 style={{ rotate: "-20deg" }}
                             />
                             <img
                                 src={DefaultImage}
                                 alt=""
-                                className={style.defaultImage}
+                                className="defaultImage"
                                 style={{ rotate: "25deg" }}
                             />
                             <img
                                 src={DefaultImage}
                                 alt=""
-                                className={style.defaultImage}
+                                className="defaultImage"
                                 style={{ rotate: "-10deg" }}
                             />
                             <img
                                 src={DefaultImage}
                                 alt=""
-                                className={style.defaultImage}
+                                className="defaultImage"
                                 style={{ rotate: "10deg" }}
                             />
                             <img
                                 src={DefaultImage}
                                 alt=""
-                                className={style.defaultImage}
+                                className="defaultImage"
                                 style={{ rotate: "-5deg", marginTop: "-300px" }}
                             />
                         </div>
-                        <div className={style.linkButton}>
+                        <div className="linkButton">
                             <button>
                                 <a href="/">了解世界和图中文教育学会</a>
                             </button>
                         </div>
                     </div>
-                    {/* <img src={JunkVector} alt="" className={style.imgJunkVector} /> */}
-                    <div className={style.gallery}>
+                    {/* <img src={JunkVector} alt="" className="imgJunkVector" /> */}
+                    <div className="gallery">
                         世界和图中文教育学会
                         <br />
                         倡导面向未来的中文教育
@@ -107,19 +108,19 @@ const Home = () => {
                 <svg viewBox="0 0 1500 100" aria-hidden="true">
                     <path
                         d="M 0 100 L 0 70 Q 300 120 700 70 Q 1100 20 1500 90 L 1500 100 Z"
-                        className={style.svgPrimary}
+                        className="svgPrimary"
                     />
                     <path
                         d="M 1500 90 Q 1200 33 850 55 Q 1150 70 1500 90 Z"
-                        className={style.svgSecondary}
+                        className="svgSecondary"
                     />
                 </svg>
             </div>
-            <div className={style.contentContainer2}>
-                <img src={Bamboo} alt="" className={style.imgBamboo} />
+            <div className="contentContainer2">
+                <img src={Bamboo} alt="" className="imgBamboo" />
 
-                <div className={style.galleryContainer}>
-                    <div className={style.gallery}>
+                <div className="galleryContainer">
+                    <div className="gallery">
                         教育是改变社会的力量。
                         <br />
                         作为师者，永远是黑暗中的火炬手，是时代迷雾的灯塔。
@@ -140,58 +141,61 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className={style.galleryContainer}>
-                    <div className={style.imagesContainer} style={{ margin: "0 0 0 -400px" }}>
-                        <img
-                            src={DefaultImage}
-                            alt=""
-                            className={style.defaultImage}
-                            style={{ rotate: "-5deg", margin: "0 0 -50px 0" }}
-                        />
-                        <img
-                            src={DefaultImage}
-                            alt=""
-                            className={style.defaultImage}
-                            style={{ rotate: "95deg", margin: "0 0 -40px -40px" }}
-                        />
-                        <div className={style.linkButton}>
-                            <button className={style.circleButton}>
-                                <a href="/">了解世界和图中文培训课程</a>
-                            </button>
-                        </div>
-                    </div>
+                {/* <Postcard /> */}
+
+                <div className="galleryContainer">
+                    <Postcard rotateDeg="-5deg" />
                 </div>
             </div>
             {/* <h3>培训反馈（选择两位老师对培训课程的评价）</h3> */}
             {/* <a href="/">加入课程</a> */}{" "}
             {/* this should be inside the page of 了解世界和图中文培训课程 */}
-            <div className={style.contentContainer3}>
-                <img src={ChinaTownGate} alt="" className={style.imgGate} />
+            <div className="contentContainer3">
+                <img src={ChinaTownGate} alt="" className="imgGate" />
                 
-                <div className={style.galleryContainer}>
-                    <div className={style.imagesContainer} style={{ margin: "0 0 0 -400px" }}>
+                <div className="galleryContainer">
+                    <div className="imagesContainer" style={{ margin: "20px 0 20px -300px" }}>
                         <img
                             src={DefaultImage}
                             alt=""
-                            className={style.defaultImage}
+                            className="defaultImage"
+                            style={{ rotate: "-5deg", margin: "0 0 -50px 0" }}
+                        />
+                        <img
+                            src={DefaultImage}
+                            alt=""
+                            className="defaultImage"
+                            style={{ rotate: "95deg", margin: "0 0 -40px -40px" }}
+                        />
+                        <div className="linkButton">
+                            <button className="circleButton intergalactic-ray">
+                                <a href="/">了解世界和图中文培训课程</a>
+                            </button>
+                        </div>
+                    </div>
+                    <div className="imagesContainer" style={{ margin: "50px 0 100px -150px" }}>
+                        <img
+                            src={DefaultImage}
+                            alt=""
+                            className="defaultImage"
                             style={{ rotate: "-5deg", margin: "20px 0 -50px 50px" }}
                         />
                         <img
                             src={DefaultImage}
                             alt=""
-                            className={style.defaultImage}
+                            className="defaultImage"
                             style={{ rotate: "5deg", margin: "0 0 -60px -20px" }}
                         />
-                        <div className={style.linkButton} style={{ margin: "60px 0 0px 50px" }}>
-                            <button className={style.circleButton}>
-                                <a href="/">了解世界和图中文教程</a>
+                        <div className="linkButton" style={{ margin: "60px 0 0px 50px" }}>
+                            <button className="circleButton bravado-red">
+                                <a href="/playground">了解世界和图中文教程</a>
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <div className={style.galleryContainer}>
-                    <div className={style.gallery}>
+                <div className="galleryContainer">
+                    <div className="gallery">
                         世界和图中文教程
                         <br />
                         源于中国传统文化和华德福教育的双重启迪，
@@ -220,31 +224,33 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className={style.contentContainer4}>
-                <div className={style.gallery}>
-                    学会热情欢迎各类合作
-                    <br />
-                    世界和图中文教程在二十年的发展中
-                    <br />
-                    积累了丰硕的教学成果
-                    <br />
-                    愿意走出课堂，走向社会
-                    <br />
-                    和我们有着相同理念的
-                    <br />
-                    教学机构、文化组织、社会团体合作，
-                    <br />
-                    共同推进中文教育品质的提升
-                    <br />
-                    促进中华文化交流与创新
-                    <br />
-                    开展有益社区和谐发展的各类活动或公益项目
-                    <br />
-                    共同为孩子创造一个能支持他们身心健康发展的
-                    <br />
-                    学习、生活以及社区环境
+            <div className="contentContainer4">
+                <div className="galleryContainer">
+                    <div className="gallery">
+                        学会热情欢迎各类合作
+                        <br />
+                        世界和图中文教程在二十年的发展中
+                        <br />
+                        积累了丰硕的教学成果
+                        <br />
+                        愿意走出课堂，走向社会
+                        <br />
+                        和我们有着相同理念的
+                        <br />
+                        教学机构、文化组织、社会团体合作，
+                        <br />
+                        共同推进中文教育品质的提升
+                        <br />
+                        促进中华文化交流与创新
+                        <br />
+                        开展有益社区和谐发展的各类活动或公益项目
+                        <br />
+                        共同为孩子创造一个能支持他们身心健康发展的
+                        <br />
+                        学习、生活以及社区环境
+                    </div>
                 </div>
-                <div className={style.linkButton}>
+                <div className="linkButton">
                     <button>
                         <a href="/">了解合作方案</a>
                     </button>
