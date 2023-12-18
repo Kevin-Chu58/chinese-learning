@@ -1,11 +1,14 @@
 import { Grid } from "@mui/material";
 import "./style.css";
+import Logo from "../../components/Logo";
+import Postcard from "../../components/Postcard";
 // import HeTuLuoShu from "./components/HeTuLuoShu";
 import Bamboo from "./../../assets/bamboo.svg";
 import IronPagoda from "./../../assets/iron-pagoda.svg";
 import ChinaTownGate from "./../../assets/chinatown-gate.svg";
-import Logo from "../../components/Logo";
-import Postcard from "../../components/Postcard";
+import ChineseLantern from "../../assets/chinese-lantern.svg";
+import Confucius from "../../assets/confucius.svg";
+import WHCEI from "../../assets/世界和图中文教育学会.jpg";
 import DefaultImage from "../../assets/default-image.jpg";
 
 const Home = () => {
@@ -17,14 +20,28 @@ const Home = () => {
             alignContent="center"
             className="homeContainer"
         >
-            {/* <Grid container className="content">
-                <Grid xs={12} sm={1}/>
-                <Grid xs={12} sm={10} className="wrapper">
-                    <HeTuLuoShu/>
-                </Grid>
-                <Grid xs={12} sm={1}/>
-            </Grid> */}
             <Logo />
+            {/* <div className="bar">
+                <img src={ChineseLantern} alt="" />
+                <img src={ChineseLantern} alt="" />
+                <img src={ChineseLantern} alt="" />
+            </div> */}
+            <div className="left-align-box head">扎根本土筑基民族魂</div>
+            <div className="left-align-box head second">面向世界融贯意识心</div>
+            <div className="right-align-box">
+                <img className="imgConfucius" src={Confucius} alt="" />
+            </div>
+            <div className="galleryContainer">
+                <div className="gallery">
+                    <div className="linkButton">
+                        <button className="circleButton big persian-red">
+                            <a className="big" href="/playground">
+                                2023/2024世界和图中文师资培训项目已开启
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
             <div className="contentContainer1">
                 <svg viewBox="0 0 1500 100" aria-hidden="true">
                     <path
@@ -38,42 +55,14 @@ const Home = () => {
                 </svg>
                 <div className="galleryContainer">
                     {/* <div className="hanziBackground">道</div> */}
-                    <img
-                        src={IronPagoda}
-                        alt=""
-                        className="imgIronPagoda"
-                    />
+                    <img src={IronPagoda} alt="" className="imgIronPagoda" />
                     <div className="gallery">
                         <div className="imagesContainer">
                             <img
-                                src={DefaultImage}
+                                src={WHCEI}
                                 alt=""
-                                className="defaultImage"
-                                style={{ rotate: "-20deg" }}
-                            />
-                            <img
-                                src={DefaultImage}
-                                alt=""
-                                className="defaultImage"
-                                style={{ rotate: "25deg" }}
-                            />
-                            <img
-                                src={DefaultImage}
-                                alt=""
-                                className="defaultImage"
+                                className="whceiImage"
                                 style={{ rotate: "-10deg" }}
-                            />
-                            <img
-                                src={DefaultImage}
-                                alt=""
-                                className="defaultImage"
-                                style={{ rotate: "10deg" }}
-                            />
-                            <img
-                                src={DefaultImage}
-                                alt=""
-                                className="defaultImage"
-                                style={{ rotate: "-5deg", marginTop: "-300px" }}
                             />
                         </div>
                         <div className="linkButton">
@@ -82,7 +71,6 @@ const Home = () => {
                             </button>
                         </div>
                     </div>
-                    {/* <img src={JunkVector} alt="" className="imgJunkVector" /> */}
                     <div className="gallery">
                         世界和图中文教育学会
                         <br />
@@ -102,7 +90,7 @@ const Home = () => {
                         <br />
                         由不同走向共同
                         <br />
-                        成为真正的世界公民
+                        成为真正的世界公民。
                     </div>
                 </div>
                 <svg viewBox="0 0 1500 100" aria-hidden="true">
@@ -141,20 +129,65 @@ const Home = () => {
                     </div>
                 </div>
 
-                {/* <Postcard /> */}
-
-                <div className="galleryContainer">
-                    <Postcard rotateDeg="-5deg" />
+                <div className="galleryContainer block">
+                    <div className="gallery">
+                        <Postcard
+                            rotateDeg={-3}
+                            title="学员评价"
+                            context="跟着林源老师学了近四个月的和图中文，他给我打开了新的思路，激起我对中文的新的热诚。我感觉他做了很多奠基性的工作，但这只是开端，还有很多的工作要做，来揭示我们语言背后的秘密，来重新激活那个中文语言灵，让它复活和重生。 "
+                            commenter="士学员秒浩"
+                            hasButton={false}
+                            hasImage={false}
+                            left={-150}
+                            chinaStampColor="red"
+                            receivedStampColor="blue"
+                        />
+                        <Postcard
+                            rotateDeg={8}
+                            context="有道无术术可求，有术无道止于术。像这样讲“道”的课程实在不多，更何况是术道相合的课程，让我们带领孩子的时候能够知其然并知其所以然，从而达到流畅、自由、享受、滋润的状态，会情不自禁第创造出更多的可能性，让教学活动变得不言而喻的美好与流动。"
+                            commenter="国学员红玲"
+                            hasButton={false}
+                            hasImage={false}
+                            top={-230}
+                            left={425}
+                            chinaStampColor="red"
+                        />
+                        <Postcard
+                        rotateDeg={-7}
+                            context="林源老师将九宫格讲得特别深入和透彻，而且可以用身体体验，结合乘法口诀和诗歌走九宫，不同数字对应不同形状，然后到语法九宫，通过名词、动词、形容词、数量词等进行造句练习。通过九宫格，孩子们可以学到很多的知识，发展了意识的灵活性。"
+                            commenter="香港学员Matt"
+                            hasButton={false}
+                            hasImage={false}
+                            top={-120}
+                            left={-40}
+                            chinaStampColor="red"
+                        />
+                        <Postcard
+                            rotateDeg={-1}
+                            context="世界和图中文不仅能帮助华裔孩子学习语言、学习文化，找到自己的民族魂，也能帮助外国学生在掌握汉语技能的同时，深入道的普世智慧。所以在众多汉语教学课程中，唯有它能担当开启孩子内在智慧的重任。"
+                            commenter="美国学员Vera"
+                            hasButton={false}
+                            hasImage={false}
+                            top={-200}
+                            left={540}
+                            airmailStampColor="black"
+                        />
+                    </div>
                 </div>
             </div>
-            {/* <h3>培训反馈（选择两位老师对培训课程的评价）</h3> */}
+            <h3 style={{ marginLeft: "200px" }}>
+                培训反馈（选择两位老师对培训课程的评价）
+            </h3>
             {/* <a href="/">加入课程</a> */}{" "}
             {/* this should be inside the page of 了解世界和图中文培训课程 */}
             <div className="contentContainer3">
                 <img src={ChinaTownGate} alt="" className="imgGate" />
-                
-                <div className="galleryContainer">
-                    <div className="imagesContainer" style={{ margin: "20px 0 20px -300px" }}>
+
+                {/* <div className="galleryContainer">
+                    <div
+                        className="imagesContainer"
+                        style={{ margin: "20px 0 20px -300px" }}
+                    >
                         <img
                             src={DefaultImage}
                             alt=""
@@ -165,7 +198,10 @@ const Home = () => {
                             src={DefaultImage}
                             alt=""
                             className="defaultImage"
-                            style={{ rotate: "95deg", margin: "0 0 -40px -40px" }}
+                            style={{
+                                rotate: "95deg",
+                                margin: "0 0 -40px -40px",
+                            }}
                         />
                         <div className="linkButton">
                             <button className="circleButton intergalactic-ray">
@@ -173,26 +209,38 @@ const Home = () => {
                             </button>
                         </div>
                     </div>
-                    <div className="imagesContainer" style={{ margin: "50px 0 100px -150px" }}>
+                    <div
+                        className="imagesContainer"
+                        style={{ margin: "50px 0 100px -150px" }}
+                    >
                         <img
                             src={DefaultImage}
                             alt=""
                             className="defaultImage"
-                            style={{ rotate: "-5deg", margin: "20px 0 -50px 50px" }}
+                            style={{
+                                rotate: "-5deg",
+                                margin: "20px 0 -50px 50px",
+                            }}
                         />
                         <img
                             src={DefaultImage}
                             alt=""
                             className="defaultImage"
-                            style={{ rotate: "5deg", margin: "0 0 -60px -20px" }}
+                            style={{
+                                rotate: "5deg",
+                                margin: "0 0 -60px -20px",
+                            }}
                         />
-                        <div className="linkButton" style={{ margin: "60px 0 0px 50px" }}>
+                        <div
+                            className="linkButton"
+                            style={{ margin: "60px 0 0px 50px" }}
+                        >
                             <button className="circleButton bravado-red">
                                 <a href="/playground">了解世界和图中文教程</a>
                             </button>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 <div className="galleryContainer">
                     <div className="gallery">

@@ -1,5 +1,44 @@
 .homeContainer {
     font-family: "微軟正黑體";
+    background-color: var(--citrine-white);
+
+    .bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+        & img {
+            width: 100px;
+            height: auto;
+            padding: 0 120px;
+        }
+    }
+
+    .left-align-box, .right-align-box {
+        display: flex;
+        font-size: 40px;
+        padding: 10px;
+        font-family: "KaiTi";
+        font-weight: bolder;
+
+        &.head {
+            font-size: 60px;
+        }
+    }
+
+    .left-align-box {
+        justify-content: left;
+        margin: 20px 20px 0 20px;
+
+        &.second {
+            margin-left: 180px;
+        }
+    }
+
+    .right-align-box {
+        justify-content: right;
+        margin-right: 80px;
+    }
 
     .contentContainer1 {
         background-color: var(--brown);
@@ -17,7 +56,6 @@
     .contentContainer2,
     .contentContainer3,
     .contentContainer4 {
-        background-color: var(--citrine-white);
         margin: 0;
         padding: 50px 0;
     }
@@ -38,10 +76,14 @@
     .galleryContainer {
         display: flex;
         justify-content: center;
-        margin: 25px 0 -50px 0;
+        margin: 25px 0;
+
+        &.block {
+            margin: 100px 0;
+        }
 
         .gallery {
-            width: 45vw;
+            width: 50vw;
             font-size: 24px;
             text-align: center;
             z-index: 3;
@@ -72,6 +114,19 @@
             z-index: 5;
             border-radius: 200px;
 
+            &.big {
+                width: 200px;
+                height: 200px;
+            }
+
+            &.brown {
+                background-color: var(--brown);
+            }
+
+            &.persian-red {
+                background-color: var(--persian-red);
+            }
+
             &.intergalactic-ray {
                 background-color: var(--intergalactic-ray);
             }
@@ -87,6 +142,14 @@
                 top: 0;
                 color: white;
                 transition:  .5s ease;
+
+                &.big {
+                    width: 180px;
+
+                    &:after {
+                        top: 95px;
+                    }
+                }
     
                 &:after {
                     top: 65px;
@@ -97,6 +160,16 @@
             &:hover a{
                 padding-right: 0px;
                 top: -5px;
+
+                &.big {
+                    top: -10px;
+
+                    &:after {
+                        opacity: 1;
+                        top: 90px;
+                        right: 45%;
+                    }
+                }
     
                 &:after {
                     opacity: 1;
@@ -138,11 +211,17 @@
             }
         }
     }
+
+    .imgConfucius {
+        height: 500px;
+        margin: -200px -200px -250px 0;
+        z-index: 1;
+    }
     
     .imgIronPagoda {
-        scale: .7;
+        scale: .6;
         position: sticky;
-        margin: -600px -500px -570px -550px;
+        margin: -460px -50vw -570px -550px;
     }
     
     .imgBamboo {
@@ -156,6 +235,17 @@
         margin: -600px 0 -1600px -1300px;
     }
     
+    .whceiImage {
+        width: 260px;
+        height: auto;
+        border-radius: 10px;
+        margin: -40px 0 0 0;
+        
+        box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.12),
+            2px 2px 2px 2px rgba(0, 0, 0, 0.12), 0px 4px 4px 0px rgba(0, 0, 0, 0.12),
+            0px 8px 8px 0px rgba(0, 0, 0, 0.12);
+    }
+
     .defaultImage {
         width: 160px;
         height: auto;

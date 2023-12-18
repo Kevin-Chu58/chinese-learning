@@ -1,6 +1,38 @@
 @charset "UTF-8";
 .homeContainer {
   font-family: "微軟正黑體";
+  background-color: var(--citrine-white);
+}
+.homeContainer .bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.homeContainer .bar img {
+  width: 100px;
+  height: auto;
+  padding: 0 120px;
+}
+.homeContainer .left-align-box, .homeContainer .right-align-box {
+  display: flex;
+  font-size: 40px;
+  padding: 10px;
+  font-family: "KaiTi";
+  font-weight: bolder;
+}
+.homeContainer .left-align-box.head, .homeContainer .right-align-box.head {
+  font-size: 60px;
+}
+.homeContainer .left-align-box {
+  justify-content: left;
+  margin: 20px 20px 0 20px;
+}
+.homeContainer .left-align-box.second {
+  margin-left: 180px;
+}
+.homeContainer .right-align-box {
+  justify-content: right;
+  margin-right: 80px;
 }
 .homeContainer .contentContainer1 {
   background-color: var(--brown);
@@ -10,7 +42,6 @@
 .homeContainer .contentContainer2,
 .homeContainer .contentContainer3,
 .homeContainer .contentContainer4 {
-  background-color: var(--citrine-white);
   margin: 0;
   padding: 50px 0;
 }
@@ -27,10 +58,13 @@
 .homeContainer .galleryContainer {
   display: flex;
   justify-content: center;
-  margin: 25px 0 -50px 0;
+  margin: 25px 0;
+}
+.homeContainer .galleryContainer.block {
+  margin: 100px 0;
 }
 .homeContainer .galleryContainer .gallery {
-  width: 45vw;
+  width: 50vw;
   font-size: 24px;
   text-align: center;
   z-index: 3;
@@ -57,6 +91,16 @@
   z-index: 5;
   border-radius: 200px;
 }
+.homeContainer .galleryContainer .circleButton.big {
+  width: 200px;
+  height: 200px;
+}
+.homeContainer .galleryContainer .circleButton.brown {
+  background-color: var(--brown);
+}
+.homeContainer .galleryContainer .circleButton.persian-red {
+  background-color: var(--persian-red);
+}
 .homeContainer .galleryContainer .circleButton.intergalactic-ray {
   background-color: var(--intergalactic-ray);
 }
@@ -69,6 +113,12 @@
   color: white;
   transition: 0.5s ease;
 }
+.homeContainer .galleryContainer .circleButton a.big {
+  width: 180px;
+}
+.homeContainer .galleryContainer .circleButton a.big:after {
+  top: 95px;
+}
 .homeContainer .galleryContainer .circleButton a:after {
   top: 65px;
   right: 45%;
@@ -76,6 +126,14 @@
 .homeContainer .galleryContainer .circleButton:hover a {
   padding-right: 0px;
   top: -5px;
+}
+.homeContainer .galleryContainer .circleButton:hover a.big {
+  top: -10px;
+}
+.homeContainer .galleryContainer .circleButton:hover a.big:after {
+  opacity: 1;
+  top: 90px;
+  right: 45%;
 }
 .homeContainer .galleryContainer .circleButton:hover a:after {
   opacity: 1;
@@ -107,10 +165,15 @@
   opacity: 1;
   right: 0;
 }
+.homeContainer .imgConfucius {
+  height: 500px;
+  margin: -200px -200px -250px 0;
+  z-index: 1;
+}
 .homeContainer .imgIronPagoda {
-  scale: 0.7;
+  scale: 0.6;
   position: sticky;
-  margin: -600px -500px -570px -550px;
+  margin: -460px -50vw -570px -550px;
 }
 .homeContainer .imgBamboo {
   scale: -0.4 0.6;
@@ -120,6 +183,13 @@
 .homeContainer .imgGate {
   scale: 0.35;
   margin: -600px 0 -1600px -1300px;
+}
+.homeContainer .whceiImage {
+  width: 260px;
+  height: auto;
+  border-radius: 10px;
+  margin: -40px 0 0 0;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.12), 2px 2px 2px 2px rgba(0, 0, 0, 0.12), 0px 4px 4px 0px rgba(0, 0, 0, 0.12), 0px 8px 8px 0px rgba(0, 0, 0, 0.12);
 }
 .homeContainer .defaultImage {
   width: 160px;

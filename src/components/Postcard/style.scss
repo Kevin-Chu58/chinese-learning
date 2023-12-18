@@ -1,7 +1,6 @@
 .postcardContainer {
     width: 600px;
     height: 380px;
-    margin: 100px;
 
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.12),
         2px 2px 2px 2px rgba(0, 0, 0, 0.12);
@@ -9,14 +8,32 @@
     background-image: url("./../../assets/postcard.jpg");
     background-size: cover;
     z-index: 1;
+    overflow: hidden;
 
     .stampContainer {
         display: flex;
-        justify-content: right;
+        justify-content: left;
+        height: 100px;
 
-        .postalStamp {
+        & svg {
+            width: inherit;
+            height: fit-content;
+        }
+
+        & .postal-stamp-received {
             width: 200px;
-            margin: 0 -20px 0 0;
+            rotate: -10deg;
+            margin: -40px 0 0 -30px;
+        }
+
+        & .postal-stamp-airmail {
+            width: 140px;
+            margin: 300px 0 0 300px;
+        }
+
+        & .postal-stamp-china {
+            width: 200px;
+            margin: 5px 0 0 -190px;
         }
     }
 
@@ -48,21 +65,35 @@
         }
         
         .contextContainer {
-            display: flex;
-            flex-direction: column;
             font-family: MaShanZhengF;
-            margin-left: -20px;
+            margin: 0 40px;
             background-color: transparent;
             overflow: visible;
+
+            &.hasImage {
+                margin: 0 0 0 -20px;
+            }
         
             .contextHeader {
                 font-size: 32px;
                 margin-bottom: 20px;
+                display: flex;
+                text-align: left;
             }
             
             .contextInfo {
                 font-size: 20px;
                 margin-bottom: 20px;
+                display: flex;
+                text-align: left;
+            }
+
+            .commenter {
+                display: flex;
+                justify-content: right;
+                font-size: 20px;
+                font-style: italic;
+                font-family: "Kaiti";
             }
             
             .floatingBotton {

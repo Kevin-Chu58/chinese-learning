@@ -1,6 +1,6 @@
 import { PropsWithChildren } from "react";
 
-import style from './Header.module.css';
+import './style.css';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import React from "react";
 
@@ -15,23 +15,23 @@ const Header = ({
     ...otherProps
 }: PropsWithChildren<Props>) => {
     return (
-        <header id="header" className={style.header}>
-            <div className={style.headerContainer}>
+        <header id="header" className="header">
+            <div className="headerContainer">
 
-                <div className={style.headerEng}>
+                <div className="headerEng">
                     World Hetu Chinese
                     <br />
                     Education Institute
                 </div>
 
-                <div className={style.headerChi}>
+                <div className="headerChi">
                     世界和图中文
                     <br />
                     教育学会
                 </div>
 
-                <button onClick={onClick} className={style.headerButton}>
-                    <MoreVertIcon className={style.icon} />
+                <button onClick={onClick} className="headerButton">
+                    <MoreVertIcon className="icon"/>
                 </button>
             </div>
             {/* <div class="corner">

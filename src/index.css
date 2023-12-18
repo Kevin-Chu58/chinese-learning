@@ -83,6 +83,11 @@ code {
 	--intergalactic-ray: #563a37;
 	--bravado-red: #a1524d;
 
+	/* other colors */
+	--larimar-blue: #187cac;
+	--horsetail: #3f5e44;
+	--baklava: #edb435;
+
 	/* layout variables */
 	--header-height: 50px;
 	--footer-height: 50px;

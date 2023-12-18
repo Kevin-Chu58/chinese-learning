@@ -1,19 +1,34 @@
 .postcardContainer {
   width: 600px;
   height: 380px;
-  margin: 100px;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.12), 2px 2px 2px 2px rgba(0, 0, 0, 0.12);
   background-image: url("./../../assets/postcard.jpg");
   background-size: cover;
   z-index: 1;
+  overflow: hidden;
 }
 .postcardContainer .stampContainer {
   display: flex;
-  justify-content: right;
+  justify-content: left;
+  height: 100px;
 }
-.postcardContainer .stampContainer .postalStamp {
+.postcardContainer .stampContainer svg {
+  width: inherit;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.postcardContainer .stampContainer .postal-stamp-received {
   width: 200px;
-  margin: 0 -20px 0 0;
+  rotate: -10deg;
+  margin: -40px 0 0 -30px;
+}
+.postcardContainer .stampContainer .postal-stamp-airmail {
+  width: 140px;
+  margin: 300px 0 0 300px;
+}
+.postcardContainer .stampContainer .postal-stamp-china {
+  width: 200px;
+  margin: 5px 0 0 -190px;
 }
 .postcardContainer .contentContainer {
   margin-top: 20px;
@@ -37,20 +52,32 @@
   z-index: 5;
 }
 .postcardContainer .contentContainer .contextContainer {
-  display: flex;
-  flex-direction: column;
   font-family: MaShanZhengF;
-  margin-left: -20px;
+  margin: 0 40px;
   background-color: transparent;
   overflow: visible;
+}
+.postcardContainer .contentContainer .contextContainer.hasImage {
+  margin: 0 0 0 -20px;
 }
 .postcardContainer .contentContainer .contextContainer .contextHeader {
   font-size: 32px;
   margin-bottom: 20px;
+  display: flex;
+  text-align: left;
 }
 .postcardContainer .contentContainer .contextContainer .contextInfo {
   font-size: 20px;
   margin-bottom: 20px;
+  display: flex;
+  text-align: left;
+}
+.postcardContainer .contentContainer .contextContainer .commenter {
+  display: flex;
+  justify-content: right;
+  font-size: 20px;
+  font-style: italic;
+  font-family: "Kaiti";
 }
 .postcardContainer .contentContainer .contextContainer .floatingBotton {
   width: 200px;
@@ -76,4 +103,4 @@
 }
 .postcardContainer .contentContainer .contextContainer .floatingBotton a:hover {
   text-decoration: none;
-}/*# sourceMappingURL=postcard.module.css.map */
+}/*# sourceMappingURL=style.css.map */

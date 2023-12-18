@@ -1,9 +1,9 @@
-import style from "./playground.module.css";
+import "./style.css";
 import Postcard from "../../components/Postcard";
 
 const Playground = () => {
     return (
-        <div className={style.playgroundContainer}>
+        <div className="playgroundContainer">
             <Postcard />
         </div>
     )
