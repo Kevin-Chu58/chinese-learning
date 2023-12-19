@@ -2,10 +2,15 @@
   width: 600px;
   height: 380px;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.12), 2px 2px 2px 2px rgba(0, 0, 0, 0.12);
-  background-image: url("./../../assets/postcard.jpg");
   background-size: cover;
   z-index: 1;
   overflow: hidden;
+}
+.postcardContainer.old {
+  background-image: url("./../../assets/old-postcard.jpg");
+}
+.postcardContainer.vintage {
+  background-image: url("./../../assets/vintage-postcard.jpg");
 }
 .postcardContainer .stampContainer {
   display: flex;
@@ -20,7 +25,7 @@
 .postcardContainer .stampContainer .postal-stamp-received {
   width: 200px;
   rotate: -10deg;
-  margin: -40px 0 0 -30px;
+  margin: -60px 0 0 -30px;
 }
 .postcardContainer .stampContainer .postal-stamp-airmail {
   width: 140px;

@@ -3,24 +3,15 @@
   font-family: "微軟正黑體";
   background-color: var(--citrine-white);
 }
-.homeContainer .bar {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.homeContainer .bar img {
-  width: 100px;
-  height: auto;
-  padding: 0 120px;
-}
-.homeContainer .left-align-box, .homeContainer .right-align-box {
+.homeContainer .left-align-box,
+.homeContainer .right-align-box {
   display: flex;
   font-size: 40px;
-  padding: 10px;
   font-family: "KaiTi";
   font-weight: bolder;
 }
-.homeContainer .left-align-box.head, .homeContainer .right-align-box.head {
+.homeContainer .left-align-box.head,
+.homeContainer .right-align-box.head {
   font-size: 60px;
 }
 .homeContainer .left-align-box {
@@ -30,9 +21,15 @@
 .homeContainer .left-align-box.second {
   margin-left: 180px;
 }
+.homeContainer .left-align-box.no-gap {
+  margin: 0;
+}
 .homeContainer .right-align-box {
   justify-content: right;
-  margin-right: 80px;
+  margin: 0 20px 20px 20px;
+}
+.homeContainer .right-align-box.no-gap {
+  margin: 0;
 }
 .homeContainer .contentContainer1 {
   background-color: var(--brown);
@@ -165,19 +162,22 @@
   opacity: 1;
   right: 0;
 }
-.homeContainer .imgConfucius {
-  height: 500px;
-  margin: -200px -200px -250px 0;
-  z-index: 1;
+.homeContainer .imgStarlight {
+  margin: 0 0 -450px 0;
+  z-index: 3;
+}
+.homeContainer #gradient-horizontal {
+  --color-stop-1: #a770ef;
+  --color-stop-2: #cf8bf3;
+  --color-stop-3: #fdb99b;
 }
 .homeContainer .imgIronPagoda {
   scale: 0.6;
-  position: sticky;
   margin: -460px -50vw -570px -550px;
 }
 .homeContainer .imgBamboo {
-  scale: -0.4 0.6;
-  rotate: -25deg;
+  scale: -0.35 0.6;
+  rotate: -20deg;
   margin: -800px 0px -1900px 700px;
 }
 .homeContainer .imgGate {
@@ -198,7 +198,7 @@
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.12), 2px 2px 2px 2px rgba(0, 0, 0, 0.12), 0px 4px 4px 0px rgba(0, 0, 0, 0.12), 0px 8px 8px 0px rgba(0, 0, 0, 0.12);
 }
 .homeContainer svg {
-  display: block;
+  display: flex;
 }
 .homeContainer svg .svgPrimary {
   fill: var(--citrine-white);

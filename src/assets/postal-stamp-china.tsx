@@ -6,24 +6,6 @@ type Props = {
 };
 
 const PostalStampChina = ({ color }: PropsWithChildren<Props>) => {
-    let fill = "";
-
-    switch (color) {
-        case "red":
-            fill = "#cd3736";
-            break;
-        case "green":
-            fill = "#3f5e44";
-            break;
-        case "blue":
-            fill = "#187cac";
-            break;
-        case "black":
-            fill = "#303031";
-            break;
-        default:
-            fill = "#00000000";
-    }
 
     return (
         <svg
@@ -37,7 +19,7 @@ const PostalStampChina = ({ color }: PropsWithChildren<Props>) => {
             {" "}
             <g
                 transform="translate(0.000000,840.000000) scale(0.100000,-0.100000)"
-                fill={fill}
+                fill={color}
                 stroke="none"
             >
                 {" "}

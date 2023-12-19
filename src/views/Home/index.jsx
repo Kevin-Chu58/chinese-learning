@@ -21,16 +21,26 @@ const Home = () => {
             className="homeContainer"
         >
             <Logo />
-            {/* <div className="bar">
-                <img src={ChineseLantern} alt="" />
-                <img src={ChineseLantern} alt="" />
-                <img src={ChineseLantern} alt="" />
-            </div> */}
+            <div className="right-align-box no-gap">
+                <svg viewBox="0 0 800 300" aria-hidden="true" className="imgStarlight">
+                    <linearGradient id="starlight-gradient" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stopColor="#447799" />
+                        <stop offset="50%" stopColor="#224488" />
+                        <stop offset="100%" stopColor="#112266" />
+                    </linearGradient>
+                    <g fill="url(#starlight-gradient) #447799">
+                        <path
+                            d="M 800 0 L 800 275 L 750 270 L 730 185 L 715 200 L 675 100 L 620 160 L 595 160 L 555 190 L 516 155 
+                            L 440 269 L 446 268 L 516 165 L 547 197 L 525 240 L 595 170 L 600 190 L 673 110 L 708 205 L 675 220 
+                            L 640 260 L 690 227 L 710 250 L 700 220 L 727 197 L 735 233 L 720 240 L 737 240 L 745 270 
+                            Q 680 265 645 265 Q 550 260 390 277 Q 500 30 210 0 Z"
+                        />
+                    </g>
+                </svg>
+            </div>
             <div className="left-align-box head">扎根本土筑基民族魂</div>
             <div className="left-align-box head second">面向世界融贯意识心</div>
-            <div className="right-align-box">
-                <img className="imgConfucius" src={Confucius} alt="" />
-            </div>
+            
             <div className="galleryContainer">
                 <div className="gallery">
                     <div className="linkButton">
@@ -133,6 +143,7 @@ const Home = () => {
                     <div className="gallery">
                         <Postcard
                             rotateDeg={-3}
+                            background="vintage"
                             title="学员评价"
                             context="跟着林源老师学了近四个月的和图中文，他给我打开了新的思路，激起我对中文的新的热诚。我感觉他做了很多奠基性的工作，但这只是开端，还有很多的工作要做，来揭示我们语言背后的秘密，来重新激活那个中文语言灵，让它复活和重生。 "
                             commenter="士学员秒浩"
@@ -144,6 +155,8 @@ const Home = () => {
                         />
                         <Postcard
                             rotateDeg={8}
+                            background="vintage"
+                            title="学员评价"
                             context="有道无术术可求，有术无道止于术。像这样讲“道”的课程实在不多，更何况是术道相合的课程，让我们带领孩子的时候能够知其然并知其所以然，从而达到流畅、自由、享受、滋润的状态，会情不自禁第创造出更多的可能性，让教学活动变得不言而喻的美好与流动。"
                             commenter="国学员红玲"
                             hasButton={false}
@@ -153,7 +166,8 @@ const Home = () => {
                             chinaStampColor="red"
                         />
                         <Postcard
-                        rotateDeg={-7}
+                            rotateDeg={-7}
+                            background="vintage"
                             context="林源老师将九宫格讲得特别深入和透彻，而且可以用身体体验，结合乘法口诀和诗歌走九宫，不同数字对应不同形状，然后到语法九宫，通过名词、动词、形容词、数量词等进行造句练习。通过九宫格，孩子们可以学到很多的知识，发展了意识的灵活性。"
                             commenter="香港学员Matt"
                             hasButton={false}
@@ -164,6 +178,7 @@ const Home = () => {
                         />
                         <Postcard
                             rotateDeg={-1}
+                            background="vintage"
                             context="世界和图中文不仅能帮助华裔孩子学习语言、学习文化，找到自己的民族魂，也能帮助外国学生在掌握汉语技能的同时，深入道的普世智慧。所以在众多汉语教学课程中，唯有它能担当开启孩子内在智慧的重任。"
                             commenter="美国学员Vera"
                             hasButton={false}

@@ -2,22 +2,10 @@
     font-family: "微軟正黑體";
     background-color: var(--citrine-white);
 
-    .bar {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        
-        & img {
-            width: 100px;
-            height: auto;
-            padding: 0 120px;
-        }
-    }
-
-    .left-align-box, .right-align-box {
+    .left-align-box,
+    .right-align-box {
         display: flex;
         font-size: 40px;
-        padding: 10px;
         font-family: "KaiTi";
         font-weight: bolder;
 
@@ -33,11 +21,19 @@
         &.second {
             margin-left: 180px;
         }
+
+        &.no-gap {
+            margin: 0;
+        }
     }
 
     .right-align-box {
         justify-content: right;
-        margin-right: 80px;
+        margin: 0 20px 20px 20px;
+
+        &.no-gap {
+            margin: 0;
+        }
     }
 
     .contentContainer1 {
@@ -52,18 +48,18 @@
         );
         color: white;
     }
-    
+
     .contentContainer2,
     .contentContainer3,
     .contentContainer4 {
         margin: 0;
         padding: 50px 0;
     }
-    
+
     .contentContainer2 {
         margin-left: -300px;
     }
-    
+
     .contentContainer3 {
         margin-top: -200px;
         padding-left: 500px;
@@ -72,7 +68,7 @@
     .contentContainer4 {
         padding-top: 100px;
     }
-    
+
     .galleryContainer {
         display: flex;
         justify-content: center;
@@ -99,13 +95,13 @@
             justify-content: center;
             margin: 70px 0 0 0;
         }
-        
+
         .linkButtonCircle {
             text-align: center;
             justify-content: center;
             margin: 50px 0 0 0;
         }
-        
+
         .circleButton {
             width: 150px;
             height: 150px;
@@ -135,13 +131,13 @@
                 background-color: var(--bravado-red);
             }
         }
-    
+
         .circleButton {
             & a {
                 width: 120px;
                 top: 0;
                 color: white;
-                transition:  .5s ease;
+                transition: 0.5s ease;
 
                 &.big {
                     width: 180px;
@@ -150,14 +146,14 @@
                         top: 95px;
                     }
                 }
-    
+
                 &:after {
                     top: 65px;
                     right: 45%;
                 }
             }
-    
-            &:hover a{
+
+            &:hover a {
                 padding-right: 0px;
                 top: -5px;
 
@@ -170,7 +166,7 @@
                         right: 45%;
                     }
                 }
-    
+
                 &:after {
                     opacity: 1;
                     top: 60px;
@@ -178,7 +174,7 @@
                 }
             }
         }
-    
+
         button {
             & a {
                 cursor: pointer;
@@ -188,9 +184,9 @@
                 transition: 0.5s;
                 font-size: 20px;
                 font-style: italic;
-                
+
                 z-index: 10;
-    
+
                 &:after {
                     content: "\00bb";
                     position: absolute;
@@ -200,10 +196,10 @@
                     transition: 0.5s;
                 }
             }
-    
-            &:hover a{
+
+            &:hover a {
                 padding-right: 25px;
-    
+
                 &:after {
                     opacity: 1;
                     right: 0;
@@ -212,37 +208,42 @@
         }
     }
 
-    .imgConfucius {
-        height: 500px;
-        margin: -200px -200px -250px 0;
-        z-index: 1;
+    .imgStarlight {
+        margin: 0 0 -450px 0;
+        z-index: 3;
     }
-    
+
+    #gradient-horizontal {
+        --color-stop-1: #a770ef;
+        --color-stop-2: #cf8bf3;
+        --color-stop-3: #fdb99b;
+    }
+
     .imgIronPagoda {
-        scale: .6;
-        position: sticky;
+        scale: 0.6;
         margin: -460px -50vw -570px -550px;
     }
-    
+
     .imgBamboo {
-        scale: -0.4 0.6;
-        rotate: -25deg;
+        scale: -0.35 0.6;
+        rotate: -20deg;
         margin: -800px 0px -1900px 700px;
     }
-    
+
     .imgGate {
         scale: 0.35;
         margin: -600px 0 -1600px -1300px;
     }
-    
+
     .whceiImage {
         width: 260px;
         height: auto;
         border-radius: 10px;
         margin: -40px 0 0 0;
-        
+
         box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.12),
-            2px 2px 2px 2px rgba(0, 0, 0, 0.12), 0px 4px 4px 0px rgba(0, 0, 0, 0.12),
+            2px 2px 2px 2px rgba(0, 0, 0, 0.12),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.12),
             0px 8px 8px 0px rgba(0, 0, 0, 0.12);
     }
 
@@ -250,40 +251,39 @@
         width: 160px;
         height: auto;
         border-radius: 10px;
-        
+
         box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.12),
-            2px 2px 2px 2px rgba(0, 0, 0, 0.12), 0px 4px 4px 0px rgba(0, 0, 0, 0.12),
+            2px 2px 2px 2px rgba(0, 0, 0, 0.12),
+            0px 4px 4px 0px rgba(0, 0, 0, 0.12),
             0px 8px 8px 0px rgba(0, 0, 0, 0.12);
     }
-    
+
     svg {
-        display: block;
+        display: flex;
 
         .svgPrimary {
             fill: var(--citrine-white);
             stroke: var(--citrine-white);
             stroke-width: 5px;
         }
-        
+
         .svgSecondary {
             fill: var(--persian-red);
         }
     }
-    
+
     // .imgJunkVector {
     //     margin: 0 -350px 0 -300px;
     //     padding-top: 40px;
     //     padding-left: 50px;
     //     float: right;
     // }
-    
+
     // .hanziBackground {
     //     color: var(--pohutukawa);
     //     // opacity: .5;
     //     font-size: 500px;
     //     font-family: HYZhuanShuF;
     //     margin: -30px -400px -100px -120px;
-    // }    
-
-    
+    // }
 }
