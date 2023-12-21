@@ -2,152 +2,83 @@
 .homeContainer {
   font-family: "微軟正黑體";
   background-color: var(--citrine-white);
+  display: flex;
+  flex-direction: column;
 }
+.homeContainer .center-align-box,
 .homeContainer .left-align-box,
 .homeContainer .right-align-box {
   display: flex;
-  font-size: 40px;
-  font-family: "KaiTi";
-  font-weight: bolder;
+  flex-direction: column;
+  font-size: 24px;
 }
-.homeContainer .left-align-box.head,
-.homeContainer .right-align-box.head {
-  font-size: 60px;
+.homeContainer .center-align-box.vw100,
+.homeContainer .left-align-box.vw100,
+.homeContainer .right-align-box.vw100 {
+  max-width: 100vw;
 }
-.homeContainer .left-align-box {
-  justify-content: left;
-  margin: 20px 20px 0 20px;
+.homeContainer .center-align-box.vw70,
+.homeContainer .left-align-box.vw70,
+.homeContainer .right-align-box.vw70 {
+  max-width: 70vw;
 }
-.homeContainer .left-align-box.second {
-  margin-left: 180px;
+.homeContainer .center-align-box.fd-row,
+.homeContainer .left-align-box.fd-row,
+.homeContainer .right-align-box.fd-row {
+  flex-direction: row;
 }
-.homeContainer .left-align-box.no-gap {
-  margin: 0;
+.homeContainer .center-align-box {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin: 20px auto;
 }
-.homeContainer .right-align-box {
-  justify-content: right;
-  margin: 0 20px 20px 20px;
-}
-.homeContainer .right-align-box.no-gap {
-  margin: 0;
-}
-.homeContainer .contentContainer1 {
+.homeContainer .center-align-box.bg-lg-red {
   background-color: var(--brown);
   background: linear-gradient(90deg, var(--pohutukawa) 0%, var(--brown) 23%, var(--persian-red) 51%, var(--brown) 77%, var(--pohutukawa) 100%);
   color: white;
 }
-.homeContainer .contentContainer2,
-.homeContainer .contentContainer3,
-.homeContainer .contentContainer4 {
-  margin: 0;
-  padding: 50px 0;
+.homeContainer .left-align-box {
+  justify-content: left;
+  text-align: left;
+  align-items: flex-start;
+  margin: 20px 20px 0 20px;
 }
-.homeContainer .contentContainer2 {
-  margin-left: -300px;
+.homeContainer .left-align-box.tap {
+  margin-left: 180px;
 }
-.homeContainer .contentContainer3 {
-  margin-top: -200px;
-  padding-left: 500px;
+.homeContainer .right-align-box {
+  justify-content: right;
+  text-align: right;
+  align-items: flex-end;
+  margin: 0 20px 20px 20px;
 }
-.homeContainer .contentContainer4 {
-  padding-top: 100px;
+.homeContainer .linkbutton,
+.homeContainer .circle-button {
+  display: inline-block;
+  z-index: 10;
 }
-.homeContainer .galleryContainer {
+.homeContainer .linkbutton.left,
+.homeContainer .circle-button.left {
+  justify-content: left;
   display: flex;
-  justify-content: center;
-  margin: 25px 0;
 }
-.homeContainer .galleryContainer.block {
-  margin: 100px 0;
+.homeContainer .linkbutton.right,
+.homeContainer .circle-button.right {
+  justify-content: right;
+  display: flex;
 }
-.homeContainer .galleryContainer .gallery {
-  width: 50vw;
-  font-size: 24px;
-  text-align: center;
-  z-index: 3;
-}
-.homeContainer .galleryContainer .imagesContainer {
-  padding: 0px 150px 0px 150px;
-  margin: 30px 0 -15px 0;
-}
-.homeContainer .galleryContainer .linkButton {
-  text-align: center;
-  justify-content: center;
-  margin: 70px 0 0 0;
-}
-.homeContainer .galleryContainer .linkButtonCircle {
-  text-align: center;
-  justify-content: center;
-  margin: 50px 0 0 0;
-}
-.homeContainer .galleryContainer .circleButton {
-  width: 150px;
-  height: 150px;
-  margin: -200px 0 0 0;
-  position: relative;
-  z-index: 5;
-  border-radius: 200px;
-}
-.homeContainer .galleryContainer .circleButton.big {
-  width: 200px;
-  height: 200px;
-}
-.homeContainer .galleryContainer .circleButton.brown {
-  background-color: var(--brown);
-}
-.homeContainer .galleryContainer .circleButton.persian-red {
-  background-color: var(--persian-red);
-}
-.homeContainer .galleryContainer .circleButton.intergalactic-ray {
-  background-color: var(--intergalactic-ray);
-}
-.homeContainer .galleryContainer .circleButton.bravado-red {
-  background-color: var(--bravado-red);
-}
-.homeContainer .galleryContainer .circleButton a {
-  width: 120px;
-  top: 0;
-  color: white;
-  transition: 0.5s ease;
-}
-.homeContainer .galleryContainer .circleButton a.big {
-  width: 180px;
-}
-.homeContainer .galleryContainer .circleButton a.big:after {
-  top: 95px;
-}
-.homeContainer .galleryContainer .circleButton a:after {
-  top: 65px;
-  right: 45%;
-}
-.homeContainer .galleryContainer .circleButton:hover a {
-  padding-right: 0px;
-  top: -5px;
-}
-.homeContainer .galleryContainer .circleButton:hover a.big {
-  top: -10px;
-}
-.homeContainer .galleryContainer .circleButton:hover a.big:after {
-  opacity: 1;
-  top: 90px;
-  right: 45%;
-}
-.homeContainer .galleryContainer .circleButton:hover a:after {
-  opacity: 1;
-  top: 60px;
-  right: 45%;
-}
-.homeContainer .galleryContainer button a {
+.homeContainer .linkbutton a,
+.homeContainer .circle-button a {
   cursor: pointer;
   display: inline-block;
   position: relative;
-  text-align: center;
   transition: 0.5s;
   font-size: 20px;
   font-style: italic;
-  z-index: 10;
 }
-.homeContainer .galleryContainer button a:after {
+.homeContainer .linkbutton a:after,
+.homeContainer .circle-button a:after {
   content: "»";
   position: absolute;
   opacity: 0;
@@ -155,56 +86,475 @@
   right: -20px;
   transition: 0.5s;
 }
-.homeContainer .galleryContainer button:hover a {
+.homeContainer .linkbutton:hover a,
+.homeContainer .circle-button:hover a {
   padding-right: 25px;
 }
-.homeContainer .galleryContainer button:hover a:after {
+.homeContainer .linkbutton:hover a:after,
+.homeContainer .circle-button:hover a:after {
   opacity: 1;
   right: 0;
 }
-.homeContainer .imgStarlight {
-  margin: 0 0 -450px 0;
-  z-index: 3;
+.homeContainer .linkbutton {
+  width: 300px;
+  color: var(--persian-red);
 }
-.homeContainer #gradient-horizontal {
-  --color-stop-1: #a770ef;
-  --color-stop-2: #cf8bf3;
-  --color-stop-3: #fdb99b;
+.homeContainer .circle-button {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  border-radius: 200px;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s ease;
 }
-.homeContainer .imgIronPagoda {
-  scale: 0.6;
-  margin: -460px -50vw -570px -550px;
+.homeContainer .circle-button.big {
+  width: 200px;
+  height: 200px;
 }
-.homeContainer .imgBamboo {
-  scale: -0.35 0.6;
-  rotate: -20deg;
-  margin: -800px 0px -1900px 700px;
+.homeContainer .circle-button.citrine-white {
+  background-color: var(--citrine-white);
+  color: var(--persian-red);
 }
-.homeContainer .imgGate {
-  scale: 0.35;
-  margin: -600px 0 -1600px -1300px;
+.homeContainer .circle-button.citrine-white-outline {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0);
+  border-width: 2px;
 }
-.homeContainer .whceiImage {
-  width: 260px;
-  height: auto;
+.homeContainer .circle-button.citrine-white-outline:hover {
+  border-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px 0px rgb(255, 255, 255);
+}
+.homeContainer .circle-button a {
+  width: 120px;
+  top: 0;
+  transition: 0.5s ease;
+}
+.homeContainer .circle-button a.big {
+  width: 180px;
+}
+.homeContainer .circle-button a.big:after {
+  top: 95px;
+}
+.homeContainer .circle-button a:after {
+  top: 65px;
+  right: 45%;
+}
+.homeContainer .circle-button:hover a {
+  padding-right: 0px;
+  top: -10px;
+}
+.homeContainer .circle-button:hover a:after {
+  opacity: 1;
+  top: 60px;
+  right: 45%;
+}
+.homeContainer .circle-button:hover a.big {
+  top: -10px;
+}
+.homeContainer .circle-button:hover a.big:after {
+  opacity: 1;
+  top: 90px;
+  right: 45%;
+}
+.homeContainer .classic-button {
+  transition: 0.5s ease;
+}
+.homeContainer .classic-button a {
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+.homeContainer .classic-button.italic {
+  font-style: italic;
+}
+.homeContainer .classic-button.br_10 {
   border-radius: 10px;
-  margin: -40px 0 0 0;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.12), 2px 2px 2px 2px rgba(0, 0, 0, 0.12), 0px 4px 4px 0px rgba(0, 0, 0, 0.12), 0px 8px 8px 0px rgba(0, 0, 0, 0.12);
 }
-.homeContainer .defaultImage {
-  width: 160px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.12), 2px 2px 2px 2px rgba(0, 0, 0, 0.12), 0px 4px 4px 0px rgba(0, 0, 0, 0.12), 0px 8px 8px 0px rgba(0, 0, 0, 0.12);
+.homeContainer .classic-button.shade {
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
+}
+.homeContainer .classic-button.shade:hover {
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
 }
 .homeContainer svg {
   display: flex;
 }
-.homeContainer svg .svgPrimary {
+.homeContainer svg .svg-primary {
   fill: var(--citrine-white);
   stroke: var(--citrine-white);
   stroke-width: 5px;
 }
-.homeContainer svg .svgSecondary {
+.homeContainer svg .svg-secondary {
   fill: var(--persian-red);
+}
+.homeContainer svg .svg-main-theme {
+  fill: var(--brown);
+}
+.homeContainer img {
+  z-index: 1;
+}
+.homeContainer img.w260 {
+  width: 260px;
+  height: auto;
+  border-radius: 10px;
+}
+.homeContainer a.rotate_-5,
+.homeContainer div.rotate_-5,
+.homeContainer img.rotate_-5,
+.homeContainer button.rotate_-5,
+.homeContainer .linkbutton.rotate_-5,
+.homeContainer .circle-button.rotate_-5,
+.homeContainer .center-align-box.rotate_-5,
+.homeContainer .left-align-box.rotate_-5,
+.homeContainer .right-align-box.rotate_-5 {
+  rotate: -5deg;
+}
+.homeContainer a.rotate_5,
+.homeContainer div.rotate_5,
+.homeContainer img.rotate_5,
+.homeContainer button.rotate_5,
+.homeContainer .linkbutton.rotate_5,
+.homeContainer .circle-button.rotate_5,
+.homeContainer .center-align-box.rotate_5,
+.homeContainer .left-align-box.rotate_5,
+.homeContainer .right-align-box.rotate_5 {
+  rotate: 5deg;
+}
+.homeContainer a.margin_5,
+.homeContainer div.margin_5,
+.homeContainer img.margin_5,
+.homeContainer button.margin_5,
+.homeContainer .linkbutton.margin_5,
+.homeContainer .circle-button.margin_5,
+.homeContainer .center-align-box.margin_5,
+.homeContainer .left-align-box.margin_5,
+.homeContainer .right-align-box.margin_5 {
+  margin: 5px;
+}
+.homeContainer a.margin_10,
+.homeContainer div.margin_10,
+.homeContainer img.margin_10,
+.homeContainer button.margin_10,
+.homeContainer .linkbutton.margin_10,
+.homeContainer .circle-button.margin_10,
+.homeContainer .center-align-box.margin_10,
+.homeContainer .left-align-box.margin_10,
+.homeContainer .right-align-box.margin_10 {
+  margin: 10px;
+}
+.homeContainer a.no-margin,
+.homeContainer div.no-margin,
+.homeContainer img.no-margin,
+.homeContainer button.no-margin,
+.homeContainer .linkbutton.no-margin,
+.homeContainer .circle-button.no-margin,
+.homeContainer .center-align-box.no-margin,
+.homeContainer .left-align-box.no-margin,
+.homeContainer .right-align-box.no-margin {
+  margin: 0;
+}
+.homeContainer a.horizontal_50,
+.homeContainer div.horizontal_50,
+.homeContainer img.horizontal_50,
+.homeContainer button.horizontal_50,
+.homeContainer .linkbutton.horizontal_50,
+.homeContainer .circle-button.horizontal_50,
+.homeContainer .center-align-box.horizontal_50,
+.homeContainer .left-align-box.horizontal_50,
+.homeContainer .right-align-box.horizontal_50 {
+  margin: 0 50px;
+}
+.homeContainer a.top_-75,
+.homeContainer div.top_-75,
+.homeContainer img.top_-75,
+.homeContainer button.top_-75,
+.homeContainer .linkbutton.top_-75,
+.homeContainer .circle-button.top_-75,
+.homeContainer .center-align-box.top_-75,
+.homeContainer .left-align-box.top_-75,
+.homeContainer .right-align-box.top_-75 {
+  margin-top: -75px;
+}
+.homeContainer a.left_-200,
+.homeContainer div.left_-200,
+.homeContainer img.left_-200,
+.homeContainer button.left_-200,
+.homeContainer .linkbutton.left_-200,
+.homeContainer .circle-button.left_-200,
+.homeContainer .center-align-box.left_-200,
+.homeContainer .left-align-box.left_-200,
+.homeContainer .right-align-box.left_-200 {
+  margin-left: -200px;
+}
+.homeContainer a.left_200,
+.homeContainer div.left_200,
+.homeContainer img.left_200,
+.homeContainer button.left_200,
+.homeContainer .linkbutton.left_200,
+.homeContainer .circle-button.left_200,
+.homeContainer .center-align-box.left_200,
+.homeContainer .left-align-box.left_200,
+.homeContainer .right-align-box.left_200 {
+  margin-left: 200px;
+}
+.homeContainer a.shade,
+.homeContainer div.shade,
+.homeContainer img.shade,
+.homeContainer button.shade,
+.homeContainer .linkbutton.shade,
+.homeContainer .circle-button.shade,
+.homeContainer .center-align-box.shade,
+.homeContainer .left-align-box.shade,
+.homeContainer .right-align-box.shade {
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.12), 2px 2px 2px 2px rgba(0, 0, 0, 0.12), 0px 4px 4px 0px rgba(0, 0, 0, 0.12), 0px 8px 8px 0px rgba(0, 0, 0, 0.12);
+}
+.homeContainer a.padding_5,
+.homeContainer div.padding_5,
+.homeContainer img.padding_5,
+.homeContainer button.padding_5,
+.homeContainer .linkbutton.padding_5,
+.homeContainer .circle-button.padding_5,
+.homeContainer .center-align-box.padding_5,
+.homeContainer .left-align-box.padding_5,
+.homeContainer .right-align-box.padding_5 {
+  padding: 5px;
+}
+.homeContainer a.padding_10,
+.homeContainer div.padding_10,
+.homeContainer img.padding_10,
+.homeContainer button.padding_10,
+.homeContainer .linkbutton.padding_10,
+.homeContainer .circle-button.padding_10,
+.homeContainer .center-align-box.padding_10,
+.homeContainer .left-align-box.padding_10,
+.homeContainer .right-align-box.padding_10 {
+  padding: 10px;
+}
+.homeContainer a.padding_20,
+.homeContainer div.padding_20,
+.homeContainer img.padding_20,
+.homeContainer button.padding_20,
+.homeContainer .linkbutton.padding_20,
+.homeContainer .circle-button.padding_20,
+.homeContainer .center-align-box.padding_20,
+.homeContainer .left-align-box.padding_20,
+.homeContainer .right-align-box.padding_20 {
+  padding: 20px;
+}
+.homeContainer a.pohutukawa,
+.homeContainer div.pohutukawa,
+.homeContainer img.pohutukawa,
+.homeContainer button.pohutukawa,
+.homeContainer .linkbutton.pohutukawa,
+.homeContainer .circle-button.pohutukawa,
+.homeContainer .center-align-box.pohutukawa,
+.homeContainer .left-align-box.pohutukawa,
+.homeContainer .right-align-box.pohutukawa {
+  background-color: var(--pohutukawa);
+  color: white;
+}
+.homeContainer a.brown,
+.homeContainer div.brown,
+.homeContainer img.brown,
+.homeContainer button.brown,
+.homeContainer .linkbutton.brown,
+.homeContainer .circle-button.brown,
+.homeContainer .center-align-box.brown,
+.homeContainer .left-align-box.brown,
+.homeContainer .right-align-box.brown {
+  background-color: var(--brown);
+  color: white;
+}
+.homeContainer a.persian-red,
+.homeContainer div.persian-red,
+.homeContainer img.persian-red,
+.homeContainer button.persian-red,
+.homeContainer .linkbutton.persian-red,
+.homeContainer .circle-button.persian-red,
+.homeContainer .center-align-box.persian-red,
+.homeContainer .left-align-box.persian-red,
+.homeContainer .right-align-box.persian-red {
+  background-color: var(--persian-red);
+  color: white;
+}
+.homeContainer a.intergalactic-ray,
+.homeContainer div.intergalactic-ray,
+.homeContainer img.intergalactic-ray,
+.homeContainer button.intergalactic-ray,
+.homeContainer .linkbutton.intergalactic-ray,
+.homeContainer .circle-button.intergalactic-ray,
+.homeContainer .center-align-box.intergalactic-ray,
+.homeContainer .left-align-box.intergalactic-ray,
+.homeContainer .right-align-box.intergalactic-ray {
+  background-color: var(--intergalactic-ray);
+  color: white;
+}
+.homeContainer a.bravado-red,
+.homeContainer div.bravado-red,
+.homeContainer img.bravado-red,
+.homeContainer button.bravado-red,
+.homeContainer .linkbutton.bravado-red,
+.homeContainer .circle-button.bravado-red,
+.homeContainer .center-align-box.bravado-red,
+.homeContainer .left-align-box.bravado-red,
+.homeContainer .right-align-box.bravado-red {
+  background-color: var(--bravado-red);
+  color: white;
+}
+.homeContainer a.vallarta-blue,
+.homeContainer div.vallarta-blue,
+.homeContainer img.vallarta-blue,
+.homeContainer button.vallarta-blue,
+.homeContainer .linkbutton.vallarta-blue,
+.homeContainer .circle-button.vallarta-blue,
+.homeContainer .center-align-box.vallarta-blue,
+.homeContainer .left-align-box.vallarta-blue,
+.homeContainer .right-align-box.vallarta-blue {
+  background-color: var(--vallarta-blue);
+  color: white;
+}
+.homeContainer a.horsetail,
+.homeContainer div.horsetail,
+.homeContainer img.horsetail,
+.homeContainer button.horsetail,
+.homeContainer .linkbutton.horsetail,
+.homeContainer .circle-button.horsetail,
+.homeContainer .center-align-box.horsetail,
+.homeContainer .left-align-box.horsetail,
+.homeContainer .right-align-box.horsetail {
+  background-color: var(--horsetail);
+  color: white;
+}
+.homeContainer a.solar-power,
+.homeContainer div.solar-power,
+.homeContainer img.solar-power,
+.homeContainer button.solar-power,
+.homeContainer .linkbutton.solar-power,
+.homeContainer .circle-button.solar-power,
+.homeContainer .center-align-box.solar-power,
+.homeContainer .left-align-box.solar-power,
+.homeContainer .right-align-box.solar-power {
+  background-color: var(--solar-power);
+  color: black;
+}
+.homeContainer a.txt-white,
+.homeContainer div.txt-white,
+.homeContainer img.txt-white,
+.homeContainer button.txt-white,
+.homeContainer .linkbutton.txt-white,
+.homeContainer .circle-button.txt-white,
+.homeContainer .center-align-box.txt-white,
+.homeContainer .left-align-box.txt-white,
+.homeContainer .right-align-box.txt-white {
+  color: white;
+}
+.homeContainer a.txt-black,
+.homeContainer div.txt-black,
+.homeContainer img.txt-black,
+.homeContainer button.txt-black,
+.homeContainer .linkbutton.txt-black,
+.homeContainer .circle-button.txt-black,
+.homeContainer .center-align-box.txt-black,
+.homeContainer .left-align-box.txt-black,
+.homeContainer .right-align-box.txt-black {
+  color: black;
+}
+.homeContainer a.font-default,
+.homeContainer div.font-default,
+.homeContainer img.font-default,
+.homeContainer button.font-default,
+.homeContainer .linkbutton.font-default,
+.homeContainer .circle-button.font-default,
+.homeContainer .center-align-box.font-default,
+.homeContainer .left-align-box.font-default,
+.homeContainer .right-align-box.font-default {
+  font-family: var(--font-body);
+}
+.homeContainer a.kaiti,
+.homeContainer div.kaiti,
+.homeContainer img.kaiti,
+.homeContainer button.kaiti,
+.homeContainer .linkbutton.kaiti,
+.homeContainer .circle-button.kaiti,
+.homeContainer .center-align-box.kaiti,
+.homeContainer .left-align-box.kaiti,
+.homeContainer .right-align-box.kaiti {
+  font-family: "KaiTi";
+}
+.homeContainer a.h0,
+.homeContainer div.h0,
+.homeContainer img.h0,
+.homeContainer button.h0,
+.homeContainer .linkbutton.h0,
+.homeContainer .circle-button.h0,
+.homeContainer .center-align-box.h0,
+.homeContainer .left-align-box.h0,
+.homeContainer .right-align-box.h0 {
+  font-size: 60px;
+}
+.homeContainer a.h1,
+.homeContainer div.h1,
+.homeContainer img.h1,
+.homeContainer button.h1,
+.homeContainer .linkbutton.h1,
+.homeContainer .circle-button.h1,
+.homeContainer .center-align-box.h1,
+.homeContainer .left-align-box.h1,
+.homeContainer .right-align-box.h1 {
+  font-size: 40px;
+}
+.homeContainer a.h2,
+.homeContainer div.h2,
+.homeContainer img.h2,
+.homeContainer button.h2,
+.homeContainer .linkbutton.h2,
+.homeContainer .circle-button.h2,
+.homeContainer .center-align-box.h2,
+.homeContainer .left-align-box.h2,
+.homeContainer .right-align-box.h2 {
+  font-size: 36px;
+}
+.homeContainer a.h3,
+.homeContainer div.h3,
+.homeContainer img.h3,
+.homeContainer button.h3,
+.homeContainer .linkbutton.h3,
+.homeContainer .circle-button.h3,
+.homeContainer .center-align-box.h3,
+.homeContainer .left-align-box.h3,
+.homeContainer .right-align-box.h3 {
+  font-size: 32px;
+}
+.homeContainer a.p1,
+.homeContainer div.p1,
+.homeContainer img.p1,
+.homeContainer button.p1,
+.homeContainer .linkbutton.p1,
+.homeContainer .circle-button.p1,
+.homeContainer .center-align-box.p1,
+.homeContainer .left-align-box.p1,
+.homeContainer .right-align-box.p1 {
+  font-size: 20px;
+}
+.homeContainer a.bold,
+.homeContainer div.bold,
+.homeContainer img.bold,
+.homeContainer button.bold,
+.homeContainer .linkbutton.bold,
+.homeContainer .circle-button.bold,
+.homeContainer .center-align-box.bold,
+.homeContainer .left-align-box.bold,
+.homeContainer .right-align-box.bold {
+  font-weight: bold;
+}
+.homeContainer a.bolder,
+.homeContainer div.bolder,
+.homeContainer img.bolder,
+.homeContainer button.bolder,
+.homeContainer .linkbutton.bolder,
+.homeContainer .circle-button.bolder,
+.homeContainer .center-align-box.bolder,
+.homeContainer .left-align-box.bolder,
+.homeContainer .right-align-box.bolder {
+  font-weight: bolder;
 }/*# sourceMappingURL=style.css.map */

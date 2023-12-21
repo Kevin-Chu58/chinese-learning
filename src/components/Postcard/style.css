@@ -6,6 +6,12 @@
   z-index: 1;
   overflow: hidden;
 }
+.postcardContainer.none {
+  background-image: none;
+  box-shadow: none;
+  width: auto;
+  height: auto;
+}
 .postcardContainer.old {
   background-image: url("./../../assets/old-postcard.jpg");
 }
@@ -71,6 +77,9 @@
   display: flex;
   text-align: left;
 }
+.postcardContainer .contentContainer .contextContainer .contextHeader.big {
+  font-size: 40px;
+}
 .postcardContainer .contentContainer .contextContainer .contextInfo {
   font-size: 20px;
   margin-bottom: 20px;
@@ -83,6 +92,14 @@
   font-size: 20px;
   font-style: italic;
   font-family: "Kaiti";
+}
+.postcardContainer .contentContainer .contextContainer .contextInfo.big,
+.postcardContainer .contentContainer .contextContainer .commenter.big {
+  font-size: 24px;
+}
+.postcardContainer .contentContainer .contextContainer .contextInfo.bigger,
+.postcardContainer .contentContainer .contextContainer .commenter.bigger {
+  font-size: 28px;
 }
 .postcardContainer .contentContainer .contextContainer .floatingBotton {
   width: 200px;

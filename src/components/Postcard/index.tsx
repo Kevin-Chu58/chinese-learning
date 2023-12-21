@@ -29,7 +29,7 @@ type Props = {
 
 const Postcard = ({
     rotateDeg = 0,
-    background = "old",
+    background = "none",
     title = "",
     context = "",
     commenter = "",
@@ -46,7 +46,7 @@ const Postcard = ({
 }: PropsWithChildren<Props>) => {
     const navigate = useNavigate();
 
-    const setColor = (color) => {
+    const setColor = (color: string) => {
 
     switch (color) {
         case "red":
@@ -75,17 +75,19 @@ const Postcard = ({
                 marginBottom: `${bottom}px`,
             }}
         >
-            <div className="stampContainer">
-                <div className="postal-stamp-received">
-                    <PostalStampReceived color={setColor(receivedStampColor)} />
+            {background !== "none" && (
+                <div className="stampContainer">
+                    <div className="postal-stamp-received">
+                        <PostalStampReceived color={setColor(receivedStampColor)} />
+                    </div>
+                    <div className="postal-stamp-airmail">
+                        <PostalStampAirmail color={setColor(airmailStampColor)} />
+                    </div>
+                    <div className="postal-stamp-china">
+                        <PostalStampChina color={setColor(chinaStampColor)} />
+                    </div>
                 </div>
-                <div className="postal-stamp-airmail">
-                <PostalStampAirmail color={setColor(airmailStampColor)} />
-                </div>
-                <div className="postal-stamp-china">
-                <PostalStampChina color={setColor(chinaStampColor)} />
-                </div>
-            </div>
+            )}
             <div className="contentContainer">
                 {hasImage && (
                     <div className="imageContainer">
@@ -109,10 +111,10 @@ const Postcard = ({
                             : "contextContainer"
                     }
                 >
-                    <span className="contextHeader">{title}</span>
-                    <span className="contextInfo">{context}</span>
+                    <span className={`contextHeader ${background === "none"? "big" : ""}`}>{title}</span>
+                    <span className={`contextInfo ${background === "none"? "big" : ""}`}>{context}</span>
                     {commenter.length > 0 && (
-                        <div className="commenter">-- {commenter}</div>
+                        <div className={`commenter ${background === "none"? "big" : ""}`}>-- {commenter}</div>
                     )}
                     {hasButton && (
                         <button

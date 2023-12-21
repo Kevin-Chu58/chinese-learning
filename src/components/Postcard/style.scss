@@ -9,6 +9,13 @@
     z-index: 1;
     overflow: hidden;
 
+    &.none {
+        background-image: none;
+        box-shadow: none;
+        width: auto;
+        height: auto;
+    }
+
     &.old {
         background-image: url("./../../assets/old-postcard.jpg");
     }
@@ -86,6 +93,10 @@
                 margin-bottom: 20px;
                 display: flex;
                 text-align: left;
+
+                &.big {
+                    font-size: 40px;
+                }
             }
             
             .contextInfo {
@@ -101,6 +112,17 @@
                 font-size: 20px;
                 font-style: italic;
                 font-family: "Kaiti";
+            }
+
+            .contextInfo,
+            .commenter {
+                &.big {
+                    font-size: 24px;
+                }
+
+                &.bigger {
+                    font-size: 28px;
+                }
             }
             
             .floatingBotton {
