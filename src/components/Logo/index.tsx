@@ -1,6 +1,6 @@
 import React from "react";
-import iconicSemicircleTop from "./../../assets/iconic-semicircle-top.svg";
-import iconicSemicircleBottom from "./../../assets/iconic-semicircle-bottom.svg";
+import iconicSemicircleTop from "./../../assets/images/iconic-semicircle-top.svg";
+import iconicSemicircleBottom from "./../../assets/images/iconic-semicircle-bottom.svg";
 import "./style.css";
 
 const Logo = () => {

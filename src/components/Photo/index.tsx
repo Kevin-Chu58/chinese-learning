@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import DefaultImage from "./../../assets/default-image.jpg";
+import DefaultImage from "./../../assets/images/default-image.jpg";
 
 const Photo = () => {
     return (

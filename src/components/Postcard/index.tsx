@@ -3,7 +3,7 @@ import React from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import "./style.css";
 import Photo from "../Photo";
-import ShortStickyTape from "./../../assets/short-sticky-tape.svg";
+import ShortStickyTape from "./../../assets/images/short-sticky-tape.svg";
 import PostalStampChina from "./../../assets/postal-stamp-china.tsx";
 import PostalStampReceived from "./../../assets/postal-stamp-received.tsx";
 import PostalStampAirmail from "./../../assets/postal-stamp-airmail.tsx";

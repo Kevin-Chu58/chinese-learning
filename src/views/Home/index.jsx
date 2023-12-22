@@ -2,14 +2,23 @@ import { Grid } from "@mui/material";
 import "./style.css";
 import Logo from "../../components/Logo";
 import Postcard from "../../components/Postcard";
+import ConnectForm from "./components/ConnectForm";
+import ImageHolder from "../../components/ImageHolder";
+// ornamental section break
 import MainOramentalSectionBreak from "../../assets/main-ornamental-section-break";
 import StarOramentalSectionBreakShort from "../../assets/star-ornamental-section-break-short";
 // images
-import 世界和图中文教育学会image from "../../assets/世界和图中文教育学会.jpg";
-import 世界和图中文教师培训课程image from "../../assets/世界和图中文教师培训课程.jpg";
-import 世界和图中文课程image from "../../assets/世界和图中文课程.jpg";
+import 世界和图中文教育学会image from "../../assets/images/世界和图中文教育学会.jpg";
+import 世界和图中文教师培训课程image from "../../assets/images/世界和图中文教师培训课程.jpg";
+import 世界和图中文课程image from "../../assets/images/世界和图中文课程.jpg";
+import 微信公众号 from "../../assets/images/media/微信公众号.png";
+import 天地课堂 from "../../assets/images/media/天地课堂.png";
+import 行走青年EWIP from "../../assets/images/media/行走青年EWIP.png";
+import 美篇号 from "../../assets/images/media/美篇号.png";
+
 
 const Home = () => {
+
     return (
         <Grid
             container
@@ -40,7 +49,7 @@ const Home = () => {
                             面向世界融贯意识心
                         </div>
                     </div>
-                    <div className="center-align-box horizontal_50">
+                    <div className="center-align-box marginx_50">
                         <button className="circle-button big citrine-white-outline">
                             <a className="big" href="/playground">
                                 2023/2024世界和图中文师资培训项目已开启
@@ -231,10 +240,7 @@ const Home = () => {
             </div>
 
             <div className="center-align-box no-margin vw100">
-                <svg
-                    viewBox="0 0 800 175"
-                    aria-hidden="true"
-                >
+                <svg viewBox="0 0 800 175" aria-hidden="true">
                     <path
                         className="svg-main-theme"
                         d="M 550 175 L 530 85 L 515 100 L 475 0 L 420 60 L 395 60 L 355 90 L 316 55 
@@ -244,23 +250,34 @@ const Home = () => {
                 </svg>
             </div>
 
-            <div className="left-align-box no-margin padding_20 brown font-default">
-                <div>
-                    保持联系
-                    <br />
-                    加入我们的邮件通讯
-                    <br />
-                    接收学会最新消息、培训及活动信息
-                    <br />
-                    请放心，您的信息不会被分享
+            <div className="box no-margin fd-row brown">
+                <div className="left-align-box no-margin padding_20">
+                    <div>
+                        保持联系
+                        <br />
+                        加入我们的邮件通讯
+                        <br />
+                        接收学会最新消息、培训及活动信息
+                        <br />
+                        请放心，您的信息不会被分享
+                    </div>
+                    <button className="classic-button marginy_10 persian-red shade enlarge">
+                        <a className="padding_10 bold" href="/playground">
+                            欢迎与我们联系
+                        </a>
+                    </button>
+                    <ConnectForm />
                 </div>
-                <button className="classic-button margin_10 persian-red shade">
-                    <a className="padding_10 bold" href="/playground">欢迎与我们联系</a>
-                </button>
-                <div>
-                    姓名框（可填写）
-                    <br />
-                    邮箱框（可填写）
+                <div className="right-align-box no-margin margin-left_max padding_20">
+                    敬请关注：
+                    <div className="right-align-box no-margin fd-row p2">
+                        <ImageHolder image={天地课堂}>“天地课堂”</ImageHolder>
+                        <div className="center-align-box no-margin p2">
+                            <ImageHolder image={微信公众号}>微信公众号“春之谷SVE”</ImageHolder>
+                            <ImageHolder image={行走青年EWIP}>行走青年EWIP</ImageHolder>
+                        </div>
+                        <ImageHolder image={美篇号}>美篇号31543228</ImageHolder>
+                    </div>
                 </div>
             </div>
         </Grid>

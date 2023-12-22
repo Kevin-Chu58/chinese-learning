@@ -13,10 +13,10 @@
   height: auto;
 }
 .postcardContainer.old {
-  background-image: url("./../../assets/old-postcard.jpg");
+  background-image: url("./../../assets/images/old-postcard.jpg");
 }
 .postcardContainer.vintage {
-  background-image: url("./../../assets/vintage-postcard.jpg");
+  background-image: url("./../../assets/images/vintage-postcard.jpg");
 }
 .postcardContainer .stampContainer {
   display: flex;
