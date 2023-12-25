@@ -43,17 +43,22 @@ path {
   width: 110px;
   margin: auto 0;
 }
-@media only screen and (width >= 500px) {
+@media only screen and (width >= 700px) {
   .headerChi {
     font-size: 18px;
   }
 }
-@media only screen and (width >= 450px) and (width < 500px) {
+@media only screen and (width >= 600px) and (width < 700px) {
+  .headerChi {
+    font-size: 16px;
+  }
+}
+@media only screen and (width >= 500px) and (width < 60px) {
   .headerChi {
     font-size: 14px;
   }
 }
-@media only screen and (width >= 350px) and (width < 450px) {
+@media only screen and (width >= 350px) and (width < 500px) {
   .headerChi {
     font-size: 12px;
   }
