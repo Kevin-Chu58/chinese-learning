@@ -126,13 +126,7 @@ const Home = () => {
             </div>
 
             <div className="center-align-box vw70">
-                <MainOramentalSectionBreak color="#9C2727" subtitle="（选择两位老师对培训课程的评价）">
-                    培训反馈
-                </MainOramentalSectionBreak>
-            </div>
-
-            <div className="center-align-box vw70">
-                <MainOramentalSectionBreak color="#9C2727">学员评价</MainOramentalSectionBreak>
+                <MainOramentalSectionBreak color="#9C2727">培训反馈</MainOramentalSectionBreak>
                 <Postcard
                     context="跟着林源老师学了近四个月的和图中文，他给我打开了新的思路，激起我对中文的新的热诚。我感觉他做了很多奠基性的工作，但这只是开端，还有很多的工作要做，来揭示我们语言背后的秘密，来重新激活那个中文语言灵，让它复活和重生。 "
                     commenter="士学员秒浩"
