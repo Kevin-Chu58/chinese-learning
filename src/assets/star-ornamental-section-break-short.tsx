@@ -16,6 +16,7 @@ const StarOramentalSectionBreakShort = ({
                 width="80.000000pt"
                 viewBox="0 0 227.000000 115.000000"
                 preserveAspectRatio="xMidYMid meet"
+                style={{margin: "20px"}}
             >
                 <metadata>
                     Created by potrace 1.10, written by Peter Selinger 2001-2011

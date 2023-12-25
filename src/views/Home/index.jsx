@@ -69,7 +69,7 @@ const Home = () => {
                 </svg>
             </div>
 
-            <div className="center-align-box vw70">
+            <div className="center-align-box vw70 p0">
                 世界和图中文教育学会
                 <br />
                 倡导面向未来的中文教育
@@ -104,7 +104,7 @@ const Home = () => {
                 <StarOramentalSectionBreakShort />
             </div>
 
-            <div className="center-align-box vw70">
+            <div className="center-align-box vw70 p0">
                 {/* <img src={Bamboo} alt="" className="imgBamboo" /> */}
                 教育是改变社会的力量。
                 <br />
@@ -126,13 +126,13 @@ const Home = () => {
             </div>
 
             <div className="center-align-box vw70">
-                <MainOramentalSectionBreak subtitle="（选择两位老师对培训课程的评价）">
+                <MainOramentalSectionBreak color="#9C2727" subtitle="（选择两位老师对培训课程的评价）">
                     培训反馈
                 </MainOramentalSectionBreak>
             </div>
 
             <div className="center-align-box vw70">
-                <MainOramentalSectionBreak>学员评价</MainOramentalSectionBreak>
+                <MainOramentalSectionBreak color="#9C2727">学员评价</MainOramentalSectionBreak>
                 <Postcard
                     context="跟着林源老师学了近四个月的和图中文，他给我打开了新的思路，激起我对中文的新的热诚。我感觉他做了很多奠基性的工作，但这只是开端，还有很多的工作要做，来揭示我们语言背后的秘密，来重新激活那个中文语言灵，让它复活和重生。 "
                     commenter="士学员秒浩"
@@ -161,7 +161,7 @@ const Home = () => {
                 <StarOramentalSectionBreakShort />
             </div>
 
-            <div className="center-align-box vw70">
+            <div className="center-align-box vw70 p0">
                 世界和图中文教程
                 <br />
                 源于中国传统文化和华德福教育的双重启迪，
@@ -202,7 +202,7 @@ const Home = () => {
                 <StarOramentalSectionBreakShort />
             </div>
 
-            <div className="center-align-box vw70">
+            <div className="center-align-box vw70 p0">
                 学会热情欢迎各类合作
                 <br />
                 世界和图中文教程在二十年的发展中
@@ -250,7 +250,7 @@ const Home = () => {
                 </svg>
             </div>
 
-            <div className="box no-margin fd-row brown">
+            <div className="box no-margin fd-row-mobile-col_900 brown">
                 <div className="left-align-box no-margin padding_20">
                     <div>
                         保持联系
@@ -268,11 +268,11 @@ const Home = () => {
                     </button>
                     <ConnectForm />
                 </div>
-                <div className="right-align-box no-margin margin-left_max padding_20">
+                <div className="right-align-box mobile-left_900 no-margin margin-left_max-mobile padding_20">
                     敬请关注：
-                    <div className="right-align-box no-margin fd-row p2">
+                    <div className="right-align-box no-margin mobile-left_900 fd-row-mobile-col_500 p2">
                         <ImageHolder image={天地课堂}>“天地课堂”</ImageHolder>
-                        <div className="center-align-box no-margin p2">
+                        <div className="center-align-box fd-col-mobile-row_500 no-margin p2">
                             <ImageHolder image={微信公众号}>微信公众号“春之谷SVE”</ImageHolder>
                             <ImageHolder image={行走青年EWIP}>行走青年EWIP</ImageHolder>
                         </div>

@@ -11,7 +11,6 @@
 .homeContainer .right-align-box {
   display: flex;
   flex-direction: column;
-  font-size: 24px;
 }
 .homeContainer .box.vw100,
 .homeContainer .center-align-box.vw100,
@@ -25,6 +24,14 @@
 .homeContainer .right-align-box.vw70 {
   max-width: 70vw;
 }
+@media only screen and (width < 700px) {
+  .homeContainer .box.vw70,
+  .homeContainer .center-align-box.vw70,
+  .homeContainer .left-align-box.vw70,
+  .homeContainer .right-align-box.vw70 {
+    max-width: 90vw;
+  }
+}
 .homeContainer .box.vw50,
 .homeContainer .center-align-box.vw50,
 .homeContainer .left-align-box.vw50,
@@ -37,11 +44,88 @@
 .homeContainer .right-align-box.fd-row {
   flex-direction: row;
 }
+.homeContainer .box.fd-row-mobile-col_900,
+.homeContainer .center-align-box.fd-row-mobile-col_900,
+.homeContainer .left-align-box.fd-row-mobile-col_900,
+.homeContainer .right-align-box.fd-row-mobile-col_900 {
+  flex-direction: row;
+}
+@media only screen and (width < 900px) {
+  .homeContainer .box.fd-row-mobile-col_900,
+  .homeContainer .center-align-box.fd-row-mobile-col_900,
+  .homeContainer .left-align-box.fd-row-mobile-col_900,
+  .homeContainer .right-align-box.fd-row-mobile-col_900 {
+    flex-direction: column;
+  }
+}
+.homeContainer .box.fd-row-mobile-col_500,
+.homeContainer .center-align-box.fd-row-mobile-col_500,
+.homeContainer .left-align-box.fd-row-mobile-col_500,
+.homeContainer .right-align-box.fd-row-mobile-col_500 {
+  flex-direction: row;
+}
+@media only screen and (width < 500px) {
+  .homeContainer .box.fd-row-mobile-col_500,
+  .homeContainer .center-align-box.fd-row-mobile-col_500,
+  .homeContainer .left-align-box.fd-row-mobile-col_500,
+  .homeContainer .right-align-box.fd-row-mobile-col_500 {
+    flex-direction: column;
+  }
+}
+.homeContainer .box.fd-col,
+.homeContainer .center-align-box.fd-col,
+.homeContainer .left-align-box.fd-col,
+.homeContainer .right-align-box.fd-col {
+  flex-direction: column;
+}
+.homeContainer .box.fd-col-mobile-row_500,
+.homeContainer .center-align-box.fd-col-mobile-row_500,
+.homeContainer .left-align-box.fd-col-mobile-row_500,
+.homeContainer .right-align-box.fd-col-mobile-row_500 {
+  flex-direction: column;
+}
+@media only screen and (width < 500px) {
+  .homeContainer .box.fd-col-mobile-row_500,
+  .homeContainer .center-align-box.fd-col-mobile-row_500,
+  .homeContainer .left-align-box.fd-col-mobile-row_500,
+  .homeContainer .right-align-box.fd-col-mobile-row_500 {
+    flex-direction: row;
+  }
+}
+@media only screen and (width < 900px) {
+  .homeContainer .box.mobile-left_900,
+  .homeContainer .center-align-box.mobile-left_900,
+  .homeContainer .left-align-box.mobile-left_900,
+  .homeContainer .right-align-box.mobile-left_900 {
+    justify-content: left;
+    text-align: left;
+    align-items: flex-start;
+  }
+}
 .homeContainer .center-align-box {
   justify-content: center;
   text-align: center;
   align-items: center;
-  margin: 20px auto;
+}
+@media only screen and (width >= 1100px) {
+  .homeContainer .center-align-box {
+    margin: 20px auto;
+  }
+}
+@media only screen and (width >= 800px) and (width < 1100px) {
+  .homeContainer .center-align-box {
+    margin: 16px auto;
+  }
+}
+@media only screen and (width >= 700px) and (width < 800px) {
+  .homeContainer .center-align-box {
+    margin: 12px auto;
+  }
+}
+@media only screen and (width >= 0px) and (width < 700px) {
+  .homeContainer .center-align-box {
+    margin: 8px auto;
+  }
 }
 .homeContainer .center-align-box.bg-lg-red {
   background-color: var(--brown);
@@ -52,16 +136,77 @@
   justify-content: left;
   text-align: left;
   align-items: flex-start;
-  margin: 20px 20px 0 20px;
 }
-.homeContainer .left-align-box.tap {
-  margin-left: 180px;
+@media only screen and (width >= 1100px) {
+  .homeContainer .left-align-box {
+    margin: 20px 20px 0 20px;
+  }
+}
+@media only screen and (width >= 800px) and (width < 1100px) {
+  .homeContainer .left-align-box {
+    margin: 16px 16px 0 16px;
+  }
+}
+@media only screen and (width >= 700px) and (width < 800px) {
+  .homeContainer .left-align-box {
+    margin: 12px 12px 0 12px;
+  }
+}
+@media only screen and (width >= 0px) and (width < 700px) {
+  .homeContainer .left-align-box {
+    margin: 8px 8px 0 8px;
+  }
+}
+@media only screen and (width >= 1100px) {
+  .homeContainer .left-align-box.tap {
+    margin-left: 180px;
+  }
+}
+@media only screen and (width >= 800px) and (width < 1100px) {
+  .homeContainer .left-align-box.tap {
+    margin-left: 140px;
+  }
+}
+@media only screen and (width >= 700px) and (width < 800px) {
+  .homeContainer .left-align-box.tap {
+    margin-left: 100px;
+  }
+}
+@media only screen and (width >= 500px) and (width < 700px) {
+  .homeContainer .left-align-box.tap {
+    margin-left: 60px;
+  }
+}
+@media only screen and (width >= 0px) and (width < 500px) {
+  .homeContainer .left-align-box.tap {
+    margin-left: 30px;
+    margin-right: -30px;
+  }
 }
 .homeContainer .right-align-box {
   justify-content: right;
   text-align: right;
   align-items: flex-end;
-  margin: 0 20px 20px 20px;
+}
+@media only screen and (width >= 1100px) {
+  .homeContainer .right-align-box {
+    margin: 0 20px 20px 20px;
+  }
+}
+@media only screen and (width >= 800px) and (width < 1100px) {
+  .homeContainer .right-align-box {
+    margin: 0 16px 16px 16px;
+  }
+}
+@media only screen and (width >= 700px) and (width < 800px) {
+  .homeContainer .right-align-box {
+    margin: 0 12px 12px 12px;
+  }
+}
+@media only screen and (width >= 0px) and (width < 700px) {
+  .homeContainer .right-align-box {
+    margin: 0 8px 8px 8px;
+  }
 }
 .homeContainer .linkbutton,
 .homeContainer .circle-button {
@@ -84,7 +229,6 @@
   display: inline-block;
   position: relative;
   transition: 0.5s;
-  font-size: 20px;
   font-style: italic;
 }
 .homeContainer .linkbutton a:after,
@@ -118,9 +262,29 @@
   font-weight: bold;
   transition: 0.3s ease;
 }
-.homeContainer .circle-button.big {
-  width: 200px;
-  height: 200px;
+@media only screen and (width >= 1100px) {
+  .homeContainer .circle-button.big {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media only screen and (width >= 800px) and (width < 1100px) {
+  .homeContainer .circle-button.big {
+    width: 160px;
+    height: 160px;
+  }
+}
+@media only screen and (width >= 700px) and (width < 800px) {
+  .homeContainer .circle-button.big {
+    width: 120px;
+    height: 120px;
+  }
+}
+@media only screen and (width >= 0px) and (width < 700px) {
+  .homeContainer .circle-button.big {
+    width: 100px;
+    height: 100px;
+  }
 }
 .homeContainer .circle-button.citrine-white {
   background-color: var(--citrine-white);
@@ -128,23 +292,62 @@
 }
 .homeContainer .circle-button.citrine-white-outline {
   background-color: transparent;
-  border-color: rgba(255, 255, 255, 0);
+  border-color: var(--brown);
   border-width: 2px;
 }
 .homeContainer .circle-button.citrine-white-outline:hover {
-  border-color: rgb(255, 255, 255);
+  border-color: white;
   box-shadow: 0px 0px 10px 0px rgb(255, 255, 255);
 }
 .homeContainer .circle-button a {
   width: 120px;
   top: 0;
+  font-size: 20px;
   transition: 0.5s ease;
 }
-.homeContainer .circle-button a.big {
-  width: 180px;
+@media only screen and (width >= 1100px) {
+  .homeContainer .circle-button a.big {
+    width: 180px;
+    font-size: 20px;
+  }
 }
-.homeContainer .circle-button a.big:after {
-  top: 95px;
+@media only screen and (width >= 800px) and (width < 1100px) {
+  .homeContainer .circle-button a.big {
+    width: 120px;
+    font-size: 14px;
+  }
+}
+@media only screen and (width >= 700px) and (width < 800px) {
+  .homeContainer .circle-button a.big {
+    width: 90px;
+    font-size: 11px;
+  }
+}
+@media only screen and (width >= 0px) and (width < 700px) {
+  .homeContainer .circle-button a.big {
+    width: 70px;
+    font-size: 9px;
+  }
+}
+@media only screen and (width >= 1100px) {
+  .homeContainer .circle-button a.big:after {
+    top: 95px;
+  }
+}
+@media only screen and (width >= 800px) and (width < 1100px) {
+  .homeContainer .circle-button a.big:after {
+    top: 75px;
+  }
+}
+@media only screen and (width >= 700px) and (width < 800px) {
+  .homeContainer .circle-button a.big:after {
+    top: 65px;
+  }
+}
+@media only screen and (width >= 0px) and (width < 700px) {
+  .homeContainer .circle-button a.big:after {
+    top: 55px;
+  }
 }
 .homeContainer .circle-button a:after {
   top: 65px;
@@ -162,10 +365,34 @@
 .homeContainer .circle-button:hover a.big {
   top: -10px;
 }
+@media only screen and (width >= 0px) and (width < 700px) {
+  .homeContainer .circle-button:hover a.big {
+    top: -5px;
+  }
+}
 .homeContainer .circle-button:hover a.big:after {
   opacity: 1;
-  top: 90px;
   right: 45%;
+}
+@media only screen and (width >= 1100px) {
+  .homeContainer .circle-button:hover a.big:after {
+    top: 90px;
+  }
+}
+@media only screen and (width >= 800px) and (width < 1100px) {
+  .homeContainer .circle-button:hover a.big:after {
+    top: 70px;
+  }
+}
+@media only screen and (width >= 700px) and (width < 800px) {
+  .homeContainer .circle-button:hover a.big:after {
+    top: 60px;
+  }
+}
+@media only screen and (width >= 0px) and (width < 700px) {
+  .homeContainer .circle-button:hover a.big:after {
+    top: 50px;
+  }
 }
 .homeContainer .classic-button {
   border: 0;
@@ -201,7 +428,18 @@
   fill: var(--brown);
 }
 .homeContainer img {
+  margin: 20px;
   z-index: 1;
+}
+@media only screen and (width >= 0px) and (width < 900px) {
+  .homeContainer img {
+    margin: 10px;
+  }
+}
+@media only screen and (width < 700px) {
+  .homeContainer img {
+    margin: 5px;
+  }
 }
 .homeContainer img.w260 {
   width: 260px;
@@ -332,6 +570,23 @@
 .homeContainer .right-align-box.marginx_50 {
   margin: 0 50px;
 }
+@media only screen and (width < 700px) {
+  .homeContainer a.marginx_50,
+  .homeContainer div.marginx_50,
+  .homeContainer img.marginx_50,
+  .homeContainer form.marginx_50,
+  .homeContainer input.marginx_50,
+  .homeContainer label.marginx_50,
+  .homeContainer button.marginx_50,
+  .homeContainer .box.marginx_50,
+  .homeContainer .linkbutton.marginx_50,
+  .homeContainer .circle-button.marginx_50,
+  .homeContainer .center-align-box.marginx_50,
+  .homeContainer .left-align-box.marginx_50,
+  .homeContainer .right-align-box.marginx_50 {
+    margin: 0 20px;
+  }
+}
 .homeContainer a.margin-left_max,
 .homeContainer div.margin-left_max,
 .homeContainer img.margin-left_max,
@@ -346,6 +601,38 @@
 .homeContainer .left-align-box.margin-left_max,
 .homeContainer .right-align-box.margin-left_max {
   margin-left: auto;
+}
+.homeContainer a.margin-left_max-mobile,
+.homeContainer div.margin-left_max-mobile,
+.homeContainer img.margin-left_max-mobile,
+.homeContainer form.margin-left_max-mobile,
+.homeContainer input.margin-left_max-mobile,
+.homeContainer label.margin-left_max-mobile,
+.homeContainer button.margin-left_max-mobile,
+.homeContainer .box.margin-left_max-mobile,
+.homeContainer .linkbutton.margin-left_max-mobile,
+.homeContainer .circle-button.margin-left_max-mobile,
+.homeContainer .center-align-box.margin-left_max-mobile,
+.homeContainer .left-align-box.margin-left_max-mobile,
+.homeContainer .right-align-box.margin-left_max-mobile {
+  margin-left: auto;
+}
+@media only screen and (width < 900px) {
+  .homeContainer a.margin-left_max-mobile,
+  .homeContainer div.margin-left_max-mobile,
+  .homeContainer img.margin-left_max-mobile,
+  .homeContainer form.margin-left_max-mobile,
+  .homeContainer input.margin-left_max-mobile,
+  .homeContainer label.margin-left_max-mobile,
+  .homeContainer button.margin-left_max-mobile,
+  .homeContainer .box.margin-left_max-mobile,
+  .homeContainer .linkbutton.margin-left_max-mobile,
+  .homeContainer .circle-button.margin-left_max-mobile,
+  .homeContainer .center-align-box.margin-left_max-mobile,
+  .homeContainer .left-align-box.margin-left_max-mobile,
+  .homeContainer .right-align-box.margin-left_max-mobile {
+    margin-left: 0;
+  }
 }
 .homeContainer a.marginy_10,
 .homeContainer div.marginy_10,
@@ -671,20 +958,73 @@
 .homeContainer .right-align-box.kaiti {
   font-family: "KaiTi";
 }
-.homeContainer a.h0,
-.homeContainer div.h0,
-.homeContainer img.h0,
-.homeContainer form.h0,
-.homeContainer input.h0,
-.homeContainer label.h0,
-.homeContainer button.h0,
-.homeContainer .box.h0,
-.homeContainer .linkbutton.h0,
-.homeContainer .circle-button.h0,
-.homeContainer .center-align-box.h0,
-.homeContainer .left-align-box.h0,
-.homeContainer .right-align-box.h0 {
-  font-size: 60px;
+@media only screen and (width >= 1055px) {
+  .homeContainer a.h0,
+  .homeContainer div.h0,
+  .homeContainer img.h0,
+  .homeContainer form.h0,
+  .homeContainer input.h0,
+  .homeContainer label.h0,
+  .homeContainer button.h0,
+  .homeContainer .box.h0,
+  .homeContainer .linkbutton.h0,
+  .homeContainer .circle-button.h0,
+  .homeContainer .center-align-box.h0,
+  .homeContainer .left-align-box.h0,
+  .homeContainer .right-align-box.h0 {
+    font-size: 60px;
+  }
+}
+@media only screen and (width >= 770px) and (width < 1055px) {
+  .homeContainer a.h0,
+  .homeContainer div.h0,
+  .homeContainer img.h0,
+  .homeContainer form.h0,
+  .homeContainer input.h0,
+  .homeContainer label.h0,
+  .homeContainer button.h0,
+  .homeContainer .box.h0,
+  .homeContainer .linkbutton.h0,
+  .homeContainer .circle-button.h0,
+  .homeContainer .center-align-box.h0,
+  .homeContainer .left-align-box.h0,
+  .homeContainer .right-align-box.h0 {
+    font-size: 40px;
+  }
+}
+@media only screen and (width >= 720px) and (width < 770px) {
+  .homeContainer a.h0,
+  .homeContainer div.h0,
+  .homeContainer img.h0,
+  .homeContainer form.h0,
+  .homeContainer input.h0,
+  .homeContainer label.h0,
+  .homeContainer button.h0,
+  .homeContainer .box.h0,
+  .homeContainer .linkbutton.h0,
+  .homeContainer .circle-button.h0,
+  .homeContainer .center-align-box.h0,
+  .homeContainer .left-align-box.h0,
+  .homeContainer .right-align-box.h0 {
+    font-size: 26px;
+  }
+}
+@media only screen and (width >= 0px) and (width < 720px) {
+  .homeContainer a.h0,
+  .homeContainer div.h0,
+  .homeContainer img.h0,
+  .homeContainer form.h0,
+  .homeContainer input.h0,
+  .homeContainer label.h0,
+  .homeContainer button.h0,
+  .homeContainer .box.h0,
+  .homeContainer .linkbutton.h0,
+  .homeContainer .circle-button.h0,
+  .homeContainer .center-align-box.h0,
+  .homeContainer .left-align-box.h0,
+  .homeContainer .right-align-box.h0 {
+    font-size: 26px;
+  }
 }
 .homeContainer a.h1,
 .homeContainer div.h1,
@@ -745,6 +1085,23 @@
 .homeContainer .left-align-box.p0,
 .homeContainer .right-align-box.p0 {
   font-size: 24px;
+}
+@media only screen and (width < 700px) {
+  .homeContainer a.p0,
+  .homeContainer div.p0,
+  .homeContainer img.p0,
+  .homeContainer form.p0,
+  .homeContainer input.p0,
+  .homeContainer label.p0,
+  .homeContainer button.p0,
+  .homeContainer .box.p0,
+  .homeContainer .linkbutton.p0,
+  .homeContainer .circle-button.p0,
+  .homeContainer .center-align-box.p0,
+  .homeContainer .left-align-box.p0,
+  .homeContainer .right-align-box.p0 {
+    font-size: 20px;
+  }
 }
 .homeContainer a.p1,
 .homeContainer div.p1,

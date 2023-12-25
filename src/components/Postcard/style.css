@@ -68,6 +68,16 @@
   background-color: transparent;
   overflow: visible;
 }
+@media only screen and (width >= 500px) and (width < 700px) {
+  .postcardContainer .contentContainer .contextContainer {
+    margin: 0 20px;
+  }
+}
+@media only screen and (width < 500px) {
+  .postcardContainer .contentContainer .contextContainer {
+    margin: 0 5px;
+  }
+}
 .postcardContainer .contentContainer .contextContainer.hasImage {
   margin: 0 0 0 -20px;
 }

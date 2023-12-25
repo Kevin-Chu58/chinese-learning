@@ -41,8 +41,17 @@ path {
 
 .headerChi {
   width: 110px;
-  font-size: 18px;
   margin: auto 0;
+}
+@media only screen and (width >= 380px) {
+  .headerChi {
+    font-size: 18px;
+  }
+}
+@media only screen and (width >= 0px) and (width < 380px) {
+  .headerChi {
+    font-size: 14px;
+  }
 }
 
 .headerEng {
@@ -50,4 +59,14 @@ path {
   text-align: center;
   font-family: antropos;
   margin: auto 0;
+}
+@media only screen and (width >= 380px) {
+  .headerEng {
+    font-size: 18px;
+  }
+}
+@media only screen and (width >= 0px) and (width < 380px) {
+  .headerEng {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=style.css.map */

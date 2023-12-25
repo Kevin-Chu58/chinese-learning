@@ -11,7 +11,7 @@ const ImageHolder = ({
 }: PropsWithChildren<Props>) => {
 
     return (
-        <div style={{display: "flex", flexDirection: "column", margin: "10px", textAlign: "center"}}>
+        <div style={{display: "flex", flexDirection: "column", textAlign: "center"}}>
             <img src={image} alt="" style={{borderRadius: "10px"}} />
             {children}
         </div>

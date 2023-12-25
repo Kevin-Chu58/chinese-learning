@@ -7,7 +7,6 @@ import ShortStickyTape from "./../../assets/images/short-sticky-tape.svg";
 import PostalStampChina from "./../../assets/postal-stamp-china.tsx";
 import PostalStampReceived from "./../../assets/postal-stamp-received.tsx";
 import PostalStampAirmail from "./../../assets/postal-stamp-airmail.tsx";
-import { stepContentClasses } from "@mui/material";
 
 type Props = {
     rotateDeg?: number;

@@ -84,6 +84,13 @@
             background-color: transparent;
             overflow: visible;
 
+            @media only screen and (width >= 500px) and (width < 700px) {
+                margin: 0 20px;
+            }
+            @media only screen and (width < 500px) {
+                margin: 0 5px;
+            }
+
             &.hasImage {
                 margin: 0 0 0 -20px;
             }

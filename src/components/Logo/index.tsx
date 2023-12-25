@@ -16,9 +16,7 @@ const Logo = () => {
 
             <div className="engTextContainer">
                 <div className="engText">
-                    WOERLD HETU CHINESE EDUCATION INSTITUTE
-                    {/* 扎根本土筑基民族魂 <br />
-                        面向世界融贯意识心 */}
+                    WORLD HETU CHINESE EDUCATION INSTITUTE
                 </div>
             </div>
 

@@ -25,14 +25,66 @@
 }
 
 .chiText {
-  font-size: 70px;
   font-weight: bolder;
   font-family: "KaiTi";
+}
+@media only screen and (width >= 1470px) {
+  .chiText {
+    font-size: 70px;
+  }
+}
+@media only screen and (width >= 1060px) and (width < 1470px) {
+  .chiText {
+    font-size: 50px;
+  }
+}
+@media only screen and (width >= 755px) and (width < 1060px) {
+  .chiText {
+    font-size: 36px;
+  }
+}
+@media only screen and (width >= 425px) and (width < 755px) {
+  .chiText {
+    font-size: 20px;
+  }
+}
+@media only screen and (width < 425px) {
+  .chiText {
+    font-size: 14px;
+  }
 }
 
 .engText {
   color: white;
-  font-size: 30px;
-  padding: 10px;
   font-family: "antropos";
+}
+@media only screen and (width >= 1500px) {
+  .engText {
+    font-size: 30px;
+    padding: 10px;
+  }
+}
+@media only screen and (width >= 1210px) and (width < 1500px) {
+  .engText {
+    font-size: 24px;
+    padding: 8px;
+  }
+}
+@media only screen and (width >= 920px) and (width < 1210px) {
+  .engText {
+    font-size: 18px;
+    padding: 6px;
+  }
+}
+@media only screen and (width >= 600px) and (width < 920px) {
+  .engText {
+    font-size: 12px;
+    padding: 4px;
+  }
+}
+@media only screen and (width >= 0px) and (width < 600px) {
+  .engText {
+    font-size: 6px;
+    padding: 2px;
+  }
 }/*# sourceMappingURL=style.css.map */
