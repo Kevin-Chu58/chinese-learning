@@ -446,6 +446,16 @@
   height: auto;
   border-radius: 10px;
 }
+.homeContainer img.w400 {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+@media only screen and (width < 500px) {
+  .homeContainer img.w400 {
+    width: 300px;
+  }
+}
 .homeContainer form label,
 .homeContainer form input {
   margin: 5px;
@@ -992,24 +1002,7 @@
     font-size: 40px;
   }
 }
-@media only screen and (width >= 720px) and (width < 770px) {
-  .homeContainer a.h0,
-  .homeContainer div.h0,
-  .homeContainer img.h0,
-  .homeContainer form.h0,
-  .homeContainer input.h0,
-  .homeContainer label.h0,
-  .homeContainer button.h0,
-  .homeContainer .box.h0,
-  .homeContainer .linkbutton.h0,
-  .homeContainer .circle-button.h0,
-  .homeContainer .center-align-box.h0,
-  .homeContainer .left-align-box.h0,
-  .homeContainer .right-align-box.h0 {
-    font-size: 26px;
-  }
-}
-@media only screen and (width >= 0px) and (width < 720px) {
+@media only screen and (width >= 0px) and (width < 770px) {
   .homeContainer a.h0,
   .homeContainer div.h0,
   .homeContainer img.h0,
@@ -1101,6 +1094,57 @@
   .homeContainer .left-align-box.p0,
   .homeContainer .right-align-box.p0 {
     font-size: 20px;
+  }
+}
+@media only screen and (width >= 500px) and (width < 700px) {
+  .homeContainer a.p0,
+  .homeContainer div.p0,
+  .homeContainer img.p0,
+  .homeContainer form.p0,
+  .homeContainer input.p0,
+  .homeContainer label.p0,
+  .homeContainer button.p0,
+  .homeContainer .box.p0,
+  .homeContainer .linkbutton.p0,
+  .homeContainer .circle-button.p0,
+  .homeContainer .center-align-box.p0,
+  .homeContainer .left-align-box.p0,
+  .homeContainer .right-align-box.p0 {
+    font-size: 16px;
+  }
+}
+@media only screen and (width >= 420px) and (width < 500px) {
+  .homeContainer a.p0,
+  .homeContainer div.p0,
+  .homeContainer img.p0,
+  .homeContainer form.p0,
+  .homeContainer input.p0,
+  .homeContainer label.p0,
+  .homeContainer button.p0,
+  .homeContainer .box.p0,
+  .homeContainer .linkbutton.p0,
+  .homeContainer .circle-button.p0,
+  .homeContainer .center-align-box.p0,
+  .homeContainer .left-align-box.p0,
+  .homeContainer .right-align-box.p0 {
+    font-size: 15px;
+  }
+}
+@media only screen and (width >= 0px) and (width < 420px) {
+  .homeContainer a.p0,
+  .homeContainer div.p0,
+  .homeContainer img.p0,
+  .homeContainer form.p0,
+  .homeContainer input.p0,
+  .homeContainer label.p0,
+  .homeContainer button.p0,
+  .homeContainer .box.p0,
+  .homeContainer .linkbutton.p0,
+  .homeContainer .circle-button.p0,
+  .homeContainer .center-align-box.p0,
+  .homeContainer .left-align-box.p0,
+  .homeContainer .right-align-box.p0 {
+    font-size: 14px;
   }
 }
 .homeContainer a.p1,

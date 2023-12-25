@@ -46,14 +46,17 @@ path {
     width: 110px;
     margin: auto 0;
 
-    @media only screen and (width >= 380px) {
+    @media only screen and (width >= 500px) {
         font-size: 18px;
     }
-    @media only screen and (width >= 300px) and (width < 380px) {
+    @media only screen and (width >= 450px) and (width < 500px) {
         font-size: 14px;
     }
-    @media only screen and (width >= 0px) and (width < 300px) {
+    @media only screen and (width >= 350px) and (width < 450px) {
         font-size: 12px;
+    }
+    @media only screen and (width >= 0px) and (width < 350px) {
+        font-size: 10px;
     }
 }
 
@@ -69,7 +72,7 @@ path {
     @media only screen and (width >= 300px) and (width < 380px) {
         font-size: 14px;
     }
-    @media only screen and (width >= 0px) and (width < 300px) {
+    @media only screen and (width >= px) and (width < 300px) {
         font-size: 12px;
     }
 }

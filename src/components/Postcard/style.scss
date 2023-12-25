@@ -111,6 +111,13 @@
                 margin-bottom: 20px;
                 display: flex;
                 text-align: left;
+
+                @media only screen and (width >= 500px) and (width < 700px) {
+                    font-size: 16px;
+                }
+                @media only screen and (width >= 0px) and (width < 500px) {
+                    font-size: 12px;
+                }
             }
 
             .commenter {
@@ -125,6 +132,13 @@
             .commenter {
                 &.big {
                     font-size: 24px;
+
+                    @media only screen and (width >= 500px) and (width < 700px) {
+                        font-size: 20px;
+                    }
+                    @media only screen and (width >= 0px) and (width < 500px) {
+                        font-size: 16px;
+                    }
                 }
 
                 &.bigger {

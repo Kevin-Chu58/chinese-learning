@@ -96,6 +96,16 @@
   display: flex;
   text-align: left;
 }
+@media only screen and (width >= 500px) and (width < 700px) {
+  .postcardContainer .contentContainer .contextContainer .contextInfo {
+    font-size: 16px;
+  }
+}
+@media only screen and (width >= 0px) and (width < 500px) {
+  .postcardContainer .contentContainer .contextContainer .contextInfo {
+    font-size: 12px;
+  }
+}
 .postcardContainer .contentContainer .contextContainer .commenter {
   display: flex;
   justify-content: right;
@@ -106,6 +116,18 @@
 .postcardContainer .contentContainer .contextContainer .contextInfo.big,
 .postcardContainer .contentContainer .contextContainer .commenter.big {
   font-size: 24px;
+}
+@media only screen and (width >= 500px) and (width < 700px) {
+  .postcardContainer .contentContainer .contextContainer .contextInfo.big,
+  .postcardContainer .contentContainer .contextContainer .commenter.big {
+    font-size: 20px;
+  }
+}
+@media only screen and (width >= 0px) and (width < 500px) {
+  .postcardContainer .contentContainer .contextContainer .contextInfo.big,
+  .postcardContainer .contentContainer .contextContainer .commenter.big {
+    font-size: 16px;
+  }
 }
 .postcardContainer .contentContainer .contextContainer .contextInfo.bigger,
 .postcardContainer .contentContainer .contextContainer .commenter.bigger {

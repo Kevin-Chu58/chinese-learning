@@ -26,13 +26,13 @@ const MainOramentalSectionBreak = ({
             setHeaderFontSize(32);
         } else if (width >= 500) {
             setSvgWidth(120);
-            setHeaderFontSize(32);
+            setHeaderFontSize(30);
         } else if (width >= 380) {
             setSvgWidth(80);
-            setHeaderFontSize(32);
+            setHeaderFontSize(28);
         } else if (width >= 0) {
             setSvgWidth(70);
-            setHeaderFontSize(32);
+            setHeaderFontSize(26);
         }
     };
 

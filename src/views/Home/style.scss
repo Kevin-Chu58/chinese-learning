@@ -401,6 +401,16 @@
             height: auto;
             border-radius: 10px;
         }
+
+        &.w400 {
+            width: 400px;
+            height: auto;
+            border-radius: 10px;
+
+            @media only screen and (width < 500px) {
+                width: 300px;
+            }
+        }
     }
 
     form {
@@ -597,10 +607,7 @@
             @media only screen and (width >= 770px) and (width < 1055px) {
                 font-size: 40px;
             }
-            @media only screen and (width >= 720px) and (width < 770px) {
-                font-size: 26px;
-            }
-            @media only screen and (width >= 0px) and (width < 720px) {
+            @media only screen and (width >= 0px) and (width < 770px) {
                 font-size: 26px;
             }
         }
@@ -622,6 +629,15 @@
 
             @media only screen and (width < 700px) {
                 font-size: 20px;
+            }
+            @media only screen and (width >= 500px) and (width < 700px) {
+                font-size: 16px;
+            }
+            @media only screen and (width >= 420px) and (width < 500px) {
+                font-size: 15px;
+            }
+            @media only screen and (width >= 0px) and (width < 420px) {
+                font-size: 14px;
             }
         }
 

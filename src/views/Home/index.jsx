@@ -93,7 +93,7 @@ const Home = () => {
 
             <div className="center-align-box">
                 <img
-                    className="w260 shade rotate_-5"
+                    className="w400 shade rotate_-5"
                     src={世界和图中文教育学会image}
                     alt=""
                 />
@@ -191,7 +191,7 @@ const Home = () => {
 
             <div className="center-align-box">
                 <img
-                    className="w260 shade rotate_5"
+                    className="w400 shade rotate_5"
                     src={世界和图中文教师培训课程image}
                     alt=""
                 />
@@ -228,7 +228,7 @@ const Home = () => {
 
             <div className="center-align-box">
                 <img
-                    className="w260 shade rotate_-5"
+                    className="w400 shade rotate_-5"
                     src={世界和图中文课程image}
                     alt=""
                 />

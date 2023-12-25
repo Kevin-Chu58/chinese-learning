@@ -43,19 +43,24 @@ path {
   width: 110px;
   margin: auto 0;
 }
-@media only screen and (width >= 380px) {
+@media only screen and (width >= 500px) {
   .headerChi {
     font-size: 18px;
   }
 }
-@media only screen and (width >= 300px) and (width < 380px) {
+@media only screen and (width >= 450px) and (width < 500px) {
   .headerChi {
     font-size: 14px;
   }
 }
-@media only screen and (width >= 0px) and (width < 300px) {
+@media only screen and (width >= 350px) and (width < 450px) {
   .headerChi {
     font-size: 12px;
+  }
+}
+@media only screen and (width >= 0px) and (width < 350px) {
+  .headerChi {
+    font-size: 10px;
   }
 }
 
@@ -75,7 +80,7 @@ path {
     font-size: 14px;
   }
 }
-@media only screen and (width >= 0px) and (width < 300px) {
+@media only screen and (width >= px) and (width < 300px) {
   .headerEng {
     font-size: 12px;
   }
