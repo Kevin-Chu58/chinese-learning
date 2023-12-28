@@ -254,13 +254,35 @@
   color: var(--persian-red);
 }
 .homeContainer .circle-button {
-  width: 150px;
-  height: 150px;
   position: relative;
   border-radius: 200px;
   color: white;
   font-weight: bold;
   transition: 0.3s ease;
+}
+@media only screen and (width >= 1100px) {
+  .homeContainer .circle-button {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media only screen and (width >= 800px) and (width < 1100px) {
+  .homeContainer .circle-button {
+    width: 140px;
+    height: 140px;
+  }
+}
+@media only screen and (width >= 700px) and (width < 800px) {
+  .homeContainer .circle-button {
+    width: 130px;
+    height: 130px;
+  }
+}
+@media only screen and (width >= 0px) and (width < 700px) {
+  .homeContainer .circle-button {
+    width: 120px;
+    height: 120px;
+  }
 }
 @media only screen and (width >= 1100px) {
   .homeContainer .circle-button.big {
@@ -300,10 +322,32 @@
   box-shadow: 0px 0px 10px 0px rgb(255, 255, 255);
 }
 .homeContainer .circle-button a {
-  width: 120px;
   top: 0;
-  font-size: 20px;
   transition: 0.5s ease;
+}
+@media only screen and (width >= 1100px) {
+  .homeContainer .circle-button a {
+    width: 120px;
+    font-size: 20px;
+  }
+}
+@media only screen and (width >= 800px) and (width < 1100px) {
+  .homeContainer .circle-button a {
+    width: 120px;
+    font-size: 16px;
+  }
+}
+@media only screen and (width >= 700px) and (width < 800px) {
+  .homeContainer .circle-button a {
+    width: 90px;
+    font-size: 14px;
+  }
+}
+@media only screen and (width >= 0px) and (width < 700px) {
+  .homeContainer .circle-button a {
+    width: 80px;
+    font-size: 12px;
+  }
 }
 @media only screen and (width >= 1100px) {
   .homeContainer .circle-button a.big {
@@ -350,7 +394,7 @@
   }
 }
 .homeContainer .circle-button a:after {
-  top: 65px;
+  top: 60px;
   right: 45%;
 }
 .homeContainer .circle-button:hover a {
@@ -359,7 +403,7 @@
 }
 .homeContainer .circle-button:hover a:after {
   opacity: 1;
-  top: 60px;
+  top: 55px;
   right: 45%;
 }
 .homeContainer .circle-button:hover a.big {
@@ -441,6 +485,16 @@
     margin: 5px;
   }
 }
+.homeContainer img.w200 {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+@media only screen and (width < 500px) {
+  .homeContainer img.w200 {
+    width: 150px;
+  }
+}
 .homeContainer img.w260 {
   width: 260px;
   height: auto;
@@ -454,6 +508,26 @@
 @media only screen and (width < 500px) {
   .homeContainer img.w400 {
     width: 300px;
+  }
+}
+.homeContainer img.w400-gallery {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+@media only screen and (width >= 950px) and (width < 1400px) {
+  .homeContainer img.w400-gallery {
+    width: 300px;
+  }
+}
+@media only screen and (width >= 650px) and (width < 950px) {
+  .homeContainer img.w400-gallery {
+    width: 200px;
+  }
+}
+@media only screen and (width >= 0px) and (width < 650px) {
+  .homeContainer img.w400-gallery {
+    width: 150px;
   }
 }
 .homeContainer form label,
@@ -673,6 +747,102 @@
 .homeContainer .left-align-box.top_-75,
 .homeContainer .right-align-box.top_-75 {
   margin-top: -75px;
+}
+@media only screen and (width < 900px) {
+  .homeContainer a.top_-75,
+  .homeContainer div.top_-75,
+  .homeContainer img.top_-75,
+  .homeContainer form.top_-75,
+  .homeContainer input.top_-75,
+  .homeContainer label.top_-75,
+  .homeContainer button.top_-75,
+  .homeContainer .box.top_-75,
+  .homeContainer .linkbutton.top_-75,
+  .homeContainer .circle-button.top_-75,
+  .homeContainer .center-align-box.top_-75,
+  .homeContainer .left-align-box.top_-75,
+  .homeContainer .right-align-box.top_-75 {
+    margin-top: -35px;
+  }
+}
+.homeContainer a.top_-100,
+.homeContainer div.top_-100,
+.homeContainer img.top_-100,
+.homeContainer form.top_-100,
+.homeContainer input.top_-100,
+.homeContainer label.top_-100,
+.homeContainer button.top_-100,
+.homeContainer .box.top_-100,
+.homeContainer .linkbutton.top_-100,
+.homeContainer .circle-button.top_-100,
+.homeContainer .center-align-box.top_-100,
+.homeContainer .left-align-box.top_-100,
+.homeContainer .right-align-box.top_-100 {
+  margin-top: -100px;
+}
+@media only screen and (width < 900px) {
+  .homeContainer a.top_-100,
+  .homeContainer div.top_-100,
+  .homeContainer img.top_-100,
+  .homeContainer form.top_-100,
+  .homeContainer input.top_-100,
+  .homeContainer label.top_-100,
+  .homeContainer button.top_-100,
+  .homeContainer .box.top_-100,
+  .homeContainer .linkbutton.top_-100,
+  .homeContainer .circle-button.top_-100,
+  .homeContainer .center-align-box.top_-100,
+  .homeContainer .left-align-box.top_-100,
+  .homeContainer .right-align-box.top_-100 {
+    margin-top: -50px;
+  }
+}
+.homeContainer a.top_-150,
+.homeContainer div.top_-150,
+.homeContainer img.top_-150,
+.homeContainer form.top_-150,
+.homeContainer input.top_-150,
+.homeContainer label.top_-150,
+.homeContainer button.top_-150,
+.homeContainer .box.top_-150,
+.homeContainer .linkbutton.top_-150,
+.homeContainer .circle-button.top_-150,
+.homeContainer .center-align-box.top_-150,
+.homeContainer .left-align-box.top_-150,
+.homeContainer .right-align-box.top_-150 {
+  margin-top: -150px;
+}
+@media only screen and (width < 900px) {
+  .homeContainer a.top_-150,
+  .homeContainer div.top_-150,
+  .homeContainer img.top_-150,
+  .homeContainer form.top_-150,
+  .homeContainer input.top_-150,
+  .homeContainer label.top_-150,
+  .homeContainer button.top_-150,
+  .homeContainer .box.top_-150,
+  .homeContainer .linkbutton.top_-150,
+  .homeContainer .circle-button.top_-150,
+  .homeContainer .center-align-box.top_-150,
+  .homeContainer .left-align-box.top_-150,
+  .homeContainer .right-align-box.top_-150 {
+    margin-top: -75px;
+  }
+}
+.homeContainer a.top_5,
+.homeContainer div.top_5,
+.homeContainer img.top_5,
+.homeContainer form.top_5,
+.homeContainer input.top_5,
+.homeContainer label.top_5,
+.homeContainer button.top_5,
+.homeContainer .box.top_5,
+.homeContainer .linkbutton.top_5,
+.homeContainer .circle-button.top_5,
+.homeContainer .center-align-box.top_5,
+.homeContainer .left-align-box.top_5,
+.homeContainer .right-align-box.top_5 {
+  margin-top: 5px;
 }
 .homeContainer a.left_-200,
 .homeContainer div.left_-200,
@@ -1236,4 +1406,19 @@
 .homeContainer .left-align-box.b-top-single,
 .homeContainer .right-align-box.b-top-single {
   border-top: 1px solid white;
+}
+.homeContainer a.no-border-radius,
+.homeContainer div.no-border-radius,
+.homeContainer img.no-border-radius,
+.homeContainer form.no-border-radius,
+.homeContainer input.no-border-radius,
+.homeContainer label.no-border-radius,
+.homeContainer button.no-border-radius,
+.homeContainer .box.no-border-radius,
+.homeContainer .linkbutton.no-border-radius,
+.homeContainer .circle-button.no-border-radius,
+.homeContainer .center-align-box.no-border-radius,
+.homeContainer .left-align-box.no-border-radius,
+.homeContainer .right-align-box.no-border-radius {
+  border-radius: 0;
 }/*# sourceMappingURL=style.css.map */

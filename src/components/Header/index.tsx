@@ -18,16 +18,8 @@ const Header = ({
         <header id="header" className="header">
             <div className="headerContainer">
 
-                <div className="headerEng">
-                    World Hetu Chinese
-                    <br />
-                    Education Institute
-                </div>
-
-                <div className="headerChi">
-                    世界和图中文
-                    <br />
-                    教育学会
+                <div className="whcei">
+                    WHCEI
                 </div>
 
                 <button onClick={onClick} className="headerButton">

@@ -212,12 +212,27 @@
     }
 
     .circle-button {
-        width: 150px;
-        height: 150px;
         position: relative;
         border-radius: 200px;
         color: white;
         font-weight: bold;
+
+        @media only screen and (width >= 1100px) {
+            width: 150px;
+            height: 150px;
+        }
+        @media only screen and (width >= 800px) and (width < 1100px) {
+            width: 140px;
+            height: 140px;
+        }
+        @media only screen and (width >= 700px) and (width < 800px) {
+            width: 130px;
+            height: 130px;
+        }
+        @media only screen and (width >= 0px) and (width < 700px) {
+            width: 120px;
+            height: 120px;
+        }
 
         transition: .3s ease;
 
@@ -257,9 +272,24 @@
         }
 
         & a {
-            width: 120px;
             top: 0;
-            font-size: 20px;
+
+            @media only screen and (width >= 1100px) {
+                width: 120px;
+                font-size: 20px;
+            }
+            @media only screen and (width >= 800px) and (width < 1100px) {
+                width: 120px;
+                font-size: 16px;
+            }
+            @media only screen and (width >= 700px) and (width < 800px) {
+                width: 90px;
+                font-size: 14px;
+            }
+            @media only screen and (width >= 0px) and (width < 700px) {
+                width: 80px;
+                font-size: 12px;
+            }
             
             transition: 0.5s ease;
 
@@ -298,7 +328,7 @@
             }
 
             &:after {
-                top: 65px;
+                top: 60px;
                 right: 45%;
             }
         }
@@ -309,7 +339,7 @@
 
             &:after {
                 opacity: 1;
-                top: 60px;
+                top: 55px;
                 right: 45%;
             }
 
@@ -395,6 +425,16 @@
         }
 
         z-index: 1;
+        
+        &.w200 {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+
+            @media only screen and (width < 500px) {
+                width: 150px;
+            }
+        }
 
         &.w260 {
             width: 260px;
@@ -409,6 +449,21 @@
 
             @media only screen and (width < 500px) {
                 width: 300px;
+            }
+
+            &-gallery {
+                width: 400px;
+                height: auto;
+                border-radius: 10px;
+                @media only screen and (width >= 950px) and (width < 1400px) {
+                    width: 300px;
+                }
+                @media only screen and (width >= 650px) and (width < 950px) {
+                    width: 200px;
+                }
+                @media only screen and (width >= 0px) and (width < 650px) {
+                    width: 150px;
+                }
             }
         }
     }
@@ -497,7 +552,29 @@
         // -> top
         &.top_-75 {
             margin-top: -75px;
+            @media only screen and (width < 900px) {
+                margin-top: -35px;
+            }
         }
+
+        &.top_-100 {
+            margin-top: -100px;
+            @media only screen and (width < 900px) {
+                margin-top: -50px;
+            }
+        }
+
+        &.top_-150 {
+            margin-top: -150px;
+            @media only screen and (width < 900px) {
+                margin-top: -75px;
+            }
+        }
+
+        &.top_5 {
+            margin-top: 5px;
+        }
+
 
         // -> left
         &.left_-200 {
@@ -667,6 +744,10 @@
 
         &.b-top-single {
             border-top: 1px solid white;
+        }
+
+        &.no-border-radius {
+            border-radius: 0;
         }
     }
 }

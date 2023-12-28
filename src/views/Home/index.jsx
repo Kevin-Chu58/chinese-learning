@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+import { Grid, ImageList, ImageListItem } from "@mui/material";
 import "./style.css";
 import Logo from "../../components/Logo";
 import Postcard from "../../components/Postcard";
@@ -8,16 +8,124 @@ import ImageHolder from "../../components/ImageHolder";
 import MainOramentalSectionBreak from "../../assets/main-ornamental-section-break";
 import StarOramentalSectionBreakShort from "../../assets/star-ornamental-section-break-short";
 // images
-import 世界和图中文教育学会image from "../../assets/images/世界和图中文教育学会.jpg";
-import 世界和图中文教师培训课程image from "../../assets/images/世界和图中文教师培训课程.jpg";
-import 世界和图中文课程image from "../../assets/images/世界和图中文课程.jpg";
+import daoMap1 from "../../assets/images/dao-map1.jpg";
+import luoShu from "../../assets/images/luo-shu.jpg";
+import hundredHanzi from "../../assets/images/hundred-hanzi.png";
+import lesson1 from "../../assets/images/lesson1.png";
+import lesson2 from "../../assets/images/lesson2.png";
+import lesson3 from "../../assets/images/lesson3.png";
+import lesson4 from "../../assets/images/lesson4.png";
+import lesson5 from "../../assets/images/lesson5.png";
+import outside1 from "../../assets/images/outside1.png";
+import outside2 from "../../assets/images/outside2.png";
+import outside3 from "../../assets/images/outside3.png";
+import outside4 from "../../assets/images/outside4.png";
+import outside5 from "../../assets/images/outside5.png";
+import outside6 from "../../assets/images/outside6.png";
+import outside7 from "../../assets/images/outside7.png";
 import 微信公众号 from "../../assets/images/media/微信公众号.png";
 import 天地课堂 from "../../assets/images/media/天地课堂.png";
 import 行走青年EWIP from "../../assets/images/media/行走青年EWIP.png";
 import 美篇号 from "../../assets/images/media/美篇号.png";
-
+import { useEffect, useState } from "react";
 
 const Home = () => {
+    const [width, setWidth] = useState(window.innerWidth); // check width size of the window
+    const handleWindowSizeChange = () => {
+        setWidth(window.innerWidth);
+    };
+
+    useEffect(() => {
+        window.addEventListener("resize", handleWindowSizeChange);
+        return () => {
+            window.removeEventListener("resize", handleWindowSizeChange);
+        };
+    }, []);
+
+    const srcset = (image, size, rows = 1, cols = 1) => {
+        return {
+            src: `${image}?w=${size * cols}&h=${
+                size * rows
+            }&fit=crop&auto=format`,
+            srcSet: `${image}?w=${size * cols}&h=${
+                size * rows
+            }&fit=crop&auto=format&dpr=2 2x`,
+        };
+    };
+
+    const itemData了解世界和图中文教育学会 = [
+        {
+            img: lesson1,
+            title: "",
+        },
+        {
+            img: lesson2,
+            title: "",
+        },
+        {
+            img: lesson3,
+            title: "",
+        },
+    ];
+
+    const itemData了解世界和图中文教育学会plus = [
+        {
+            img: lesson4,
+            title: "",
+        },
+        {
+            img: lesson5,
+            title: "",
+        },
+    ];
+
+    const itemData世界和图中文教师培训课程 = [
+        {
+            img: daoMap1,
+            title: "",
+        },
+        {
+            img: luoShu,
+            title: "",
+        },
+        {
+            img: hundredHanzi,
+            title: "",
+        },
+    ];
+
+    const itemData世界和图中文课程 = [
+        {
+            img: outside1,
+            title: "",
+        },
+        {
+            img: outside2,
+            title: "",
+        },
+        {
+            img: outside3,
+            title: "",
+        },
+        {
+            img: outside6,
+            title: "",
+            cols: 2,
+        },
+        {
+            img: outside4,
+            title: "",
+        },
+        {
+            img: outside5,
+            title: "",
+        },
+        {
+            img: outside7,
+            title: "",
+            cols: 2,
+        },
+    ];
 
     return (
         <Grid
@@ -69,9 +177,64 @@ const Home = () => {
                 </svg>
             </div>
 
+            {width >= 500 ? (
+                <div className="center-align-box">
+                    <div className="center-align-box fd-row">
+                        <img
+                            className="w400-gallery shade rotate_-5 no-margin"
+                            src={lesson1}
+                            alt=""
+                        />
+                        <img
+                            className="w400-gallery shade top_-75 no-margin"
+                            src={lesson2}
+                            alt=""
+                        />
+                        <img
+                            className="w400-gallery shade rotate_5 no-margin"
+                            src={lesson3}
+                            alt=""
+                        />
+                    </div>
+                    <button className="circle-button vallarta-blue top_-150">
+                        <a href="/">了解世界和图中文教育学会</a>
+                    </button>
+                </div>
+            ) : 
+                (<div className="center-align-box">
+                    <button className="classic-button vallarta-blue marginy_10 shade enlarge no-margin">
+                        <a href="/">了解世界和图中文教育学会</a>
+                    </button>
+                    <ImageList
+                        sx={{ width: 350 }}
+                        variant="quilted"
+                        cols={1}
+                        rowHeight={200}
+                        style={{ overflow: "hidden", margin: "0 auto" }}
+                    >
+                        {itemData了解世界和图中文教育学会.map((item) => (
+                            <ImageListItem
+                                key={item.img}
+                                cols={item.cols || 1}
+                                rows={item.rows || 1}
+                            >
+                                <img
+                                    {...srcset(
+                                        item.img,
+                                        121,
+                                        item.rows,
+                                        item.cols
+                                    )}
+                                    alt={item.title}
+                                    loading="lazy"
+                                />
+                            </ImageListItem>
+                        ))}
+                    </ImageList>
+                </div>
+            )}
+
             <div className="center-align-box vw70 p0">
-                世界和图中文教育学会
-                <br />
                 倡导面向未来的中文教育
                 <br />
                 以根植于东方的文明、文化和思维，
@@ -89,20 +252,54 @@ const Home = () => {
                 由不同走向共同
                 <br />
                 成为真正的世界公民。
-            </div>
-
-            <div className="center-align-box">
-                <img
-                    className="w400 shade rotate_-5"
-                    src={世界和图中文教育学会image}
-                    alt=""
-                />
-                <button className="circle-button vallarta-blue top_-75 left_200">
-                    <a href="/">了解世界和图中文教育学会</a>
-                </button>
-
                 <StarOramentalSectionBreakShort />
             </div>
+
+            {width >= 500 ? (
+                <div className="center-align-box">
+                    <div className="center-align-box fd-row">
+                        <img
+                            className="w400-gallery shade"
+                            src={lesson4}
+                            alt=""
+                        />
+                        <img
+                            className="w400-gallery shade"
+                            src={lesson5}
+                            alt=""
+                        />
+                    </div>
+                </div>
+            ) : 
+                (<div className="center-align-box">
+                    <ImageList
+                        sx={{ width: 350 }}
+                        variant="quilted"
+                        cols={1}
+                        rowHeight={220}
+                        style={{ overflow: "hidden", margin: "0 auto" }}
+                    >
+                        {itemData了解世界和图中文教育学会plus.map((item) => (
+                            <ImageListItem
+                                key={item.img}
+                                cols={item.cols || 1}
+                                rows={item.rows || 1}
+                            >
+                                <img
+                                    {...srcset(
+                                        item.img,
+                                        121,
+                                        item.rows,
+                                        item.cols
+                                    )}
+                                    alt={item.title}
+                                    loading="lazy"
+                                />
+                            </ImageListItem>
+                        ))}
+                    </ImageList>
+                </div>
+            )}
 
             <div className="center-align-box vw70 p0">
                 {/* <img src={Bamboo} alt="" className="imgBamboo" /> */}
@@ -126,7 +323,9 @@ const Home = () => {
             </div>
 
             <div className="center-align-box vw70">
-                <MainOramentalSectionBreak color="#9C2727">培训反馈</MainOramentalSectionBreak>
+                <MainOramentalSectionBreak color="#9C2727">
+                    培训反馈
+                </MainOramentalSectionBreak>
                 <Postcard
                     context="跟着林源老师学了近四个月的和图中文，他给我打开了新的思路，激起我对中文的新的热诚。我感觉他做了很多奠基性的工作，但这只是开端，还有很多的工作要做，来揭示我们语言背后的秘密，来重新激活那个中文语言灵，让它复活和重生。 "
                     commenter="士学员秒浩"
@@ -155,9 +354,64 @@ const Home = () => {
                 <StarOramentalSectionBreakShort />
             </div>
 
+            {width >= 500 ? (
+                <div className="center-align-box">
+                    <div className="center-align-box fd-row">
+                        <img
+                            className="w400-gallery shade rotate_-5 no-margin"
+                            src={daoMap1}
+                            alt=""
+                        />
+                        <img
+                            className="w400-gallery shade top_-75 no-margin"
+                            src={hundredHanzi}
+                            alt=""
+                        />
+                        <img
+                            className="w400-gallery shade rotate_5 no-margin"
+                            src={luoShu}
+                            alt=""
+                        />
+                    </div>
+                    <button className="circle-button horsetail top_-150">
+                        <a href="/playground">世界和图中文教师培训课程</a>
+                    </button>
+                </div>
+            ) : 
+                (<div className="center-align-box">
+                    <button className="classic-button horsetail marginy_10 shade enlarge no-margin">
+                        <a href="/playground">世界和图中文教师培训课程</a>
+                    </button>
+                    <ImageList
+                        sx={{ width: 350 }}
+                        variant="quilted"
+                        cols={1}
+                        rowHeight={310}
+                        style={{ overflow: "hidden", margin: "0 auto" }}
+                    >
+                        {itemData世界和图中文教师培训课程.map((item) => (
+                            <ImageListItem
+                                key={item.img}
+                                cols={item.cols || 1}
+                                rows={item.rows || 1}
+                            >
+                                <img
+                                    {...srcset(
+                                        item.img,
+                                        121,
+                                        item.rows,
+                                        item.cols
+                                    )}
+                                    alt={item.title}
+                                    loading="lazy"
+                                />
+                            </ImageListItem>
+                        ))}
+                    </ImageList>
+                </div>
+            )}
+
             <div className="center-align-box vw70 p0">
-                世界和图中文教程
-                <br />
                 源于中国传统文化和华德福教育的双重启迪，
                 <br />
                 历经二十年的发展历程，
@@ -181,20 +435,106 @@ const Home = () => {
                 与学生不同年龄的生理心理特征相匹配，
                 <br />
                 整个教程形成天-语-人合一的和谐境界。
-            </div>
-
-            <div className="center-align-box">
-                <img
-                    className="w400 shade rotate_5"
-                    src={世界和图中文教师培训课程image}
-                    alt=""
-                />
-                <button className="circle-button horsetail top_-75 left_-200">
-                    <a href="/playground">世界和图中文教师培训课程</a>
-                </button>
-
                 <StarOramentalSectionBreakShort />
             </div>
+
+            {width >= 900 ? (
+                <div className="center-align-box">
+                    <ImageList
+                        sx={{ width: 800 }}
+                        variant="quilted"
+                        cols={3}
+                        rowHeight={200}
+                        style={{ overflow: "hidden", margin: "0 auto" }}
+                    >
+                        {itemData世界和图中文课程.map((item) => (
+                            <ImageListItem
+                                key={item.img}
+                                cols={item.cols || 1}
+                                rows={item.rows || 1}
+                            >
+                                <img
+                                    {...srcset(
+                                        item.img,
+                                        121,
+                                        item.rows,
+                                        item.cols
+                                    )}
+                                    alt={item.title}
+                                    loading="lazy"
+                                />
+                            </ImageListItem>
+                        ))}
+                    </ImageList>
+                    <button className="circle-button pohutukawa top_-75">
+                        <a href="/playground">世界和图中文课程</a>
+                    </button>
+                </div>
+            ) : width >= 500 ? (
+                <div className="center-align-box">
+                    <ImageList
+                        sx={{ width: 500 }}
+                        variant="quilted"
+                        cols={3}
+                        rowHeight={150}
+                        style={{ overflow: "hidden", margin: "0 auto" }}
+                    >
+                        {itemData世界和图中文课程.map((item) => (
+                            <ImageListItem
+                                key={item.img}
+                                cols={item.cols || 1}
+                                rows={item.rows || 1}
+                            >
+                                <img
+                                    {...srcset(
+                                        item.img,
+                                        121,
+                                        item.rows,
+                                        item.cols
+                                    )}
+                                    alt={item.title}
+                                    loading="lazy"
+                                />
+                            </ImageListItem>
+                        ))}
+                    </ImageList>
+                    <button className="circle-button pohutukawa top_-75">
+                        <a href="/playground">世界和图中文课程</a>
+                    </button>
+                </div>
+            ) : (
+                <div className="center-align-box">
+                    <button className="classic-button pohutukawa marginy_10 shade enlarge no-margin">
+                        <a href="/playground">世界和图中文课程</a>
+                    </button>
+                    <ImageList
+                        sx={{ width: 350 }}
+                        variant="quilted"
+                        cols={3}
+                        rowHeight={80}
+                        style={{ overflow: "hidden", margin: "0 auto" }}
+                    >
+                        {itemData世界和图中文课程.map((item) => (
+                            <ImageListItem
+                                key={item.img}
+                                cols={item.cols || 1}
+                                rows={item.rows || 1}
+                            >
+                                <img
+                                    {...srcset(
+                                        item.img,
+                                        121,
+                                        item.rows,
+                                        item.cols
+                                    )}
+                                    alt={item.title}
+                                    loading="lazy"
+                                />
+                            </ImageListItem>
+                        ))}
+                    </ImageList>
+                </div>
+            )}
 
             <div className="center-align-box vw70 p0">
                 学会热情欢迎各类合作
@@ -218,18 +558,6 @@ const Home = () => {
                 共同为孩子创造一个能支持他们身心健康发展的
                 <br />
                 学习、生活以及社区环境
-            </div>
-
-            <div className="center-align-box">
-                <img
-                    className="w400 shade rotate_-5"
-                    src={世界和图中文课程image}
-                    alt=""
-                />
-                <button className="circle-button baklava top_-75 left_200 pohutukawa">
-                    <a href="/playground">世界和图中文课程</a>
-                </button>
-
                 <StarOramentalSectionBreakShort />
             </div>
 
@@ -267,8 +595,12 @@ const Home = () => {
                     <div className="right-align-box no-margin mobile-left_900 fd-row-mobile-col_500 p2">
                         <ImageHolder image={天地课堂}>“天地课堂”</ImageHolder>
                         <div className="center-align-box fd-col-mobile-row_500 no-margin p2">
-                            <ImageHolder image={微信公众号}>微信公众号“春之谷SVE”</ImageHolder>
-                            <ImageHolder image={行走青年EWIP}>行走青年EWIP</ImageHolder>
+                            <ImageHolder image={微信公众号}>
+                                微信公众号“春之谷SVE”
+                            </ImageHolder>
+                            <ImageHolder image={行走青年EWIP}>
+                                行走青年EWIP
+                            </ImageHolder>
                         </div>
                         <ImageHolder image={美篇号}>美篇号31543228</ImageHolder>
                     </div>
