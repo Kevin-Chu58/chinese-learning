@@ -1,7 +1,8 @@
-import { PropsWithChildren } from "react";
-
 import './style.css';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import MenuIcon from '@mui/icons-material/Menu';
+import { Switch } from "@mui/material";
+import { PropsWithChildren } from "react";
 import React from "react";
 
 type Props = {
@@ -16,41 +17,23 @@ const Header = ({
 }: PropsWithChildren<Props>) => {
     return (
         <header id="header" className="header">
-            <div className="headerContainer">
+            <div className="box fd-row header-container">
 
                 <div className="whcei">
                     WHCEI
                 </div>
+				
+				<Switch className="center-vertical lang-switch" />
 
-                <button onClick={onClick} className="headerButton">
-                    <MoreVertIcon className="icon"/>
-                </button>
+				<div className="tool-container">
+					<button onClick={onClick} className="header-button">
+						<MenuIcon className="center-vertical"/>
+					</button>
+					<button onClick={onClick} className="header-button">
+						<MoreVertIcon className="center-vertical"/>
+					</button>
+				</div>
             </div>
-            {/* <div class="corner">
-		<a href="https://kit.svelte.dev">
-			<img src={logo} alt="SvelteKit" />
-		</a>
-	</div> */}
-
-            {/* <nav>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
-		</svg>
-		<ul>
-			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-				<a href="/">Home</a>
-			</li>
-			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
-				<a href="/about">About</a>
-			</li>
-			<li aria-current={$page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
-				<a href="/sverdle">Sverdle</a>
-			</li>
-		</ul>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-		</svg>
-	</nav> */}
         </header>
     );
 };

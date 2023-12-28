@@ -9,13 +9,11 @@
     color: white;
     z-index: 10;
 
-    .headerContainer {
-        display: flex;
-        flex-direction: row;
+    .header-container {
         height: var(--header-height);
     }
     
-    .headerButton {
+    .header-button {
         margin-left: auto;
         padding: 0 10px;
         display: flex;
@@ -26,14 +24,14 @@
     
         transition: 0.5s ease;
     }
-    
-    .icon {
-        margin: auto 0;
-    }
-    
-    .headerButton:hover {
+
+    .header-button:hover {
         background-color: var(--persian-red);
         transform: scale(1.1);
+    }
+    
+    .center-vertical {
+        margin: auto 0;
     }
     
     path {
@@ -47,4 +45,88 @@
         font-size: 18px;
         margin: auto 0;
     }    
+
+    .tool-container {
+        display: flex;
+        flex-direction: row;
+        margin-left: auto;
+    }
+
+    .lang-switch {
+        border-radius: 20px;
+        width: 48px;
+        height: 27px;
+        padding: 0px;
+
+        &::after {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-70%);
+            width: 16px;
+            height: 16px;
+            color: black;
+            font-family: "微軟正黑體";
+            font-size: 10px;
+            content: "EN";
+            top: 18px;
+            right: 3px;
+        };
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-70%);
+            width: 16px;
+            height: 16px;
+            color: white;
+            font-family: "微軟正黑體";
+            font-size: 13px;
+            content: "中";
+            left: 7px;
+            top: 16px;
+        };
+        
+        & .MuiSwitch-switchBase {
+            padding: 0px;
+            margin: 3px 4px;
+            transition-duration: 300ms;
+        }
+
+        & .MuiSwitch-track {
+            background-color: white;
+        }
+
+        .Mui-checked {
+            color: var(--brown);
+
+            & + .MuiSwitch-track {
+                background-color: black;
+            }
+
+            & .MuiSwitch-thumb::before {
+
+                content: "EN";
+                right: 1px;
+                top: 13px;
+                font-size: 12px;
+                color: white;
+            }            
+        }
+
+        .MuiSwitch-thumb {
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-70%);
+                width: 16px;
+                height: 16px;
+                color: black;
+                font-family: "微軟正黑體";
+                font-weight: bold;
+                content: "中";
+                left: 2px;
+            };
+        }
+    }
 }
