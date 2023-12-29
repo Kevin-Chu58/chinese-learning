@@ -219,12 +219,7 @@ const Header = ({
                             </ListItemButton>
                         </ListItem>
                         {item.sub.map((subItem) => (
-                            <ListItem
-                                sx={{
-                                    color: setListItemHighlight(subItem.nav),
-                                    ":hover": { color: "#cd3736" },
-                                }}
-                            >
+                            <ListItem>
                                 <ListItemButton sx={{cursor: "default"}}>
                                     <Link
                                         href={subItem.nav}
