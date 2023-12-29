@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import routes from "./routes";
 import { useState } from "react";
 import Header from './components/Header';
-import Sidebar from './Sidebar.jsx';
 
 const App = () => {
     const [showSidebar, setShowSidebar] = useState(true);
@@ -19,9 +18,6 @@ const App = () => {
             <Header onClick={() => onSidebarToggle()} hidden={!showSidebar} />
 
             <div className="app-container">
-                {/* <div className="sidebar-container">
-                    <Sidebar />
-                </div> */}
 
                 <div className="main-container">
                     

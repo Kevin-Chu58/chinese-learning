@@ -106,9 +106,9 @@
             & .MuiSwitch-thumb::before {
 
                 content: "EN";
-                right: 1px;
-                top: 13px;
-                font-size: 12px;
+                margin-left: 1px;
+                top: 15px;
+                font-size: 10px;
                 color: white;
             }            
         }
@@ -128,5 +128,20 @@
                 left: 2px;
             };
         }
+    }
+
+    .list-item {
+        background-color: var(--off-black);
+    }
+
+    .current-pages {
+        color: var(--primary-red);
+        /* background-color: white;
+        background-image: var(--matching-linear-reverse);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent; */
     }
 }
