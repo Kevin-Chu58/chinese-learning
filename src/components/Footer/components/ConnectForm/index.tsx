@@ -1,4 +1,5 @@
 import { useState } from "react";
+import React from "react";
 
 const ConnectForm = () => {
     const [fullName, setFullName] = useState("");
@@ -63,7 +64,7 @@ const ConnectForm = () => {
                 value="提交"
                 disabled={submitDisabled}
                 className={`classic-button ${
-                    submitDisabled ? "off-black" : "persian-red enlarge"
+                    submitDisabled ? "bg-off-black" : "bg-persian-red enlarge"
                 } shade`}
             />
         </form>

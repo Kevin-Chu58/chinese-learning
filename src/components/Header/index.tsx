@@ -29,14 +29,14 @@ const drawerList = [
             },
             {
                 title: "认识创办人",
-                nav: "/playground/",
+                nav: "/founder/",
             },
         ],
     },
     {
         main: {
             title: "世界和图中文教程",
-            nav: "/demo/",
+            nav: "/playground/",
         },
         sub: [
             {
@@ -172,6 +172,7 @@ const Header = ({
         <Box sx={{ width: 250 }} role="presentation">
             <List sx={{ paddingTop: 0 }}>
                 <ListItem
+                    key="drawer-toolbar"
                     sx={{
                         backgroundColor: "#9C2727",
                         marginBottom: 0,
@@ -198,7 +199,7 @@ const Header = ({
                 {drawerList.map((item) => (
                     <div>
                         <Divider />
-                        <ListItem key={item.main.title} disablePadding sx={{}}>
+                        <ListItem key={item.main.title} disablePadding>
                             <ListItemButton sx={{cursor: "default"}}>
                                 <Link
                                     href={item.main.nav}
@@ -220,7 +221,7 @@ const Header = ({
                             </ListItemButton>
                         </ListItem>
                         {item.sub.map((subItem) => (
-                            <ListItem>
+                            <ListItem key={subItem.title}>
                                 <ListItemButton sx={{cursor: "default"}}>
                                     <Link
                                         href={subItem.nav}

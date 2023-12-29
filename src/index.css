@@ -160,6 +160,14 @@ button:focus:not(:focus-visible) {
 	white-space: nowrap;
 }
 
+/* general styling */
+
+.main-box{
+  font-family: "微軟正黑體";
+  background-color: var(--citrine-white);
+  display: flex;
+  flex-direction: column;
+}
 .box,
 .center-align-box,
 .left-align-box,
@@ -873,6 +881,53 @@ button.margin-left_max-mobile,
     margin-left: 0;
   }
 }
+a.margin-right_max,
+div.margin-right_max,
+img.margin-right_max,
+form.margin-right_max,
+input.margin-right_max,
+label.margin-right_max,
+button.margin-right_max,
+.box.margin-right_max,
+.linkbutton.margin-right_max,
+.circle-button.margin-right_max,
+.center-align-box.margin-right_max,
+.left-align-box.margin-right_max,
+.right-align-box.margin-right_max {
+  margin-right: auto;
+}
+a.margin-right_max-mobile,
+div.margin-right_max-mobile,
+img.margin-right_max-mobile,
+form.margin-right_max-mobile,
+input.margin-right_max-mobile,
+label.margin-right_max-mobile,
+button.margin-right_max-mobile,
+.box.margin-right_max-mobile,
+.linkbutton.margin-right_max-mobile,
+.circle-button.margin-right_max-mobile,
+.center-align-box.margin-right_max-mobile,
+.left-align-box.margin-right_max-mobile,
+.right-align-box.margin-right_max-mobile {
+  margin-right: auto;
+}
+@media only screen and (width < 900px) {
+  a.margin-right_max-mobile,
+  div.margin-right_max-mobile,
+  img.margin-right_max-mobile,
+  form.margin-right_max-mobile,
+  input.margin-right_max-mobile,
+  label.margin-right_max-mobile,
+  button.margin-right_max-mobile,
+  .box.margin-right_max-mobile,
+  .linkbutton.margin-right_max-mobile,
+  .circle-button.margin-right_max-mobile,
+  .center-align-box.margin-right_max-mobile,
+  .left-align-box.margin-right_max-mobile,
+  .right-align-box.margin-right_max-mobile {
+    margin-right: 0;
+  }
+}
 a.marginy_10,
 div.marginy_10,
 img.marginy_10,
@@ -1089,147 +1144,147 @@ button.padding_20,
 .right-align-box.padding_20 {
   padding: 20px;
 }
-a.pohutukawa,
-div.pohutukawa,
-img.pohutukawa,
-form.pohutukawa,
-input.pohutukawa,
-label.pohutukawa,
-button.pohutukawa,
-.box.pohutukawa,
-.linkbutton.pohutukawa,
-.circle-button.pohutukawa,
-.center-align-box.pohutukawa,
-.left-align-box.pohutukawa,
-.right-align-box.pohutukawa {
+a.bg-pohutukawa,
+div.bg-pohutukawa,
+img.bg-pohutukawa,
+form.bg-pohutukawa,
+input.bg-pohutukawa,
+label.bg-pohutukawa,
+button.bg-pohutukawa,
+.box.bg-pohutukawa,
+.linkbutton.bg-pohutukawa,
+.circle-button.bg-pohutukawa,
+.center-align-box.bg-pohutukawa,
+.left-align-box.bg-pohutukawa,
+.right-align-box.bg-pohutukawa {
   background-color: var(--pohutukawa);
   color: white;
 }
-a.brown,
-div.brown,
-img.brown,
-form.brown,
-input.brown,
-label.brown,
-button.brown,
-.box.brown,
-.linkbutton.brown,
-.circle-button.brown,
-.center-align-box.brown,
-.left-align-box.brown,
-.right-align-box.brown {
+a.bg-brown,
+div.bg-brown,
+img.bg-brown,
+form.bg-brown,
+input.bg-brown,
+label.bg-brown,
+button.bg-brown,
+.box.bg-brown,
+.linkbutton.bg-brown,
+.circle-button.bg-brown,
+.center-align-box.bg-brown,
+.left-align-box.bg-brown,
+.right-align-box.bg-brown {
   background-color: var(--brown);
   color: white;
 }
-a.persian-red,
-div.persian-red,
-img.persian-red,
-form.persian-red,
-input.persian-red,
-label.persian-red,
-button.persian-red,
-.box.persian-red,
-.linkbutton.persian-red,
-.circle-button.persian-red,
-.center-align-box.persian-red,
-.left-align-box.persian-red,
-.right-align-box.persian-red {
+a.bg-persian-red,
+div.bg-persian-red,
+img.bg-persian-red,
+form.bg-persian-red,
+input.bg-persian-red,
+label.bg-persian-red,
+button.bg-persian-red,
+.box.bg-persian-red,
+.linkbutton.bg-persian-red,
+.circle-button.bg-persian-red,
+.center-align-box.bg-persian-red,
+.left-align-box.bg-persian-red,
+.right-align-box.bg-persian-red {
   background-color: var(--persian-red);
   color: white;
 }
-a.intergalactic-ray,
-div.intergalactic-ray,
-img.intergalactic-ray,
-form.intergalactic-ray,
-input.intergalactic-ray,
-label.intergalactic-ray,
-button.intergalactic-ray,
-.box.intergalactic-ray,
-.linkbutton.intergalactic-ray,
-.circle-button.intergalactic-ray,
-.center-align-box.intergalactic-ray,
-.left-align-box.intergalactic-ray,
-.right-align-box.intergalactic-ray {
+a.bg-intergalactic-ray,
+div.bg-intergalactic-ray,
+img.bg-intergalactic-ray,
+form.bg-intergalactic-ray,
+input.bg-intergalactic-ray,
+label.bg-intergalactic-ray,
+button.bg-intergalactic-ray,
+.box.bg-intergalactic-ray,
+.linkbutton.bg-intergalactic-ray,
+.circle-button.bg-intergalactic-ray,
+.center-align-box.bg-intergalactic-ray,
+.left-align-box.bg-intergalactic-ray,
+.right-align-box.bg-intergalactic-ray {
   background-color: var(--intergalactic-ray);
   color: white;
 }
-a.bravado-red,
-div.bravado-red,
-img.bravado-red,
-form.bravado-red,
-input.bravado-red,
-label.bravado-red,
-button.bravado-red,
-.box.bravado-red,
-.linkbutton.bravado-red,
-.circle-button.bravado-red,
-.center-align-box.bravado-red,
-.left-align-box.bravado-red,
-.right-align-box.bravado-red {
+a.bg-bravado-red,
+div.bg-bravado-red,
+img.bg-bravado-red,
+form.bg-bravado-red,
+input.bg-bravado-red,
+label.bg-bravado-red,
+button.bg-bravado-red,
+.box.bg-bravado-red,
+.linkbutton.bg-bravado-red,
+.circle-button.bg-bravado-red,
+.center-align-box.bg-bravado-red,
+.left-align-box.bg-bravado-red,
+.right-align-box.bg-bravado-red {
   background-color: var(--bravado-red);
   color: white;
 }
-a.vallarta-blue,
-div.vallarta-blue,
-img.vallarta-blue,
-form.vallarta-blue,
-input.vallarta-blue,
-label.vallarta-blue,
-button.vallarta-blue,
-.box.vallarta-blue,
-.linkbutton.vallarta-blue,
-.circle-button.vallarta-blue,
-.center-align-box.vallarta-blue,
-.left-align-box.vallarta-blue,
-.right-align-box.vallarta-blue {
+a.bg-vallarta-blue,
+div.bg-vallarta-blue,
+img.bg-vallarta-blue,
+form.bg-vallarta-blue,
+input.bg-vallarta-blue,
+label.bg-vallarta-blue,
+button.bg-vallarta-blue,
+.box.bg-vallarta-blue,
+.linkbutton.bg-vallarta-blue,
+.circle-button.bg-vallarta-blue,
+.center-align-box.bg-vallarta-blue,
+.left-align-box.bg-vallarta-blue,
+.right-align-box.bg-vallarta-blue {
   background-color: var(--vallarta-blue);
   color: white;
 }
-a.horsetail,
-div.horsetail,
-img.horsetail,
-form.horsetail,
-input.horsetail,
-label.horsetail,
-button.horsetail,
-.box.horsetail,
-.linkbutton.horsetail,
-.circle-button.horsetail,
-.center-align-box.horsetail,
-.left-align-box.horsetail,
-.right-align-box.horsetail {
+a.bg-horsetail,
+div.bg-horsetail,
+img.bg-horsetail,
+form.bg-horsetail,
+input.bg-horsetail,
+label.bg-horsetail,
+button.bg-horsetail,
+.box.bg-horsetail,
+.linkbutton.bg-horsetail,
+.circle-button.bg-horsetail,
+.center-align-box.bg-horsetail,
+.left-align-box.bg-horsetail,
+.right-align-box.bg-horsetail {
   background-color: var(--horsetail);
   color: white;
 }
-a.solar-power,
-div.solar-power,
-img.solar-power,
-form.solar-power,
-input.solar-power,
-label.solar-power,
-button.solar-power,
-.box.solar-power,
-.linkbutton.solar-power,
-.circle-button.solar-power,
-.center-align-box.solar-power,
-.left-align-box.solar-power,
-.right-align-box.solar-power {
+a.bg-solar-power,
+div.bg-solar-power,
+img.bg-solar-power,
+form.bg-solar-power,
+input.bg-solar-power,
+label.bg-solar-power,
+button.bg-solar-power,
+.box.bg-solar-power,
+.linkbutton.bg-solar-power,
+.circle-button.bg-solar-power,
+.center-align-box.bg-solar-power,
+.left-align-box.bg-solar-power,
+.right-align-box.bg-solar-power {
   background-color: var(--solar-power);
   color: black;
 }
-a.off-black,
-div.off-black,
-img.off-black,
-form.off-black,
-input.off-black,
-label.off-black,
-button.off-black,
-.box.off-black,
-.linkbutton.off-black,
-.circle-button.off-black,
-.center-align-box.off-black,
-.left-align-box.off-black,
-.right-align-box.off-black {
+a.bg-off-black,
+div.bg-off-black,
+img.bg-off-black,
+form.bg-off-black,
+input.bg-off-black,
+label.bg-off-black,
+button.bg-off-black,
+.box.bg-off-black,
+.linkbutton.bg-off-black,
+.circle-button.bg-off-black,
+.center-align-box.bg-off-black,
+.left-align-box.bg-off-black,
+.right-align-box.bg-off-black {
   background-color: var(--off-black);
   color: white;
 }
@@ -1262,6 +1317,141 @@ button.txt-black,
 .left-align-box.txt-black,
 .right-align-box.txt-black {
   color: black;
+}
+a.txt-pohutukawa,
+div.txt-pohutukawa,
+img.txt-pohutukawa,
+form.txt-pohutukawa,
+input.txt-pohutukawa,
+label.txt-pohutukawa,
+button.txt-pohutukawa,
+.box.txt-pohutukawa,
+.linkbutton.txt-pohutukawa,
+.circle-button.txt-pohutukawa,
+.center-align-box.txt-pohutukawa,
+.left-align-box.txt-pohutukawa,
+.right-align-box.txt-pohutukawa {
+  color: var(--pohutukawa);
+}
+a.txt-brown,
+div.txt-brown,
+img.txt-brown,
+form.txt-brown,
+input.txt-brown,
+label.txt-brown,
+button.txt-brown,
+.box.txt-brown,
+.linkbutton.txt-brown,
+.circle-button.txt-brown,
+.center-align-box.txt-brown,
+.left-align-box.txt-brown,
+.right-align-box.txt-brown {
+  color: var(--brown);
+}
+a.txt-persian-red,
+div.txt-persian-red,
+img.txt-persian-red,
+form.txt-persian-red,
+input.txt-persian-red,
+label.txt-persian-red,
+button.txt-persian-red,
+.box.txt-persian-red,
+.linkbutton.txt-persian-red,
+.circle-button.txt-persian-red,
+.center-align-box.txt-persian-red,
+.left-align-box.txt-persian-red,
+.right-align-box.txt-persian-red {
+  color: var(--persian-red);
+}
+a.txt-intergalactic-ray,
+div.txt-intergalactic-ray,
+img.txt-intergalactic-ray,
+form.txt-intergalactic-ray,
+input.txt-intergalactic-ray,
+label.txt-intergalactic-ray,
+button.txt-intergalactic-ray,
+.box.txt-intergalactic-ray,
+.linkbutton.txt-intergalactic-ray,
+.circle-button.txt-intergalactic-ray,
+.center-align-box.txt-intergalactic-ray,
+.left-align-box.txt-intergalactic-ray,
+.right-align-box.txt-intergalactic-ray {
+  color: var(--intergalactic-ray);
+}
+a.txt-bravado-red,
+div.txt-bravado-red,
+img.txt-bravado-red,
+form.txt-bravado-red,
+input.txt-bravado-red,
+label.txt-bravado-red,
+button.txt-bravado-red,
+.box.txt-bravado-red,
+.linkbutton.txt-bravado-red,
+.circle-button.txt-bravado-red,
+.center-align-box.txt-bravado-red,
+.left-align-box.txt-bravado-red,
+.right-align-box.txt-bravado-red {
+  color: var(--bravado-red);
+}
+a.txt-vallarta-blue,
+div.txt-vallarta-blue,
+img.txt-vallarta-blue,
+form.txt-vallarta-blue,
+input.txt-vallarta-blue,
+label.txt-vallarta-blue,
+button.txt-vallarta-blue,
+.box.txt-vallarta-blue,
+.linkbutton.txt-vallarta-blue,
+.circle-button.txt-vallarta-blue,
+.center-align-box.txt-vallarta-blue,
+.left-align-box.txt-vallarta-blue,
+.right-align-box.txt-vallarta-blue {
+  color: var(--vallarta-blue);
+}
+a.txt-horsetail,
+div.txt-horsetail,
+img.txt-horsetail,
+form.txt-horsetail,
+input.txt-horsetail,
+label.txt-horsetail,
+button.txt-horsetail,
+.box.txt-horsetail,
+.linkbutton.txt-horsetail,
+.circle-button.txt-horsetail,
+.center-align-box.txt-horsetail,
+.left-align-box.txt-horsetail,
+.right-align-box.txt-horsetail {
+  color: var(--horsetail);
+}
+a.txt-solar-power,
+div.txt-solar-power,
+img.txt-solar-power,
+form.txt-solar-power,
+input.txt-solar-power,
+label.txt-solar-power,
+button.txt-solar-power,
+.box.txt-solar-power,
+.linkbutton.txt-solar-power,
+.circle-button.txt-solar-power,
+.center-align-box.txt-solar-power,
+.left-align-box.txt-solar-power,
+.right-align-box.txt-solar-power {
+  color: var(--solar-power);
+}
+a.txt-off-black,
+div.txt-off-black,
+img.txt-off-black,
+form.txt-off-black,
+input.txt-off-black,
+label.txt-off-black,
+button.txt-off-black,
+.box.txt-off-black,
+.linkbutton.txt-off-black,
+.circle-button.txt-off-black,
+.center-align-box.txt-off-black,
+.left-align-box.txt-off-black,
+.right-align-box.txt-off-black {
+  color: var(--off-black);
 }
 a.font-default,
 div.font-default,
@@ -1576,4 +1766,4 @@ button.no-border-radius,
 .left-align-box.no-border-radius,
 .right-align-box.no-border-radius {
   border-radius: 0;
-}/*# sourceMappingURL=style.css.map */
+}

@@ -2,12 +2,13 @@ import Home from './views/Home';
 import Demo from './views/Demo';
 import Playground from './views/Playground';
 import About from './views/About';
+import Founder from './views/Founder';
 
 const routes = [
     {
-        name: 'Home',
-        path: '/',
-        element: <Home />,
+        name: 'About',
+        path: '/about/',
+        element: <About />,
     },
     {
         name: 'Demo',
@@ -15,14 +16,19 @@ const routes = [
         element: <Demo />,
     },
     {
+        name: 'Founder',
+        path: '/founder/',
+        element: <Founder />,
+    },
+    {
+        name: 'Home',
+        path: '/',
+        element: <Home />,
+    },
+    {
         name: 'Playground',
         path: '/playground/',
         element: <Playground />,
-    },
-    {
-        name: 'About',
-        path: '/about/',
-        element: <About />,
     },
 ]
 

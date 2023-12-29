@@ -2,8 +2,8 @@ import { Grid, ImageList, ImageListItem } from "@mui/material";
 import "./style.css";
 import Logo from "../../components/Logo";
 import Postcard from "../../components/Postcard";
-import ConnectForm from "./components/ConnectForm";
-import ImageHolder from "../../components/ImageHolder";
+import Footer from "../../components/Footer";
+import { useEffect, useState } from "react";
 // ornamental section break
 import MainOramentalSectionBreak from "../../assets/main-ornamental-section-break";
 import StarOramentalSectionBreakShort from "../../assets/star-ornamental-section-break-short";
@@ -23,11 +23,80 @@ import outside4 from "../../assets/images/outside4.png";
 import outside5 from "../../assets/images/outside5.png";
 import outside6 from "../../assets/images/outside6.png";
 import outside7 from "../../assets/images/outside7.png";
-import 微信公众号 from "../../assets/images/media/微信公众号.png";
-import 天地课堂 from "../../assets/images/media/天地课堂.png";
-import 行走青年EWIP from "../../assets/images/media/行走青年EWIP.png";
-import 美篇号 from "../../assets/images/media/美篇号.png";
-import { useEffect, useState } from "react";
+
+const itemData了解世界和图中文教育学会 = [
+    {
+        img: lesson1,
+        title: "",
+    },
+    {
+        img: lesson2,
+        title: "",
+    },
+    {
+        img: lesson3,
+        title: "",
+    },
+];
+
+const itemData了解世界和图中文教育学会plus = [
+    {
+        img: lesson4,
+        title: "",
+    },
+    {
+        img: lesson5,
+        title: "",
+    },
+];
+
+const itemData世界和图中文教师培训课程 = [
+    {
+        img: daoMap1,
+        title: "",
+    },
+    {
+        img: luoShu,
+        title: "",
+    },
+    {
+        img: hundredHanzi,
+        title: "",
+    },
+];
+
+const itemData世界和图中文课程 = [
+    {
+        img: outside1,
+        title: "",
+    },
+    {
+        img: outside2,
+        title: "",
+    },
+    {
+        img: outside3,
+        title: "",
+    },
+    {
+        img: outside6,
+        title: "",
+        cols: 2,
+    },
+    {
+        img: outside4,
+        title: "",
+    },
+    {
+        img: outside5,
+        title: "",
+    },
+    {
+        img: outside7,
+        title: "",
+        cols: 2,
+    },
+];
 
 const Home = () => {
     const [width, setWidth] = useState(window.innerWidth); // check width size of the window
@@ -53,87 +122,13 @@ const Home = () => {
         };
     };
 
-    const itemData了解世界和图中文教育学会 = [
-        {
-            img: lesson1,
-            title: "",
-        },
-        {
-            img: lesson2,
-            title: "",
-        },
-        {
-            img: lesson3,
-            title: "",
-        },
-    ];
-
-    const itemData了解世界和图中文教育学会plus = [
-        {
-            img: lesson4,
-            title: "",
-        },
-        {
-            img: lesson5,
-            title: "",
-        },
-    ];
-
-    const itemData世界和图中文教师培训课程 = [
-        {
-            img: daoMap1,
-            title: "",
-        },
-        {
-            img: luoShu,
-            title: "",
-        },
-        {
-            img: hundredHanzi,
-            title: "",
-        },
-    ];
-
-    const itemData世界和图中文课程 = [
-        {
-            img: outside1,
-            title: "",
-        },
-        {
-            img: outside2,
-            title: "",
-        },
-        {
-            img: outside3,
-            title: "",
-        },
-        {
-            img: outside6,
-            title: "",
-            cols: 2,
-        },
-        {
-            img: outside4,
-            title: "",
-        },
-        {
-            img: outside5,
-            title: "",
-        },
-        {
-            img: outside7,
-            title: "",
-            cols: 2,
-        },
-    ];
-
     return (
         <Grid
             container
             display="block"
             alignItems="center"
             alignContent="center"
-            className="homeContainer"
+            className="main-box"
         >
             <Logo />
 
@@ -196,13 +191,13 @@ const Home = () => {
                             alt=""
                         />
                     </div>
-                    <button className="circle-button vallarta-blue top_-150">
+                    <button className="circle-button bg-vallarta-blue top_-150">
                         <a href="/">了解世界和图中文教育学会</a>
                     </button>
                 </div>
             ) : 
                 (<div className="center-align-box">
-                    <button className="classic-button vallarta-blue marginy_10 shade enlarge no-margin">
+                    <button className="classic-button bg-vallarta-blue marginy_10 shade enlarge no-margin">
                         <a href="/">了解世界和图中文教育学会</a>
                     </button>
                     <ImageList
@@ -373,13 +368,13 @@ const Home = () => {
                             alt=""
                         />
                     </div>
-                    <button className="circle-button horsetail top_-150">
+                    <button className="circle-button bg-horsetail top_-150">
                         <a href="/playground">世界和图中文教师培训课程</a>
                     </button>
                 </div>
             ) : 
                 (<div className="center-align-box">
-                    <button className="classic-button horsetail marginy_10 shade enlarge no-margin">
+                    <button className="classic-button bg-horsetail marginy_10 shade enlarge no-margin">
                         <a href="/playground">世界和图中文教师培训课程</a>
                     </button>
                     <ImageList
@@ -466,7 +461,7 @@ const Home = () => {
                             </ImageListItem>
                         ))}
                     </ImageList>
-                    <button className="circle-button pohutukawa top_-75">
+                    <button className="circle-button bg-pohutukawa top_-75">
                         <a href="/playground">世界和图中文课程</a>
                     </button>
                 </div>
@@ -498,13 +493,13 @@ const Home = () => {
                             </ImageListItem>
                         ))}
                     </ImageList>
-                    <button className="circle-button pohutukawa top_-75">
+                    <button className="circle-button bg-pohutukawa top_-75">
                         <a href="/playground">世界和图中文课程</a>
                     </button>
                 </div>
             ) : (
                 <div className="center-align-box">
-                    <button className="classic-button pohutukawa marginy_10 shade enlarge no-margin">
+                    <button className="classic-button bg-pohutukawa marginy_10 shade enlarge no-margin">
                         <a href="/playground">世界和图中文课程</a>
                     </button>
                     <ImageList
@@ -572,40 +567,7 @@ const Home = () => {
                 </svg>
             </div>
 
-            <div className="box no-margin fd-row-mobile-col_900 brown">
-                <div className="left-align-box no-margin padding_20">
-                    <div>
-                        保持联系
-                        <br />
-                        加入我们的邮件通讯
-                        <br />
-                        接收学会最新消息、培训及活动信息
-                        <br />
-                        请放心，您的信息不会被分享
-                    </div>
-                    <button className="classic-button marginy_10 persian-red shade enlarge">
-                        <a className="padding_10 bold" href="/playground">
-                            欢迎与我们联系
-                        </a>
-                    </button>
-                    <ConnectForm />
-                </div>
-                <div className="right-align-box mobile-left_900 no-margin margin-left_max-mobile padding_20">
-                    敬请关注：
-                    <div className="right-align-box no-margin mobile-left_900 fd-row-mobile-col_500 p2">
-                        <ImageHolder image={天地课堂}>“天地课堂”</ImageHolder>
-                        <div className="center-align-box fd-col-mobile-row_500 no-margin p2">
-                            <ImageHolder image={微信公众号}>
-                                微信公众号“春之谷SVE”
-                            </ImageHolder>
-                            <ImageHolder image={行走青年EWIP}>
-                                行走青年EWIP
-                            </ImageHolder>
-                        </div>
-                        <ImageHolder image={美篇号}>美篇号31543228</ImageHolder>
-                    </div>
-                </div>
-            </div>
+            <Footer />
         </Grid>
     );
 };

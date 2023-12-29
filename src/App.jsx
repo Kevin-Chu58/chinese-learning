@@ -1,16 +1,16 @@
 import "./App.css";
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import routes from "./routes";
-import { useState } from "react";
+import { createBrowserHistory } from 'history';
+import { useState, useRef } from "react";
 import Header from './components/Header';
 
 const App = () => {
     const [showSidebar, setShowSidebar] = useState(true);
+    const historyRef = useRef(createBrowserHistory());
 
     const onSidebarToggle = () => {
         setShowSidebar(!showSidebar);
-        console.log('a');
     };
 
     return (
@@ -21,8 +21,9 @@ const App = () => {
 
                 <div className="main-container">
                     
-                    <main>
-                        <Router>
+                    
+                        <Router historyRef={historyRef.current}>
+                            <main>
                             <Routes>
                                 {routes.map((route) => (
                                     <Route
@@ -32,14 +33,16 @@ const App = () => {
                                     />
                                 ))}
                             </Routes>
+                            </main>
                         </Router>
-                    </main>
 
                     {/* <footer>
                         <p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
                     </footer> */}
                 </div>
             </div>
+
+            
         </div>
         
     );
