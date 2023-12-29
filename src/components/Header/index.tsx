@@ -36,103 +36,103 @@ const drawerList = [
     {
         main: {
             title: "世界和图中文教程",
-            nav: "/demo",
+            nav: "/demo/",
         },
         sub: [
             {
                 title: "教程介绍",
-                nav: "/demo",
+                nav: "/demo/",
             },
             {
                 title: "教学原理",
-                nav: "/demo",
+                nav: "/demo/",
             },
             {
                 title: "二十年回眸",
-                nav: "/demo",
+                nav: "/demo/",
             },
             {
                 title: "教程内容",
-                nav: "/demo",
+                nav: "/demo/",
             },
             {
                 title: "教学方法",
-                nav: "/demo",
+                nav: "/demo/",
             },
             {
                 title: "教学效果",
-                nav: "/demo",
+                nav: "/demo/",
             },
         ],
     },
     {
         main: {
             title: "华德福教育",
-            nav: "/demo",
+            nav: "/demo/",
         },
         sub: [
             {
                 title: "什么是华德福教育",
-                nav: "/demo",
+                nav: "/demo/",
             },
             {
                 title: "华德福教育的基础",
-                nav: "/demo",
+                nav: "/demo/",
             },
             {
                 title: "华德福教育的益处",
-                nav: "/demo",
+                nav: "/demo/",
             },
             {
                 title: "华德福教师的核心角色",
-                nav: "/demo",
+                nav: "/demo/",
             },
             {
                 title: "华德福教育的缘起",
-                nav: "/demo",
+                nav: "/demo/",
             },
         ],
     },
     {
         main: {
             title: "教师培训课程",
-            nav: "/demo",
+            nav: "/demo/",
         },
         sub: [
             {
                 title: "招生简介",
-                nav: "/demo",
+                nav: "/demo/",
             },
             {
                 title: "课程安排",
-                nav: "/demo",
+                nav: "/demo/",
             },
             {
                 title: "课程设计思路",
-                nav: "/demo",
+                nav: "/demo/",
             },
             {
                 title: "线上课程介绍",
-                nav: "/demo",
+                nav: "/demo/",
             },
             {
                 title: "教师团队",
-                nav: "/demo",
+                nav: "/demo/",
             },
             {
                 title: "报名信息",
-                nav: "/demo",
+                nav: "/demo/",
             },
             {
                 title: "公开课",
-                nav: "/demo",
+                nav: "/demo/",
             },
         ],
     },
     {
         main: {
             title: "邀约与合作",
-            nav: "/demo",
+            nav: "/demo/",
         },
         sub: [],
     },
