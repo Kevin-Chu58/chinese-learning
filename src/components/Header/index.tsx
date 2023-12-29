@@ -25,11 +25,11 @@ const drawerList = [
         sub: [
             {
                 title: "关于学会",
-                nav: "/playground",
+                nav: "/about",
             },
             {
                 title: "认识创办人",
-                nav: "/demo1",
+                nav: "/demo",
             },
         ],
     },
@@ -152,6 +152,7 @@ const Header = ({
 
     const toggleDrawer =
         (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
+            console.log(window.location.pathname);
             if (
                 event.type === "keydown" &&
                 ((event as React.KeyboardEvent).key === "Tab" ||

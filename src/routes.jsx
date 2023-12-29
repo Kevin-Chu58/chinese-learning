@@ -1,6 +1,7 @@
 import Home from './views/Home';
 import Demo from './views/Demo';
 import Playground from './views/Playground';
+import About from './views/About';
 
 const routes = [
     {
@@ -17,6 +18,11 @@ const routes = [
         name: 'Playground',
         path: '/playground',
         element: <Playground />,
+    },
+    {
+        name: 'About',
+        path: '/about',
+        element: <About />,
     },
 ]
 
