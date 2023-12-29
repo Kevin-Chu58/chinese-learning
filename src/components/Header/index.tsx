@@ -29,7 +29,7 @@ const drawerList = [
             },
             {
                 title: "认识创办人",
-                nav: "/demo",
+                nav: "/playground/",
             },
         ],
     },
