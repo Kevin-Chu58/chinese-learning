@@ -11,17 +11,17 @@ const routes = [
     },
     {
         name: 'Demo',
-        path: '/demo/',
+        path: '/demo',
         element: <Demo />,
     },
     {
         name: 'Playground',
-        path: '/playground/',
+        path: '/playground',
         element: <Playground />,
     },
     {
         name: 'About',
-        path: '/about/',
+        path: '/about',
         element: <About />,
     },
 ]
