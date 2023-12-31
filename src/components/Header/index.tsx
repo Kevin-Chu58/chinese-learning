@@ -41,11 +41,11 @@ const drawerList = [
         sub: [
             {
                 title: "教程介绍",
-                nav: "/about",
+                nav: "/demo",
             },
             {
                 title: "教学原理",
-                nav: "/about",
+                nav: "/demo",
             },
             {
                 title: "二十年回眸",
