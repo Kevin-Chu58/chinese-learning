@@ -3,21 +3,14 @@ import Footer from "../../components/Footer";
 import SubNavBar from "../../components/SubNavBar";
 
 const About = () => {
-    return (
-        <div className="main-box">
 
-            <div className="box">
-                <SubNavBar
-                    width={window.innerWidth}
-                    navRight="/founder/"
-                    textRight="认识创办人"
-                />
-            </div>
-            <div className="center-align-box h1 txt-bravado-red bold vw70">
+    return (
+        <div className="main-box" >
+            <div className="center-align-box h1 txt-bravado-red bold vw70 padding_20" style={{fontFamily: "kaiti"}}>
                 关于学会
             </div>
 
-            <div className="center-align-box vw70" style={{marginBottom: "100px"}}>
+            <div className="center-align-box vw70">
                 <div className="left-align-box">
                     <div className="left-align-box h3">学会的宗旨</div>
                     <div className="left-align-box p1">
@@ -78,6 +71,14 @@ const About = () => {
                         断提升和丰富世界和图中文教程大纲、内容、形式，为中文教育的发展献计献策。
                     </div>
                 </div>
+            </div>
+
+            <div className="box">
+                <SubNavBar
+                    width={window.innerWidth}
+                    navRight="/founder/"
+                    textRight="认识创办人"
+                />
             </div>
 
             <Footer />

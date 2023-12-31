@@ -3,23 +3,13 @@ import Footer from "../../components/Footer";
 import SubNavBar from "../../components/SubNavBar";
 
 const Founder = () => {
-    window.scrollTo(0, 0);
-
     return (
         <div className="main-box">
-
-            <div className="box">
-                <SubNavBar
-                    width={window.innerWidth}
-                    navLeft="/about/"
-                    textLeft="关于学会"
-                />
-            </div>
-            <div className="center-align-box h1 txt-bravado-red bold vw70">
+            <div className="center-align-box h1 txt-bravado-red bold vw70 padding_20" style={{fontFamily: "kaiti"}}>
                 创办人
             </div>
 
-            <div className="center-align-box vw70" style={{marginBottom: "100px"}}>
+            <div className="center-align-box vw70">
                 <div className="left-align-box">
                     <div className="left-align-box h3">teacher.jpg</div>
                     <div className="left-align-box p1">
@@ -83,7 +73,7 @@ const Founder = () => {
                         多年中，林源老师一直从事华德福教育的中国
                         本土化工作，将全人教育理念与中国传统文化结合、创立了
                         1-12 年级的具有东 方精神的“光的教育”课程体系。这 20
-                        年中，他旅居美国十年，在中国任教十 9
+                        年中，他旅居美国十年，在中国任教19
                         年，带着他的学生游历了世界各地几十个人智学、RSE 社区、IB
                         学校；在自然
                         原型生态场域、世界文化遗产遗址，以天地为课堂，以自然为友，以万物为
@@ -92,6 +82,13 @@ const Founder = () => {
                     </div>
                     <div className="left-align-box p1">image.jpg</div>
                 </div>
+            </div>
+            <div className="box">
+                <SubNavBar
+                    width={window.innerWidth}
+                    navLeft="/about/"
+                    textLeft="关于学会"
+                />
             </div>
 
             <Footer />

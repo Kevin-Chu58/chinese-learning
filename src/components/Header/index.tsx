@@ -139,20 +139,16 @@ const drawerList = [
 ];
 
 type Props = {
-    hidden: boolean;
-    onClick: (event: {}) => void;
+    
 };
 
 const Header = ({
-    hidden,
-    onClick,
     ...otherProps
 }: PropsWithChildren<Props>) => {
     const [drawerOn, setDrawerOn] = useState(false);
 
     const toggleDrawer =
         (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
-            console.log(window.location.pathname);
             if (
                 event.type === "keydown" &&
                 ((event as React.KeyboardEvent).key === "Tab" ||
@@ -169,7 +165,7 @@ const Header = ({
     };
 
     const list = () => (
-        <Box sx={{ width: 250 }} role="presentation">
+        <Box style={{ width: 250, position: "sticky", top: 0 }} role="presentation">
             <List sx={{ paddingTop: 0 }}>
                 <ListItem
                     key="drawer-toolbar"
@@ -271,7 +267,7 @@ const Header = ({
                         </Drawer>
                     </React.Fragment>
 
-                    <button onClick={onClick} className="header-button">
+                    <button onClick={() => {}} className="header-button">
                         <MoreVertIcon className="center-vertical" />
                     </button>
                 </div>
