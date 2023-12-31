@@ -7,7 +7,7 @@ import Founder from './views/Founder';
 const routes = [
     {
         name: 'Home',
-        path: '/',
+        path: '',
         element: <Home />,
     },
     {

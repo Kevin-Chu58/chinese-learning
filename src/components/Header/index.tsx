@@ -20,7 +20,7 @@ const drawerList = [
     {
         main: {
             title: "世界和图中文教育学会",
-            nav: "/",
+            nav: "",
         },
         sub: [
             {
