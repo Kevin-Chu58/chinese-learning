@@ -198,13 +198,13 @@ const Header = ({
                         <ListItem key={item.main.title} disablePadding>
                             <ListItemButton sx={{cursor: "default"}}>
                                 <Link
-                                    href={item.main.nav}
+                                    href={`${item.main.nav}/`}
                                     sx={{
                                         textDecoration: "none",
                                         fontSize: "large",
                                         fontWeight: "bold",
                                         color: setListItemHighlight(
-                                            item.main.nav
+                                            `${item.main.nav}/`
                                         ),
                                         ":hover": {
                                             color: "#cd3736",
@@ -220,11 +220,11 @@ const Header = ({
                             <ListItem key={subItem.title}>
                                 <ListItemButton sx={{cursor: "default"}}>
                                     <Link
-                                        href={subItem.nav}
+                                        href={`${subItem.nav}/`}
                                         sx={{
                                             textDecoration: "none",
                                             color: setListItemHighlight(
-                                                subItem.nav
+                                                `${subItem.nav}/`
                                             ),
                                             ":hover": {
                                                 color: "#cd3736",
