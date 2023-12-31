@@ -192,13 +192,13 @@ const Home = () => {
                         />
                     </div>
                     <button className="circle-button bg-vallarta-blue top_-150">
-                        <a href="/about">了解世界和图中文教育学会</a>
+                        <a href="/">了解世界和图中文教育学会</a>
                     </button>
                 </div>
             ) : 
                 (<div className="center-align-box">
                     <button className="classic-button bg-vallarta-blue marginy_10 shade enlarge no-margin">
-                        <a href="/founder">了解世界和图中文教育学会</a>
+                        <a href="/">了解世界和图中文教育学会</a>
                     </button>
                     <ImageList
                         sx={{ width: 350 }}
@@ -297,7 +297,6 @@ const Home = () => {
             )}
 
             <div className="center-align-box vw70 p0">
-                {/* <img src={Bamboo} alt="" className="imgBamboo" /> */}
                 教育是改变社会的力量。
                 <br />
                 作为师者，永远是黑暗中的火炬手，是时代迷雾的灯塔。
