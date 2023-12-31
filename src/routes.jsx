@@ -6,28 +6,28 @@ import Founder from './views/Founder';
 
 const routes = [
     {
-        name: 'About',
-        path: '/about/',
-        element: <About />,
-    },
-    {
-        name: 'Demo',
-        path: '/demo/',
-        element: <Demo />,
-    },
-    {
-        name: 'Founder',
-        path: '/founder/',
-        element: <Founder />,
-    },
-    {
         name: 'Home',
         path: '/',
         element: <Home />,
     },
     {
+        name: 'About',
+        path: '/about',
+        element: <About />,
+    },
+    {
+        name: 'Founder',
+        path: '/founder',
+        element: <Founder />,
+    },
+    {
+        name: 'Demo',
+        path: '/demo',
+        element: <Demo />,
+    },
+    {
         name: 'Playground',
-        path: '/playground/',
+        path: '/playground',
         element: <Playground />,
     },
 ]

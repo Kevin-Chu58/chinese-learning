@@ -6,7 +6,7 @@ const Founder = () => {
     return (
         <div className="main-box">
             <div className="center-align-box h1 txt-bravado-red bold vw70 padding_20" style={{fontFamily: "kaiti"}}>
-                创办人
+                认识创办人
             </div>
 
             <div className="center-align-box vw70">
