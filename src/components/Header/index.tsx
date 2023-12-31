@@ -45,7 +45,7 @@ const drawerList = [
             },
             {
                 title: "教学原理",
-                nav: "/about/",
+                nav: "/about",
             },
             {
                 title: "二十年回眸",
