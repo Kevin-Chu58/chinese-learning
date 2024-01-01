@@ -14,6 +14,7 @@ import WaldorfCornerstone from './views/WaldorfCornerstone';
 import WaldorfBenefit from './views/WaldorfBenefit';
 import WaldorfTeacherCoreRole from './views/WaldorfTeacherCoreRole';
 import WaldorfOrigin from './views/WaldorfOrigin';
+import Abouts from './views/Abouts';
 
 const routes = [
     {
@@ -25,6 +26,11 @@ const routes = [
         name: 'About',
         path: '/about',
         element: <About />,
+    },
+    {
+        name: 'Abouts',
+        path: '/abouts',
+        element: <Abouts />,
     },
     {
         name: 'Founder',
