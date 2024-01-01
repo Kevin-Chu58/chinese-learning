@@ -25,11 +25,11 @@ const drawerList = [
         sub: [
             {
                 title: "关于学会",
-                nav: "/demo",
+                nav: "/about",
             },
             {
                 title: "认识创办人",
-                nav: "/demo",
+                nav: "/founder",
             },
         ],
     },
