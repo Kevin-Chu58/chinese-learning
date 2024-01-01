@@ -22,8 +22,8 @@ const routes = [
         element: <Home />,
     },
     {
-        name: 'About',
-        path: '/about',
+        name: 'Abouts',
+        path: '/abouts',
         element: <Abouts />,
     },
     {
