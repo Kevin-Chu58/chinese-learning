@@ -75,7 +75,7 @@ const Founder = () => {
             <div className="box">
                 <SubNavBar
                     width={window.innerWidth}
-                    navLeft="/about"
+                    navLeft="/abouts"
                     textLeft="关于学会"
                 />
             </div>
