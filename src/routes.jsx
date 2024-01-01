@@ -18,7 +18,7 @@ import WaldorfOrigin from './views/WaldorfOrigin';
 const routes = [
     {
         name: 'Home',
-        path: '',
+        path: '/',
         element: <Home />,
     },
     {

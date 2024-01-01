@@ -20,7 +20,7 @@ const drawerList = [
     {
         main: {
             title: "世界和图中文教育学会",
-            nav: "",
+            nav: "/",
         },
         sub: [
             {
@@ -36,7 +36,7 @@ const drawerList = [
     {
         main: {
             title: "世界和图中文教程",
-            nav: "",
+            nav: "/",
         },
         sub: [
             {
@@ -68,7 +68,7 @@ const drawerList = [
     {
         main: {
             title: "华德福教育",
-            nav: "",
+            nav: "/",
         },
         sub: [
             {
@@ -96,7 +96,7 @@ const drawerList = [
     {
         main: {
             title: "教师培训课程",
-            nav: "",
+            nav: "/",
         },
         sub: [
             {
@@ -132,7 +132,7 @@ const drawerList = [
     {
         main: {
             title: "邀约与合作",
-            nav: "",
+            nav: "/",
         },
         sub: [],
     },
@@ -198,13 +198,13 @@ const Header = ({
                         <ListItem key={item.main.title} disablePadding>
                             <ListItemButton sx={{cursor: "default"}}>
                                 <Link
-                                    href={`${item.main.nav}/`}
+                                    href={`${item.main.nav}`}
                                     sx={{
                                         textDecoration: "none",
                                         fontSize: "large",
                                         fontWeight: "bold",
                                         color: setListItemHighlight(
-                                            `${item.main.nav}/`
+                                            `${item.main.nav}`
                                         ),
                                         ":hover": {
                                             color: "#cd3736",
@@ -220,11 +220,11 @@ const Header = ({
                             <ListItem key={subItem.title}>
                                 <ListItemButton sx={{cursor: "default"}}>
                                     <Link
-                                        href={`${subItem.nav}/`}
+                                        href={`${subItem.nav}`}
                                         sx={{
                                             textDecoration: "none",
                                             color: setListItemHighlight(
-                                                `${subItem.nav}/`
+                                                `${subItem.nav}`
                                             ),
                                             ":hover": {
                                                 color: "#cd3736",
