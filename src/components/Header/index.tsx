@@ -23,10 +23,6 @@ const drawerList = [
         sub: [
             {
                 title: "关于学会",
-                nav: "/about",
-            },
-            {
-                title: "关于学会",
                 nav: "/abouts",
             },
             {

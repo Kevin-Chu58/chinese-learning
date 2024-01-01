@@ -1,7 +1,6 @@
 import Home from './views/Home';
 import Demo from './views/Demo';
 import Playground from './views/Playground';
-import About from './views/About';
 import Founder from './views/Founder';
 import Introduction from './views/Introduction';
 import TwentyYears from './views/TwentyYears';
@@ -25,11 +24,6 @@ const routes = [
     {
         name: 'About',
         path: '/about',
-        element: <About />,
-    },
-    {
-        name: 'Abouts',
-        path: '/abouts',
         element: <Abouts />,
     },
     {
