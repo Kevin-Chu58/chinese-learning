@@ -29,10 +29,6 @@ const drawerList = [
                 title: "认识创办人",
                 nav: "/founder",
             },
-            {
-                title: "关于学会",
-                nav: "/about",
-            },
         ],
     },
     {
