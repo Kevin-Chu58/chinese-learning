@@ -18,10 +18,8 @@ import React from "react";
 
 const drawerList = [
     {
-        main: {
-            title: "世界和图中文教育学会",
-            nav: "/",
-        },
+        title: "世界和图中文教育学会",
+        nav: "/",
         sub: [
             {
                 title: "关于学会",
@@ -34,19 +32,17 @@ const drawerList = [
         ],
     },
     {
-        main: {
-            title: "世界和图中文教程",
-            nav: "/",
-        },
+        title: "世界和图中文教程",
+        nav: "/",
         sub: [
-            {
-                title: "关于学会",
-                nav: "/about",
-            },
-            {
-                title: "认识创办人",
-                nav: "/founder",
-            },
+            // {
+            //     title: "关于学会",
+            //     nav: "/about",
+            // },
+            // {
+            //     title: "认识创办人",
+            //     nav: "/founder",
+            // },
             {
                 title: "教程介绍",
                 nav: "/introduction",
@@ -74,10 +70,8 @@ const drawerList = [
         ],
     },
     {
-        main: {
-            title: "华德福教育",
-            nav: "/",
-        },
+        title: "华德福教育",
+        nav: "/",
         sub: [
             {
                 title: "什么是华德福教育",
@@ -102,10 +96,8 @@ const drawerList = [
         ],
     },
     {
-        main: {
-            title: "教师培训课程",
-            nav: "/",
-        },
+        title: "教师培训课程",
+        nav: "/",
         sub: [
             {
                 title: "招生简介",
@@ -138,10 +130,8 @@ const drawerList = [
         ],
     },
     {
-        main: {
-            title: "邀约与合作",
-            nav: "/",
-        },
+        title: "邀约与合作",
+        nav: "/",
         sub: [],
     },
 ];
@@ -203,16 +193,16 @@ const Header = ({
                 {drawerList.map((item) => (
                     <div>
                         <Divider />
-                        <ListItem key={item.main.title} disablePadding>
+                        <ListItem key={item.title} disablePadding>
                             <ListItemButton sx={{cursor: "default"}}>
                                 <Link
-                                    href={`${item.main.nav}`}
+                                    href={`${item.nav}`}
                                     sx={{
                                         textDecoration: "none",
                                         fontSize: "large",
                                         fontWeight: "bold",
                                         color: setListItemHighlight(
-                                            `${item.main.nav}`
+                                            `${item.nav}`
                                         ),
                                         ":hover": {
                                             color: "#cd3736",
@@ -220,7 +210,7 @@ const Header = ({
                                         },
                                     }}
                                 >
-                                    {item.main.title}
+                                    {item.title}
                                 </Link>
                             </ListItemButton>
                         </ListItem>
