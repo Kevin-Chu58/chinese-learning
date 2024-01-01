@@ -36,67 +36,67 @@ const drawerList = [
     {
         main: {
             title: "世界和图中文教程",
-            nav: "/playground",
+            nav: "",
         },
         sub: [
             {
                 title: "教程介绍",
-                nav: "/demo",
-            },
-            {
-                title: "教学原理",
-                nav: "/demo",
+                nav: "/introduction",
             },
             {
                 title: "二十年回眸",
-                nav: "/demo",
+                nav: "/twenty-years",
+            },
+            {
+                title: "教学原理",
+                nav: "/principle",
             },
             {
                 title: "教程内容",
-                nav: "/demo",
+                nav: "/content",
             },
             {
                 title: "教学方法",
-                nav: "/demo",
+                nav: "/method",
             },
             {
                 title: "教学效果",
-                nav: "/demo",
+                nav: "/effect",
             },
         ],
     },
     {
         main: {
             title: "华德福教育",
-            nav: "/demo",
+            nav: "",
         },
         sub: [
             {
                 title: "什么是华德福教育",
-                nav: "/demo",
+                nav: "/what-is-waldorf",
             },
             {
-                title: "华德福教育的基础",
-                nav: "/demo",
+                title: "华德福教育的基石",
+                nav: "/waldorf-cornerstone",
             },
             {
                 title: "华德福教育的益处",
-                nav: "/demo",
+                nav: "/waldorf-benefit",
             },
             {
                 title: "华德福教师的核心角色",
-                nav: "/demo",
+                nav: "/waldorf-teacher-core-role",
             },
             {
                 title: "华德福教育的缘起",
-                nav: "/demo",
+                nav: "/waldorf-origin",
             },
         ],
     },
     {
         main: {
             title: "教师培训课程",
-            nav: "/demo",
+            nav: "",
         },
         sub: [
             {
@@ -132,7 +132,7 @@ const drawerList = [
     {
         main: {
             title: "邀约与合作",
-            nav: "/demo",
+            nav: "",
         },
         sub: [],
     },

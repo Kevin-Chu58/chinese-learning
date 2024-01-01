@@ -36,7 +36,7 @@ const SubNavBar = ({
                 >
                     <Button
                         onClick={(e) => {
-                            navigate(navLeft);
+                            navigate(`${navLeft}/`);
                             setScrollPosition(e);
                         }}
                         variant="contained"
@@ -58,7 +58,7 @@ const SubNavBar = ({
                 >
                     <Button
                         onClick={(e) => {
-                            navigate(navRight);
+                            navigate(`${navRight}/`);
                             setScrollPosition(e);
                         }}
                         variant="contained"
