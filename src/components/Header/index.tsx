@@ -29,20 +29,16 @@ const drawerList = [
                 title: "认识创办人",
                 nav: "/founder",
             },
+            {
+                title: "关于学会",
+                nav: "/about",
+            },
         ],
     },
     {
         title: "世界和图中文教程",
         nav: "/",
         sub: [
-            // {
-            //     title: "关于学会",
-            //     nav: "/about",
-            // },
-            // {
-            //     title: "认识创办人",
-            //     nav: "/founder",
-            // },
             {
                 title: "教程介绍",
                 nav: "/introduction",
