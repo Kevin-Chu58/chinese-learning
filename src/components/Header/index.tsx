@@ -40,6 +40,14 @@ const drawerList = [
         },
         sub: [
             {
+                title: "关于学会",
+                nav: "/about",
+            },
+            {
+                title: "认识创办人",
+                nav: "/founder",
+            },
+            {
                 title: "教程介绍",
                 nav: "/introduction",
             },
