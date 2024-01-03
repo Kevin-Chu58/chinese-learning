@@ -23,7 +23,7 @@ const Footer = () => {
                         请放心，您的信息不会被分享
                     </div>
                     <button className="classic-button marginy_10 bg-persian-red shade enlarge">
-                        <a className="padding_10 bold" href="/playground">
+                        <a className="padding_10 bold" href="/invitation-cooperation">
                             欢迎与我们联系
                         </a>
                     </button>

@@ -154,7 +154,7 @@ const Home = () => {
                     </div>
                     <div className="center-align-box marginx_50">
                         <button className="circle-button big citrine-white-outline">
-                            <a className="big" href="/playground">
+                            <a className="big" href="/admission-introduction">
                                 2023/2024世界和图中文师资培训项目已开启
                             </a>
                         </button>
@@ -192,13 +192,13 @@ const Home = () => {
                         />
                     </div>
                     <button className="circle-button bg-vallarta-blue top_-150">
-                        <a href="/about">了解世界和图中文教育学会</a>
+                        <a href="/abouts">了解世界和图中文教育学会</a>
                     </button>
                 </div>
             ) : 
                 (<div className="center-align-box">
                     <button className="classic-button bg-vallarta-blue marginy_10 shade enlarge no-margin">
-                        <a href="/about">了解世界和图中文教育学会</a>
+                        <a href="/abouts">了解世界和图中文教育学会</a>
                     </button>
                     <ImageList
                         sx={{ width: 350 }}
@@ -322,13 +322,13 @@ const Home = () => {
                 </MainOramentalSectionBreak>
                 <Postcard
                     context="跟着林源老师学了近四个月的和图中文，他给我打开了新的思路，激起我对中文的新的热诚。我感觉他做了很多奠基性的工作，但这只是开端，还有很多的工作要做，来揭示我们语言背后的秘密，来重新激活那个中文语言灵，让它复活和重生。 "
-                    commenter="士学员秒浩"
+                    commenter="瑞士学员秒浩"
                     hasButton={false}
                     hasImage={false}
                 />
                 <Postcard
                     context="有道无术术可求，有术无道止于术。像这样讲“道”的课程实在不多，更何况是术道相合的课程，让我们带领孩子的时候能够知其然并知其所以然，从而达到流畅、自由、享受、滋润的状态，会情不自禁第创造出更多的可能性，让教学活动变得不言而喻的美好与流动。"
-                    commenter="国学员红玲"
+                    commenter="中国学员红玲"
                     hasButton={false}
                     hasImage={false}
                 />
@@ -368,13 +368,13 @@ const Home = () => {
                         />
                     </div>
                     <button className="circle-button bg-horsetail top_-150">
-                        <a href="/playground">世界和图中文教师培训课程</a>
+                        <a href="/admission-introduction">世界和图中文教师培训课程</a>
                     </button>
                 </div>
             ) : 
                 (<div className="center-align-box">
                     <button className="classic-button bg-horsetail marginy_10 shade enlarge no-margin">
-                        <a href="/playground">世界和图中文教师培训课程</a>
+                        <a href="/admission-introduction">世界和图中文教师培训课程</a>
                     </button>
                     <ImageList
                         sx={{ width: 350 }}

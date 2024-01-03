@@ -1,6 +1,5 @@
 import Home from './views/Home';
 import Demo from './views/Demo';
-import Playground from './views/Playground';
 import Founder from './views/Founder';
 import Introduction from './views/Introduction';
 import TwentyYears from './views/TwentyYears';
@@ -14,6 +13,14 @@ import WaldorfBenefit from './views/WaldorfBenefit';
 import WaldorfTeacherCoreRole from './views/WaldorfTeacherCoreRole';
 import WaldorfOrigin from './views/WaldorfOrigin';
 import Abouts from './views/Abouts';
+import AdmissionIntroduction from './views/AdmissionIntroduction';
+import ClassSchedule from './views/ClassSchedule';
+import CourseDegisn from './views/CourseDesign';
+import OnlineCourse from './views/OnlineCourse';
+import Teachers from './views/Teachers';
+import RegisterInfo from './views/RegisterInfo';
+import PublicCourse from './views/PublicCourse';
+import InvitationAndCooperation from './views/InvitationAndCooperation';
 
 const routes = [
     {
@@ -86,17 +93,52 @@ const routes = [
         path: '/waldorf-origin',
         element: <WaldorfOrigin />,
     },
+    {
+        name: 'AdmissionIntroduction',
+        path: '/admission-introduction',
+        element: <AdmissionIntroduction />,
+    },
+    {
+        name: 'ClassSchedule',
+        path: '/class-schedule',
+        element: <ClassSchedule />,
+    },
+    {
+        name: 'CourseDesign',
+        path: '/course-design',
+        element: <CourseDegisn />,
+    },
+    {
+        name: 'OnlineCourse',
+        path: '/online-course',
+        element: <OnlineCourse />,
+    },
+    {
+        name: 'Teachers',
+        path: '/teachers',
+        element: <Teachers />,
+    },
+    {
+        name: 'RegisterInfo',
+        path: '/register-info',
+        element: <RegisterInfo />,
+    },
+    {
+        name: 'PublicCourse',
+        path: '/public-course',
+        element: <PublicCourse />,
+    },
+    {
+        name: 'InvitationAndCooperation',
+        path: '/invitation-cooperation',
+        element: <InvitationAndCooperation />,
+    },
 
     // draft pages
     {
         name: 'Demo',
         path: '/demo',
         element: <Demo />,
-    },
-    {
-        name: 'Playground',
-        path: '/playground',
-        element: <Playground />,
     },
 ]
 

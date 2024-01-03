@@ -7,7 +7,7 @@ const WaldorfTeacherCoreRole = () => {
     return (
         <div className="main-box">
             <div className="center-align-box h1 txt-bravado-red bold vw70 padding_20" style={{fontFamily: "kaiti"}}>
-                华德福教师的核心角色
+                华德福教师的{window.innerWidth > 500? "": <br />}核心角色
             </div>
 
             <div className="center-align-box vw70">
