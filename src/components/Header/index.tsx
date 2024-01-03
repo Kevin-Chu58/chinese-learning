@@ -177,7 +177,7 @@ const Header = ({ ...otherProps }: PropsWithChildren<Props>) => {
 
     const list = () => (
         <Box
-            style={{ width: 250, position: "sticky", top: 0 }}
+            style={{ width: 250}}
             role="presentation"
         >
             <List sx={{ paddingTop: 0 }}>
@@ -188,6 +188,9 @@ const Header = ({ ...otherProps }: PropsWithChildren<Props>) => {
                         marginBottom: 0,
                         paddingTop: 0,
                         paddingBottom: 0,
+                        position: "sticky",
+                        top: 0 ,
+                        zIndex: 5,
                     }}
                 >
                     <IconButton
