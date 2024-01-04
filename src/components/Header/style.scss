@@ -44,6 +44,12 @@
         font-family: antropos;
         font-size: 18px;
         margin: auto 0;
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+            color: var(--roman);
+        }
     }    
 
     .tool-container {
@@ -89,7 +95,7 @@
         & .MuiSwitch-switchBase {
             padding: 0px;
             margin: 3px 4px;
-            transition-duration: 300ms;
+            transition-duration: 0ms;
         }
 
         & .MuiSwitch-track {

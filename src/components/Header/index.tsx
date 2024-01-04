@@ -15,24 +15,67 @@ import {
     Collapse,
     ListItemText,
 } from "@mui/material";
-import { PropsWithChildren, useState } from "react";
+import { PropsWithChildren, useEffect, useState } from "react";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import React from "react";
 
-type Props = {};
+type Props = {
+    isSwitchOn: boolean;
+};
 
-const Header = ({ ...otherProps }: PropsWithChildren<Props>) => {
+const Header = ({
+    isSwitchOn,
+    ...otherProps
+}: PropsWithChildren<Props>) => {
     const [drawerOn, setDrawerOn] = useState(false);
-    const [openTitle1, setOpenTitle1] = useState(false);
-    const [openTitle2, setOpenTitle2] = useState(false);
-    const [openTitle3, setOpenTitle3] = useState(false);
-    const [openTitle4, setOpenTitle4] = useState(false);
+    const drawerTitles = [
+        "世界和图中文教育学会",
+        "世界和图中文教程",
+        "华德福教育",
+        "教师培训课程",
+        "邀约与合作",
+    ]; //"邀约与合作" has no collapse
+    const [onTitle, setOnTitle] = useState(""); // if onTitle === "closed", then useEffect cannot overwrite it
+    const [switchOn, setSwitchOn] = useState(isSwitchOn);
+    const [openTitle1, setOpenTitle1] = useState(false); // "世界和图中文教育学会"
+    const [openTitle2, setOpenTitle2] = useState(false); // "世界和图中文教程"
+    const [openTitle3, setOpenTitle3] = useState(false); // "华德福教育"
+    const [openTitle4, setOpenTitle4] = useState(false); // "教师培训课程"
+
+    useEffect(() => {
+        const originURL = checkURL() ? window.location.href.slice(0, -3) : window.location.href;
+        const lastSlash = originURL.lastIndexOf('/');
+        const currentTitle = findOnTitle(originURL.slice(lastSlash));
+        if (onTitle !== "closed")
+            setOnTitle(currentTitle ?? "");
+
+        setOpenTitle1(onTitle === drawerTitles[0] || openTitle1);
+        setOpenTitle2(onTitle === drawerTitles[1] || openTitle2);
+        setOpenTitle3(onTitle === drawerTitles[2] || openTitle3);
+        setOpenTitle4(onTitle === drawerTitles[3] || openTitle4);
+    });
+
+    const checkURL = () => {
+        return window.location.href.endsWith("/en");
+    };
+
+    const setURL = (url: string) => {
+        return checkURL()
+            ? url.slice(0, -3)
+            : `${url}${
+                  url.endsWith("/") ? "en" : "/en"
+              }`;
+    }
+
+    const onSwitch = () => {
+        setSwitchOn(checkURL());
+        window.location.href = setURL(window.location.href);
+    };
 
     const drawerList = [
         {
-            title: "世界和图中文教育学会",
-            nav: "/",
+            title: drawerTitles[0],
             hasCollapsed: true,
             onOpen: openTitle1,
             setOnOpen: setOpenTitle1,
@@ -48,8 +91,7 @@ const Header = ({ ...otherProps }: PropsWithChildren<Props>) => {
             ],
         },
         {
-            title: "世界和图中文教程",
-            nav: "/",
+            title: drawerTitles[1],
             hasCollapsed: true,
             onOpen: openTitle2,
             setOnOpen: setOpenTitle2,
@@ -81,8 +123,7 @@ const Header = ({ ...otherProps }: PropsWithChildren<Props>) => {
             ],
         },
         {
-            title: "华德福教育",
-            nav: "/",
+            title: drawerTitles[2],
             hasCollapsed: true,
             onOpen: openTitle3,
             setOnOpen: setOpenTitle3,
@@ -110,8 +151,7 @@ const Header = ({ ...otherProps }: PropsWithChildren<Props>) => {
             ],
         },
         {
-            title: "教师培训课程",
-            nav: "/",
+            title: drawerTitles[3],
             hasCollapsed: true,
             onOpen: openTitle4,
             setOnOpen: setOpenTitle4,
@@ -147,12 +187,21 @@ const Header = ({ ...otherProps }: PropsWithChildren<Props>) => {
             ],
         },
         {
-            title: "邀约与合作",
+            title: drawerTitles[4],
             nav: "/invitation-cooperation",
             hasCollapsed: false,
             sub: [],
         },
     ];
+
+    const findOnTitle = (nav: string) => {
+        for (let item = 0; item < drawerList.length; item++) {
+            for (let subItem = 0; subItem < drawerList[item].sub.length; subItem++) {
+                if (drawerList[item].sub[subItem].nav === nav)
+                    return drawerList[item].title;
+            }
+        }
+    }
 
     const handleClick = (onOpen, setOnOpen) => {
         setOnOpen(!onOpen);
@@ -176,10 +225,7 @@ const Header = ({ ...otherProps }: PropsWithChildren<Props>) => {
     };
 
     const list = () => (
-        <Box
-            style={{ width: 250}}
-            role="presentation"
-        >
+        <Box style={{ width: 250 }} role="presentation">
             <List sx={{ paddingTop: 0 }}>
                 <ListItem
                     key="drawer-toolbar"
@@ -189,7 +235,7 @@ const Header = ({ ...otherProps }: PropsWithChildren<Props>) => {
                         paddingTop: 0,
                         paddingBottom: 0,
                         position: "sticky",
-                        top: 0 ,
+                        top: 0,
                         zIndex: 5,
                     }}
                 >
@@ -220,7 +266,7 @@ const Header = ({ ...otherProps }: PropsWithChildren<Props>) => {
                             }
                         >
                             {item.hasCollapsed ? (
-                                <ListItemButton>
+                                <ListItemButton onClick={() => onTitle === item.title && item.onOpen ? setOnTitle("closed") : null}>
                                     <ListItemText
                                         primary={
                                             <Box
@@ -274,12 +320,19 @@ const Header = ({ ...otherProps }: PropsWithChildren<Props>) => {
                                             sx={{ cursor: "default" }}
                                         >
                                             <Link
-                                                href={`${subItem.nav}`}
+                                                href={`${subItem.nav}${
+                                                    switchOn ? "/en" : ""
+                                                }`}
+                                                onClick={() => {}}
                                                 sx={{
                                                     width: 220,
                                                     textDecoration: "none",
                                                     color: setListItemHighlight(
-                                                        `${subItem.nav}`
+                                                        `${subItem.nav}${
+                                                            switchOn
+                                                                ? "/en"
+                                                                : ""
+                                                        }`
                                                     ),
                                                     ":hover": {
                                                         color: "#cd3736",
@@ -294,32 +347,7 @@ const Header = ({ ...otherProps }: PropsWithChildren<Props>) => {
                                 ))}
                             </Collapse>
                         ) : (
-                            <>
-                                {item.sub.map((subItem) => (
-                                    <ListItem key={subItem.title}>
-                                        <ListItemButton
-                                            sx={{ cursor: "default" }}
-                                        >
-                                            <Link
-                                                href={`${subItem.nav}`}
-                                                sx={{
-                                                    width: 220,
-                                                    textDecoration: "none",
-                                                    color: setListItemHighlight(
-                                                        `${subItem.nav}`
-                                                    ),
-                                                    ":hover": {
-                                                        color: "#cd3736",
-                                                        textDecoration: "none",
-                                                    },
-                                                }}
-                                            >
-                                                {subItem.title}
-                                            </Link>
-                                        </ListItemButton>
-                                    </ListItem>
-                                ))}
-                            </>
+                            <></>
                         )}
                     </div>
                 ))}
@@ -330,9 +358,15 @@ const Header = ({ ...otherProps }: PropsWithChildren<Props>) => {
     return (
         <header id="header" className="header">
             <div className="box fd-row header-container">
-                <div className="whcei">WHCEI</div>
+                <Link href="/" className="whcei">
+                    WHCEI
+                </Link>
 
-                <Switch className="center-vertical lang-switch" />
+                <Switch
+                    checked={switchOn}
+                    onChange={onSwitch}
+                    className="center-vertical lang-switch"
+                />
 
                 <div className="tool-container">
                     <React.Fragment>

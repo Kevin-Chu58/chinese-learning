@@ -37,6 +37,11 @@
   font-family: antropos;
   font-size: 18px;
   margin: auto 0;
+  text-decoration: none;
+  color: white;
+}
+.header .whcei:hover {
+  color: var(--roman);
 }
 .header .tool-container {
   display: flex;
@@ -78,7 +83,7 @@
 .header .lang-switch .MuiSwitch-switchBase {
   padding: 0px;
   margin: 3px 4px;
-  transition-duration: 300ms;
+  transition-duration: 0ms;
 }
 .header .lang-switch .MuiSwitch-track {
   background-color: white;

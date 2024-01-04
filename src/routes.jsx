@@ -1,4 +1,5 @@
 import Home from './views/Home';
+import HomeEn from './views/Home/en';
 import Demo from './views/Demo';
 import Founder from './views/Founder';
 import Introduction from './views/Introduction';
@@ -23,6 +24,11 @@ import PublicCourse from './views/PublicCourse';
 import InvitationAndCooperation from './views/InvitationAndCooperation';
 
 const routes = [
+    {
+        name: 'HomeEn',
+        path: '/en',
+        element: <HomeEn />,
+    },
     {
         name: 'Home',
         path: '/',
