@@ -395,9 +395,9 @@ const Header = ({ isSwitchOn, ...otherProps }: PropsWithChildren<Props>) => {
                         </Drawer>
                     </React.Fragment>
 
-                    <button onClick={() => {}} className="header-button">
+                    {/* <button onClick={() => {}} className="header-button">
                         <MoreVertIcon className="center-vertical" />
-                    </button>
+                    </button> */}
                 </div>
             </div>
         </header>
