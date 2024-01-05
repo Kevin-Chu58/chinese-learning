@@ -322,7 +322,7 @@ const Home = () => {
                 </MainOramentalSectionBreak>
                 <Postcard
                     context="跟着林源老师学了近四个月的和图中文，他给我打开了新的思路，激起我对中文的新的热诚。我感觉他做了很多奠基性的工作，但这只是开端，还有很多的工作要做，来揭示我们语言背后的秘密，来重新激活那个中文语言灵，让它复活和重生。 "
-                    commenter="瑞士学员秒浩"
+                    commenter="瑞士学员妙浩"
                     hasButton={false}
                     hasImage={false}
                 />
