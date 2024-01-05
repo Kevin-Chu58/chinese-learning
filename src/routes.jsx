@@ -1,5 +1,4 @@
 import Home from './views/Home';
-import HomeEn from './views/Home/en';
 import Demo from './views/Demo';
 import Founder from './views/Founder';
 import Introduction from './views/Introduction';
@@ -27,7 +26,7 @@ const routes = [
     {
         name: 'HomeEn',
         path: '/en',
-        element: <HomeEn />,
+        element: <Home />,
     },
     {
         name: 'Home',
@@ -36,8 +35,18 @@ const routes = [
     },
     {
         name: 'Abouts',
+        path: '/abouts/en',
+        element: <Abouts />,
+    },
+    {
+        name: 'Abouts',
         path: '/abouts',
         element: <Abouts />,
+    },
+    {
+        name: 'Founder',
+        path: '/founder/en',
+        element: <Founder />,
     },
     {
         name: 'Founder',
@@ -46,8 +55,18 @@ const routes = [
     },
     {
         name: 'Introduction',
+        path: '/introduction/en',
+        element: <Introduction />,
+    },
+    {
+        name: 'Introduction',
         path: '/introduction',
         element: <Introduction />,
+    },
+    {
+        name: 'TwentyYears',
+        path: '/twenty-years/en',
+        element: <TwentyYears />,
     },
     {
         name: 'TwentyYears',
@@ -56,8 +75,18 @@ const routes = [
     },
     {
         name: 'Principle',
+        path: '/principle/en',
+        element: <Principle />,
+    },
+    {
+        name: 'Principle',
         path: '/principle',
         element: <Principle />,
+    },
+    {
+        name: 'Content',
+        path: '/content/en',
+        element: <Content />,
     },
     {
         name: 'Content',
@@ -66,8 +95,18 @@ const routes = [
     },
     {
         name: 'Method',
+        path: '/method/en',
+        element: <Method />,
+    },
+    {
+        name: 'Method',
         path: '/method',
         element: <Method />,
+    },
+    {
+        name: 'Effect',
+        path: '/effect/en',
+        element: <Effect />,
     },
     {
         name: 'Effect',
@@ -76,8 +115,18 @@ const routes = [
     },
     {
         name: 'WhatIsWaldorf',
+        path: '/what-is-waldorf/en',
+        element: <WhatIsWaldorf />,
+    },
+    {
+        name: 'WhatIsWaldorf',
         path: '/what-is-waldorf',
         element: <WhatIsWaldorf />,
+    },
+    {
+        name: 'WaldorfCornerstone',
+        path: '/waldorf-cornerstone/en',
+        element: <WaldorfCornerstone />,
     },
     {
         name: 'WaldorfCornerstone',
@@ -86,8 +135,18 @@ const routes = [
     },
     {
         name: 'WaldorfBenefit',
+        path: '/waldorf-benefit/en',
+        element: <WaldorfBenefit />,
+    },
+    {
+        name: 'WaldorfBenefit',
         path: '/waldorf-benefit',
         element: <WaldorfBenefit />,
+    },
+    {
+        name: 'WaldorfTeacherCoreRole',
+        path: '/waldorf-teacher-core-role/en',
+        element: <WaldorfTeacherCoreRole />,
     },
     {
         name: 'WaldorfTeacherCoreRole',
@@ -96,8 +155,18 @@ const routes = [
     },
     {
         name: 'WaldorfOrigin',
+        path: '/waldorf-origin/en',
+        element: <WaldorfOrigin />,
+    },
+    {
+        name: 'WaldorfOrigin',
         path: '/waldorf-origin',
         element: <WaldorfOrigin />,
+    },
+    {
+        name: 'AdmissionIntroduction',
+        path: '/admission-introduction/en',
+        element: <AdmissionIntroduction />,
     },
     {
         name: 'AdmissionIntroduction',
@@ -106,8 +175,18 @@ const routes = [
     },
     {
         name: 'ClassSchedule',
+        path: '/class-schedule/en',
+        element: <ClassSchedule />,
+    },
+    {
+        name: 'ClassSchedule',
         path: '/class-schedule',
         element: <ClassSchedule />,
+    },
+    {
+        name: 'CourseDesign',
+        path: '/course-design/en',
+        element: <CourseDegisn />,
     },
     {
         name: 'CourseDesign',
@@ -116,8 +195,18 @@ const routes = [
     },
     {
         name: 'OnlineCourse',
+        path: '/online-course/en',
+        element: <OnlineCourse />,
+    },
+    {
+        name: 'OnlineCourse',
         path: '/online-course',
         element: <OnlineCourse />,
+    },
+    {
+        name: 'Teachers',
+        path: '/teachers/en',
+        element: <Teachers />,
     },
     {
         name: 'Teachers',
@@ -126,13 +215,28 @@ const routes = [
     },
     {
         name: 'RegisterInfo',
+        path: '/register-info/en',
+        element: <RegisterInfo />,
+    },
+    {
+        name: 'RegisterInfo',
         path: '/register-info',
         element: <RegisterInfo />,
     },
     {
         name: 'PublicCourse',
+        path: '/public-course/en',
+        element: <PublicCourse />,
+    },
+    {
+        name: 'PublicCourse',
         path: '/public-course',
         element: <PublicCourse />,
+    },
+    {
+        name: 'InvitationAndCooperation',
+        path: '/invitation-cooperation/en',
+        element: <InvitationAndCooperation />,
     },
     {
         name: 'InvitationAndCooperation',

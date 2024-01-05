@@ -1,5 +1,6 @@
 import Footer from "../../components/Footer";
 import SubNavBar from "../../components/SubNavBar";
+import Content1 from "../../assets/images/content1.png";
 
 const Content = () => {
 
@@ -9,7 +10,9 @@ const Content = () => {
                 教程内容
             </div>
 
-            {/* image here */}
+            <div className="center-align-box">
+                <img src={Content1} alt="founder" className="w400 no-margin" />
+            </div>
 
             <div className="center-align-box vw70">
                 <div className="left-align-box">

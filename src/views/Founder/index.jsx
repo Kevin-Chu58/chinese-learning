@@ -1,6 +1,11 @@
 import StarOramentalSectionBreakShort from "../../assets/star-ornamental-section-break-short";
 import Footer from "../../components/Footer";
 import SubNavBar from "../../components/SubNavBar";
+import Founder1 from "../../assets/images/founder1.png";
+import Founder2 from "../../assets/images/founder2.png";
+import Founder3 from "../../assets/images/founder3.png";
+import Founder4 from "../../assets/images/founder4.png";
+import Founder5 from "../../assets/images/founder5.png";
 
 const Founder = () => {
     return (
@@ -11,7 +16,9 @@ const Founder = () => {
 
             <div className="center-align-box vw70">
                 <div className="left-align-box">
-                    {/* <div className="left-align-box h3">teacher.jpg</div> */}
+                    <div className="center-align-box">
+                        <img src={Founder1} alt="founder" className="w400 no-margin" />
+                    </div>
                     <div className="left-align-box p1 txt-horsetail bold">
                         林源老师，春之谷学院院长、EWIP项目负责人、文史地老师，
                         曾就读于南京师范大学、北京鲁迅文学院、北京大学。
@@ -23,7 +30,9 @@ const Founder = () => {
                         创立了一套深受美国中小学生喜欢的《世界和图中文教程》，
                         该教程连续 5 年获得纽约州 政府所颁发的艺术教育基金奖。
                     </div>
-                    {/* <div className="left-align-box p1">image.jpg</div> */}
+                    <div className="center-align-box">
+                        <img src={Founder2} alt="founder" className="w400 no-margin" />
+                    </div>
                     <div className="left-align-box p1">
                         2010 年，林源老师回北京创办春之谷学院及春之谷学园，
                         从2012 年起担 任春之谷学园壬辰班 1-6年级主班老师，
@@ -40,7 +49,9 @@ const Founder = () => {
                         <StarOramentalSectionBreakShort />
                     </div>
 
-                    {/* <div className="left-align-box p1">image.jpg</div> */}
+                    <div className="center-align-box">
+                        <img src={Founder3} alt="founder" className="w400 no-margin" />
+                    </div>
                     <div className="left-align-box p1">
                         林源老师多年来在国内外刊物发表大量诗歌。其中，
                         《教育诗》获1991 年 全国校园诗歌大赛一等奖；《古代奥林匹克精神》获2008 奥运会诗歌大赛优秀作品奖。
@@ -58,7 +69,9 @@ const Founder = () => {
                         <StarOramentalSectionBreakShort />
                     </div>
 
-                    {/* <div className="left-align-box p1">image.jpg</div> */}
+                    <div className="center-align-box">
+                        <img src={Founder4} alt="founder" className="w400 no-margin" />
+                    </div>
                     <div className="left-align-box p1">
                         自 2001 年到 2022 年，在 20多年中，
                         林源老师一直从事华德福教育的中国本土化工作，
@@ -69,7 +82,9 @@ const Founder = () => {
                         在自然原型生态场域、世界文化遗产遗址，以天地为课堂，以自然为友，以万物为师，
                         从事自然和人文教育，探索迈向东方、迈向现场、迈向未来的生态文明教育。
                     </div>
-                    {/* <div className="left-align-box p1">image.jpg</div> */}
+                    <div className="center-align-box">
+                        <img src={Founder5} alt="founder" className="w400 no-margin" />
+                    </div>
                 </div>
             </div>
             <div className="box">

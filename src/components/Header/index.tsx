@@ -24,10 +24,7 @@ type Props = {
     isSwitchOn: boolean;
 };
 
-const Header = ({
-    isSwitchOn,
-    ...otherProps
-}: PropsWithChildren<Props>) => {
+const Header = ({ isSwitchOn, ...otherProps }: PropsWithChildren<Props>) => {
     const [drawerOn, setDrawerOn] = useState(false);
     const drawerTitles = [
         "世界和图中文教育学会",
@@ -43,35 +40,38 @@ const Header = ({
     const [openTitle3, setOpenTitle3] = useState(false); // "华德福教育"
     const [openTitle4, setOpenTitle4] = useState(false); // "教师培训课程"
 
+    // set drawer initial opening status for Collapse components
     useEffect(() => {
-        const originURL = checkURL() ? window.location.href.slice(0, -3) : window.location.href;
-        const lastSlash = originURL.lastIndexOf('/');
+        const originURL = checkURL("/en")
+            ? window.location.href.slice(0, -3)
+            : window.location.href;
+        const lastSlash = originURL.lastIndexOf("/");
         const currentTitle = findOnTitle(originURL.slice(lastSlash));
-        if (onTitle !== "closed")
+        if (onTitle !== "closed") {
             setOnTitle(currentTitle ?? "");
-
-        setOpenTitle1(onTitle === drawerTitles[0] || openTitle1);
-        setOpenTitle2(onTitle === drawerTitles[1] || openTitle2);
-        setOpenTitle3(onTitle === drawerTitles[2] || openTitle3);
-        setOpenTitle4(onTitle === drawerTitles[3] || openTitle4);
+            setOpenTitle1(onTitle === drawerTitles[0] || openTitle1);
+            setOpenTitle2(onTitle === drawerTitles[1] || openTitle2);
+            setOpenTitle3(onTitle === drawerTitles[2] || openTitle3);
+            setOpenTitle4(onTitle === drawerTitles[3] || openTitle4);
+        }
     });
 
-    const checkURL = () => {
-        return window.location.href.endsWith("/en");
+    const checkURL = (subString: string) => {
+        return window.location.href.endsWith(subString);
     };
-
-    const setURL = (url: string) => {
-        return checkURL()
-            ? url.slice(0, -3)
-            : `${url}${
-                  url.endsWith("/") ? "en" : "/en"
-              }`;
-    }
 
     const onSwitch = () => {
-        setSwitchOn(checkURL());
-        window.location.href = setURL(window.location.href);
+        setSwitchOn(!switchOn);
+        sleep(400).then(() => {
+            window.location.href = checkURL("/en")
+                ? window.location.href.slice(0, -3)
+                : `${window.location.href}${checkURL("/") ? "en" : "/en"}`;
+        });
     };
+
+    function sleep(ms: number) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+    }
 
     const drawerList = [
         {
@@ -196,12 +196,16 @@ const Header = ({
 
     const findOnTitle = (nav: string) => {
         for (let item = 0; item < drawerList.length; item++) {
-            for (let subItem = 0; subItem < drawerList[item].sub.length; subItem++) {
+            for (
+                let subItem = 0;
+                subItem < drawerList[item].sub.length;
+                subItem++
+            ) {
                 if (drawerList[item].sub[subItem].nav === nav)
                     return drawerList[item].title;
             }
         }
-    }
+    };
 
     const handleClick = (onOpen, setOnOpen) => {
         setOnOpen(!onOpen);
@@ -266,7 +270,13 @@ const Header = ({
                             }
                         >
                             {item.hasCollapsed ? (
-                                <ListItemButton onClick={() => onTitle === item.title && item.onOpen ? setOnTitle("closed") : null}>
+                                <ListItemButton
+                                    onClick={() =>
+                                        onTitle === item.title && item.onOpen
+                                            ? setOnTitle("closed")
+                                            : null
+                                    }
+                                >
                                     <ListItemText
                                         primary={
                                             <Box
@@ -358,7 +368,7 @@ const Header = ({
     return (
         <header id="header" className="header">
             <div className="box fd-row header-container">
-                <Link href="/" className="whcei">
+                <Link href={`/${switchOn ? "en" : ""}`} className="whcei">
                     WHCEI
                 </Link>
 

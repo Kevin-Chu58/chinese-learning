@@ -1,6 +1,19 @@
 import Footer from "../../components/Footer";
 import SubNavBar from "../../components/SubNavBar";
 import ContactForm from "../../components/ContactForm";
+import Founder1 from "../../assets/images/founder1.png";
+import Teacher1 from "../../assets/images/teacher1.png";
+import Teacher2 from "../../assets/images/teacher2.png";
+import Teacher3 from "../../assets/images/teacher3.png";
+import Teacher4 from "../../assets/images/teacher4.png";
+import Teacher5 from "../../assets/images/teacher5.png";
+import Teacher6 from "../../assets/images/teacher6.png";
+import Teacher7 from "../../assets/images/teacher7.png";
+import Teacher8 from "../../assets/images/teacher8.png";
+import Teacher9 from "../../assets/images/teacher9.png";
+import Teacher10 from "../../assets/images/teacher10.png";
+import Teacher11 from "../../assets/images/teacher11.png";
+import Teacher12 from "../../assets/images/teacher12.png";
 
 const Teachers = () => {
     return (
@@ -14,7 +27,9 @@ const Teachers = () => {
 
             <div className="left-align-box vw100" style={{margin: window.innerWidth >= 600 ? "0 15vw" : "0 5vw"}}>
                 <br />
-                {/* teacher image */}
+                <div className="center-align-box">
+                    <img src={Founder1} alt="teacher" className="w400 no-margin" />
+                </div>
                 <div className="center-align-box h3 bold txt-brown" style={{margin: "0 auto"}}>林 源</div>
                 <div className="center-align-box p1 bold txt-brown" style={{margin: "0 auto"}}>春之谷学院院长、EWIP 项目负责人、文史地老师</div>
                 <div className="left-align-box p1 bold">
@@ -24,7 +39,9 @@ const Teachers = () => {
                     2010 年林源老师回北京创办春之谷学院及春之谷学园，从 2012 年起担任春之谷学园壬辰班主班老师，任教师会主席，同时在春之谷学院担任教学并任院长，2019 年起创立东西方国际中学项目（EWIP），并担任 7-12 年级文史地主课教学。现任春之谷学院院长，EWIP 项目负责人。自 2012 年起，林源老师与武当山结缘，在武当山采点、带领学生研习游学，走遍了武当的峰岩涧洞、宫观庵堂。原创性地开发了本土课程，2021 年成立春之谷武当研学中心。
                 </div>
                 <br />
-                {/* teacher image */}
+                <div className="center-align-box">
+                    <img src={Teacher1} alt="teacher" className="w400 no-margin" />
+                </div>
                 <div className="center-align-box h3 bold txt-brown" style={{margin: "0 auto"}}>Ted Warren</div>
                 <div className="center-align-box p1 bold txt-brown" style={{margin: "0 auto"}}>英语教师、高年级人文老师</div>
                 <div className="left-align-box p1 bold">
@@ -37,7 +54,9 @@ const Teachers = () => {
                     Ted Warren 老师精通英文和德文，具有 20 多年华德福主班教学，英语教学经验，为研究中国化的课程倾注心血，尤其他对人智学中关于中国及东方的论述有专门研究。他是欧美公认华德福历史教学的专家，英语作为第二外语的专家。
                 </div>
                 <br />
-                {/* teacher image */}
+                <div className="center-align-box">
+                    <img src={Teacher2} alt="teacher" className="w400 no-margin" />
+                </div>
                 <div className="center-align-box h3 bold txt-brown" style={{margin: "0 auto"}}>Micheal D'Aleo</div>
                 <div className="center-align-box p1 bold txt-brown" style={{margin: "0 auto"}}>人智学导师，自然、物理、天文教师</div>
                 <div className="left-align-box p1 bold">
@@ -53,7 +72,9 @@ const Teachers = () => {
                     2017 年，Micheal D'Aleo 老师受春之谷、乐知和上海福源的邀请开始了“天梯计划---华德福高中课程培训”。自 2017 年起，Micheal D'Aleo 老师就在春之谷学院任教。
                 </div>
                 <br />
-                {/* teacher image */}
+                <div className="center-align-box">
+                    <img src={Teacher3} alt="teacher" className="w400 no-margin" />
+                </div>
                 <div className="center-align-box h3 bold txt-brown" style={{margin: "0 auto"}}>Patrice Maynard</div>
                 <div className="center-align-box p1 bold txt-brown" style={{margin: "0 auto"}}>现任美国华德福教育研究中心(Research Institute for Waldorf Education)出版发展部负责人</div>
                 <div className="left-align-box p1 bold">
@@ -66,7 +87,9 @@ const Teachers = () => {
                     自 2016 年起，Patrice 就是春之谷学院全日制研修班的 1-8 年级华德福教育的导师。
                 </div>
                 <br />
-                {/* teacher image */}
+                <div className="center-align-box">
+                    <img src={Teacher4} alt="teacher" className="w400 no-margin" />
+                </div>
                 <div className="center-align-box h3 bold txt-brown" style={{margin: "0 auto"}}>Bo Werner Eriksson</div>
                 <div className="center-align-box p1 bold txt-brown" style={{margin: "0 auto"}}>讲授艺术和色彩理论</div>
                 <div className="left-align-box p1 bold">
@@ -79,7 +102,9 @@ const Teachers = () => {
                     自 2011 年起，Bo Werner Eriksson 老师就在春之谷学院任教。
                 </div>
                 <br />
-                {/* teacher image */}
+                <div className="center-align-box">
+                    <img src={Teacher5} alt="teacher" className="w400 no-margin" />
+                </div>
                 <div className="center-align-box h3 bold txt-brown" style={{margin: "0 auto"}}>Karl SchurmanKarl Schurman</div>
                 <div className="center-align-box p1 bold txt-brown" style={{margin: "0 auto"}}>普林斯顿大学毕业，纽约大学电影专业本科，帝国大学（BS），曾在新罕布什尔人智学中心完成华德福高中教师培训</div>
                 <div className="left-align-box p1 bold">
@@ -92,21 +117,27 @@ const Teachers = () => {
                     从 1973 年至 2005 年，电影拍摄将 Karl 带到了美国和世界各地，包括 2005 年在中国的两部拍摄：一部是环保 NGO 的纪录片，另一部是 IBM 的宣传片。他还是 1980年 PBS 电视纪录片“特蕾莎修女的世界”中的一位著名作家和摄影师。他对电影史、法语、土著美国、神秘的苏菲诗歌，还有中国及其文化保持着浓厚的兴趣。
                 </div>
                 <br />
-                {/* teacher image */}
+                <div className="center-align-box">
+                    <img src={Teacher6} alt="teacher" className="w400 no-margin" />
+                </div>
                 <div className="center-align-box h3 bold txt-brown" style={{margin: "0 auto"}}>Jeff Martin</div>
                 <div className="center-align-box p1 bold txt-brown" style={{margin: "0 auto"}}>人智学导师</div>
                 <div className="left-align-box p1 bold">
                     1947 年出生于美国印第安那州，大学毕业后研究社会科学，后去英国爱默生学院学习人智学，然后去英国南部的人智学社会发展中心工作，成为组织发展咨询及过程推动专家。三十年来，作为教师，分析家及顾问工作于不同的组织机构，同时他带领各种工作坊，深化研究人智学，并运用于实践。最近三年，他在英国、德国和法国研究和讲授人智学。他还是美国芝加哥华德福教师培训的主讲人智学的老师。他是全球少有的几位能将人智学讲得既深刻又生动的教师之一。杰夫老师近来一直致力于东西方人学的研究、老子、佛陀和孔子智慧与施泰纳人学的比较。Jeff 自 2011 年起，就在春之谷学院任教，是一位深受学员爱戴的人智学导师。
                 </div>
                 <br />
-                {/* teacher image */}
+                <div className="center-align-box">
+                    <img src={Teacher7} alt="teacher" className="w400 no-margin" />
+                </div>
                 <div className="center-align-box h3 bold txt-brown" style={{margin: "0 auto"}}>臧艺兵</div>
                 <div className="center-align-box p1 bold txt-brown" style={{margin: "0 auto"}}>原华中师范大学音乐学院教授、院长，笔名臧一冰</div>
                 <div className="left-align-box p1 bold">
                     音乐史硕士，香港中文大学哲学（民族音乐学）博士。华中师范大学非物质化遗产研究中心研究员，湖北省音乐实验教学示范中心主任，中央电视台音乐频道《民歌中国》特聘专家，世界传统音乐学会（ICTM）会员。著有《中国音乐史》、《作为文化的音乐》等书，并曾在近年发表《中国音乐记谱法历史沿革》、《对音乐行为过程的人类学阐释》、《中国音乐与八亿农民》、《民间歌手与乡土文明建构》、《口述史与音乐史——中国音乐史写作的新视角》等数十篇论文。《民歌与安魂》是一部二十多万字的田野采风录。其中可以《民歌与安魂》是臧一冰教授以民族音乐学田野调查的方法，通过对一位汉族民间歌师个人命运的描述与阐释，研究这位本土“歌师”六十年间，个人与社会、与历史、与音乐之间互为建构的历程。本研究与其他人文学科关于人的研究有着共同的学术取向：通过人解读文化，通过文化解读人。任何一项有价值的学术命题的最终确立，事实上都会体现出研究者对本学科学术传统及学术语境的历史思考和现代应答。为方便读者对本研究的意图、构想有一个整体了解，以下将对本论题的研究语境与缘由、研究对象定位、相关的文献回顾、研究的理论视角与方法、研究的对象范围和目的以及《民歌与安魂》独具的文本表述方式等予以必要叙述。
                 </div>
                 <br />
-                {/* teacher image */}
+                <div className="center-align-box">
+                    <img src={Teacher8} alt="teacher" className="w400 no-margin" />
+                </div>
                 <div className="center-align-box h3 bold txt-brown" style={{margin: "0 auto"}}>信辰道长</div>
                 <div className="center-align-box p1 bold txt-brown" style={{margin: "0 auto"}}>武当山龙门派第二十五代弟子</div>
                 <div className="left-align-box p1 bold">
@@ -116,7 +147,9 @@ const Teachers = () => {
                     信辰道长曾在遇真宫修练武功，后在武当山发源地五龙宫修行道家文化、中医、周易，居于山洞中修行，文武双全，内外兼修，对武当内家拳、太极拳有很深的造诣。信辰道长在武当开馆授徒已十余年，期间培养出大批优秀武当弟子，为武当武术的传承、发扬和创新做出了巨大贡献。信辰道院座落在真武大帝的祖庭磨针井。
                 </div>
                 <br />
-                {/* teacher image */}
+                <div className="center-align-box">
+                    <img src={Teacher9} alt="teacher" className="w400 no-margin" />
+                </div>
                 <div className="center-align-box h3 bold txt-brown" style={{margin: "0 auto"}}>刘昱廷</div>
                 <div className="center-align-box p1 bold txt-brown" style={{margin: "0 auto"}}>（道号：崇煜），武当龙门派第二十六代弟子</div>
                 <div className="left-align-box p1 bold">
@@ -126,21 +159,27 @@ const Teachers = () => {
                     自2020 年起，刘昱廷老师就开始担任春之谷学院及 EWIP 项目及暑期夏令营的武术老师。
                 </div>
                 <br />
-                {/* teacher image */}
+                <div className="center-align-box">
+                    <img src={Teacher10} alt="teacher" className="w400 no-margin" />
+                </div>
                 <div className="center-align-box h3 bold txt-brown" style={{margin: "0 auto"}}>柴 建</div>
                 <div className="center-align-box p1 bold txt-brown" style={{margin: "0 auto"}}>（道号：凌虚子），武当三丰自然派第二十六代传人</div>
                 <div className="left-align-box p1 bold">
                     世居武当山，祖上两代均为武当正一派道人。师从武当三丰自然派第二十五代掌门人张奇习练道法、武术、道医等，多年来博采众长，在道医道药方面取得了较深的造诣。
                 </div>
                 <br />
-                {/* teacher image */}
+                <div className="center-align-box">
+                    <img src={Teacher11} alt="teacher" className="w400 no-margin" />
+                </div>
                 <div className="center-align-box h3 bold txt-brown" style={{margin: "0 auto"}}>唐诚华</div>
                 <div className="center-align-box p1 bold txt-brown" style={{margin: "0 auto"}}>全真龙门派第二十四代弟子</div>
                 <div className="left-align-box p1 bold">
                     音乐、道家古琴、《道德经》经典与古诗词吟诵、道家古琴静心疗愈，音乐制作人。自 2022 年起，唐诚华老师就作为春之谷学院及 EWIP 项目的道乐和吟诵老师。
                 </div>
                 <br />
-                {/* teacher image */}
+                <div className="center-align-box">
+                    <img src={Teacher12} alt="teacher" className="w400 no-margin" />
+                </div>
                 <div className="center-align-box h3 bold txt-brown" style={{margin: "0 auto"}}>郑 乐</div>
                 <div className="center-align-box p1 bold txt-brown" style={{margin: "0 auto"}}>长线课人文老师（第一个板块主讲武当文史地），吉它/书法老师</div>
                 <div className="left-align-box p1 bold">

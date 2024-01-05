@@ -10,8 +10,7 @@ const App = () => {
 
     return (
         <div className="app">
-            <Header
-                isSwitchOn={window.location.href.endsWith("/en")} />
+            <Header isSwitchOn={window.location.href.endsWith("/en")} />
 
             <div className="main-container">
                 <main id="main">
